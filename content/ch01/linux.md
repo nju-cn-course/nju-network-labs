@@ -44,6 +44,7 @@ Most of our operations will be completed inside the terminal. You need to know
 
 A tutorial of Linux can be found at [鸟哥的 Linux 私房菜 —— 基础学习篇](http://cn.linux.vbird.org/linux_basic/linux_basic.php). Select the part you want to know and read it.
 
-## I Don't Like Your VM
+## Customize Your own VM
 
-If you are a free soul and want to setup Switchyard in a different environment you are welcome to do that as well. You can find some useful information [here](../../appendix/environment-setup.md). This might or might not be useful for you depending on your environment.
+If you are a free soul and want to setup Mininet and Switchyard in a different environment you are welcome to do that as well. You can find some useful information [here](../../appendix/environment-setup.md). This might or might not be useful for you depending on your environment. FYI, Switchyard is cross-platform but Mininet supports only Linux. 
+

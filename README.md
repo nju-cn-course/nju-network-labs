@@ -1,6 +1,6 @@
 # Computer Network Lab Manual
 
-Computer Network, Nanjing University, Spring 2020
+Computer Network, Nanjing University, Spring 2021
 
 ## Course Info
 
@@ -8,13 +8,11 @@ Course Number: 22010050
 
 Lecturer: [Chen Tian](https://cs.nju.edu.cn/tianchen/) & [Wenzhong Li](https://cs.nju.edu.cn/lwz/)
 
-Website: https://cs.nju.edu.cn/lwz/networks-2020/
+Website: https://cs.nju.edu.cn/lwz/networks/
 
 ## Contact
 
-Course QQ group: 940577165
-
-You can find TAs and our 教学立方 invitation code after joining this group.
+Course QQ group: 685928389
 
 > [!TIP]
 > You may have many questions about our labs. There are some questions can be answered in our manual, some can be answered by searching the Internet, and some we have not mentioned which need to be added to our manual. We welcome the third one because the answers to the first two questions are readily available. To give you faster access to the answers, you need to take a look at this article [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md).

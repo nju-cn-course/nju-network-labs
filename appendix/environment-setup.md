@@ -7,7 +7,7 @@ If you see here then you must be a high-end player, the instructions here will b
 You can find instructions [here](https://shellqiqi.gitee.io/switchyard), the repository of switchyard on GitHub. A quick note here for Ubuntu.
 
 ```
-git clone https://gitee.com/shellqiqi/switchyard.git
+git clone https://gitee.com/pavinberg/switchyard.git
 sudo apt-get install libffi-dev libpcap-dev python3-dev python3-pip
 ```
 

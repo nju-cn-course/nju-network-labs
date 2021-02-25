@@ -23,7 +23,7 @@ router are to:
 5.  Generate ICMP error messages when necessary, such as when an IP
     packet's TTL (time to live) value has been decremented to zero.
 
-The goal of this stage of the project is to accomplish items 4 and 5
+The goal of this stage of the project is to accomplish items **#4** and **#5**
 above. When you're done with this project, you will have a fully
 functioning Internet router. 
 
