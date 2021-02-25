@@ -15,7 +15,7 @@
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://github.com/shellqiqi/nju-network-experiments"
+      "url": "https://github.com/Pavinberg/nju-network-labs"
     },
     "styles": {
       "website": "styles/website.css"

@@ -27,7 +27,7 @@ handling ARP queries you should do the following:
 -   Send an ARP request for the IP address needing to be "resolved"
     (i.e., the IP address for which you need the corresponding Ethernet
     address).
-    -   The Switchyard reference documentation for the [ARP header](https://shellqiqi.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header) has an
+    -   The Switchyard reference documentation for the [ARP header](https://pavinberg.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header) has an
         example of constructing an ARP request packet.
 -   When an ARP reply is received, complete the Ethernet header for the
     IP packet to be forwarded, and send it along. You should also create
@@ -44,11 +44,11 @@ Lastly, refer to the Switchyard documentation details and examples for
 parsing and constructing packets containing Ethernet, ARP, and IP packet
 headers.
 
-- [Packet parsing/construction introduction](https://shellqiqi.gitee.io/switchyard/writing_a_program.html#introduction-to-packet-parsing-and-construction)
-- [Packet parsing/construction reference](https://shellqiqi.gitee.io/switchyard/reference.html#packet-parsing-and-construction-reference)
-- [Ethernet header reference](https://shellqiqi.gitee.io/switchyard/reference.html#ethernet-header)
-- [ARP header reference](https://shellqiqi.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header)
-- [IPv4 header reference](https://shellqiqi.gitee.io/switchyard/reference.html#ip-version-4-header)
+- [Packet parsing/construction introduction](https://pavinberg.gitee.io/switchyard/writing_a_program.html#introduction-to-packet-parsing-and-construction)
+- [Packet parsing/construction reference](https://pavinberg.gitee.io/switchyard/reference.html#packet-parsing-and-construction-reference)
+- [Ethernet header reference](https://pavinberg.gitee.io/switchyard/reference.html#ethernet-header)
+- [ARP header reference](https://pavinberg.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header)
+- [IPv4 header reference](https://pavinberg.gitee.io/switchyard/reference.html#ip-version-4-header)
 
 
 ## Coding

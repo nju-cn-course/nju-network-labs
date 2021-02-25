@@ -40,7 +40,7 @@ current working directory.
 Note that for each interface object in the list obtained from
 `net.interfaces()` (or, equivalently, `net.ports()`), the IP address
 assigned to the interface and the network mask are available (see the
-Switchyard documentation on getting information about [interfaces/ports](https://shellqiqi.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)).
+Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)).
 
 The file `forwarding_table.txt` can be assumed to exist in the same
 directory where your router is starting up (again, this file is produced

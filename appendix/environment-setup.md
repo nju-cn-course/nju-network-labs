@@ -4,7 +4,7 @@ If you see here then you must be a high-end player, the instructions here will b
 
 ## Install Switchyard
 
-You can find instructions [here](https://shellqiqi.gitee.io/switchyard), the repository of switchyard on GitHub. A quick note here for Ubuntu.
+You can find instructions [here](https://pavinberg.gitee.io/switchyard), the repository of switchyard on GitHub. A quick note here for Ubuntu.
 
 ```
 git clone https://gitee.com/pavinberg/switchyard.git

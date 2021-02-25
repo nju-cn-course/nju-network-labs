@@ -58,7 +58,7 @@ This rule blocks any TCP traffic with source address in the range
 destination port of 80.
 
 It is straightforward to access TCP and UDP port numbers using the
-Switchyard packet library. See the [Switchyard documentation](https://shellqiqi.gitee.io/switchyard/reference.html#udp-user-datagram-protocol-header) for details
+Switchyard packet library. See the [Switchyard documentation](https://pavinberg.gitee.io/switchyard/reference.html#udp-user-datagram-protocol-header) for details
 and examples.
 
 You may also find the `IPv4Network` class useful (it is built in to the

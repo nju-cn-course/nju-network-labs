@@ -14,7 +14,7 @@ original host that sent the ping. To do that, you should:
 
 -   Construct an ICMP header + echo reply, correctly populating the
     fields in the header. See the Switchyard documentation for details
-    on [ICMP packet headers](https://shellqiqi.gitee.io/switchyard/reference.html#icmp-internet-control-message-protocol-header-v4). When creating the EchoReply, do the
+    on [ICMP packet headers](https://pavinberg.gitee.io/switchyard/reference.html#icmp-internet-control-message-protocol-header-v4). When creating the EchoReply, do the
     following:
     -   Copy the EchoRequest sequence number into the EchoReply you
         make, and

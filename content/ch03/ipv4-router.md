@@ -40,5 +40,5 @@ Just like the previous assignment, you should test the correctness of your imple
 
 ## Helpful Materials
 
-- [Switchyard API Documentation](https://shellqiqi.gitee.io/switchyard/reference.html)
-- [Switchyard Test Scenario Creation](https://shellqiqi.gitee.io/switchyard/test_scenario_creation.html)
+- [Switchyard API Documentation](https://pavinberg.gitee.io/switchyard/reference.html)
+- [Switchyard Test Scenario Creation](https://pavinberg.gitee.io/switchyard/test_scenario_creation.html)

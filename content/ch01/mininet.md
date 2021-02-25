@@ -149,7 +149,7 @@ $ sudo mn -c
 
 ## Custom Topologies
 
-Custom topologies can be easily defined as well, using a simple Python API. The example here connects 4 devices as a star topology shows below. This file is in the Switchyard repository [`examples/start_mininet.py`](https://github.com/shellqiqi/switchyard/blob/master/examples/start_mininet.py).
+Custom topologies can be easily defined as well, using a simple Python API. The example here connects 4 devices as a star topology shows below. This file is in the Switchyard repository [`examples/start_mininet.py`](https://gitee.com/pavinberg/switchyard/blob/master/examples/start_mininet.py).
 
 ```python
 #!/usr/bin/python
