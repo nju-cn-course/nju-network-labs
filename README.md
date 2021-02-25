@@ -69,6 +69,7 @@ Out: 2020-5-27, due 2020-6-17.
 
 We encourage discussions with others to clarify questions about homework problems and programming assignment problem statements. However
 
-> [!DANGER|style:flat]
-> 1. Programming solutions must be your own.
-> 2. Do not make your remote assignment repository public.
+{% hint style="danger" %}
+1. Programming solutions must be your own.
+2. Do not make your remote assignment repository public.
+{% endhint %}
