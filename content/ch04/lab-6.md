@@ -16,8 +16,9 @@ Your reliable communication library will implement the following features to pro
 
 Further details will be discussed in each Task.
 
-> [!NOTE]
-> The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% hint style="info" %}
+The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% endhint %}
 
 ### Task 1: Preparation
 
@@ -49,8 +50,9 @@ Make sure that your blaster, blastee and middlebox function correctly.
 
 [Start the task here](deploy.md)
 
-> [!WARNING]
-> Please carefully read the [FAQ](faq.md) section, for more specific details regarding the implementations.
+{% hint style="warning" %}
+Please carefully read the [FAQ](faq.md) section, for more specific details regarding the implementations.
+{% endhint %}
 
 ## Handing it in
 
@@ -84,10 +86,13 @@ To submit your work, you need to do the following things.
      └─...
    ```
 
-  > [!WARNING]
-  > The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+  {% hint style="warning" %}
+  The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+  {% endhint %}
 
 3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
 
-  > [!WARNING]
-  > **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+  {% hint style="warning" %}
+  **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+  {% endhint %}
+

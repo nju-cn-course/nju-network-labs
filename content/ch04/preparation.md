@@ -30,5 +30,6 @@ switchyard
   └─...
 ```
 
-> [!WARNING]
-> All of your modifications should be done on the files under your directory `lab_6`. We will check and compare the **git commits** to judge the originality of your work. So remember to commit every time you complete one small task.
+{% hint style="warning" %}
+All of your modifications should be done on the files under your directory `lab_6`. We will check and compare the **git commits** to judge the originality of your work. So remember to commit every time you complete one small task.
+{% endhint %}

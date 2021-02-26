@@ -32,10 +32,11 @@ the test scripts or run your router in Mininet. Your code can
 simply assume that a file named `forwarding_table.txt` exists in the
 current working directory.
 
-> [!NOTE]
-> Your forwarding table *may* be different for the test scenario and for Mininet to help
-> ensure that your router behaves in a *general* way and isn't written just
-> to handle a specific set of forwarding table entries
+{% hint style="info" %}
+Your forwarding table *may* be different for the test scenario and for Mininet to help
+ensure that your router behaves in a *general* way and isn't written just
+to handle a specific set of forwarding table entries
+{% endhint %}
 
 Note that for each interface object in the list obtained from
 `net.interfaces()` (or, equivalently, `net.ports()`), the IP address

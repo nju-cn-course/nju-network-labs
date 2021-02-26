@@ -20,15 +20,17 @@ These mechanisms are:
 
 You will implement these mechanisms in three separate Python files. The core functionalities that are explained above will be the same for these implementations.
 
-> [!WARNING]
-> Please carefully read the [FAQ](faq.md) section, for more specific details regarding the implementations
+{% hint style="warning" %}
+Please carefully read the [FAQ](faq.md) section, for more specific details regarding the implementations
+{% endhint %}
 
 ## Your Tasks
 
 In these tasks, you will write the code to implement the core logic in an Ethernet learning switch using the Switchyard framework. Besides using Switchyard for developing and testing your switch, you can deploy it in Mininet to test it in a "live" setting. The code you'll need to add for the simplest version of this exercise should be less than 20 lines (and possibly quite a bit less depending on exactly how you write the code). There are extensions to the basic learning switch that could add quite a bit more code.
 
-> [!NOTE]
-> The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% hint style="warning" %}
+The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% endhint %}
 
 ### Task 1: Preparation
 
@@ -90,10 +92,15 @@ To submit your work, you need to do the following things.
      └─...
    ```
 
-   > [!WARNING]
-   > The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+   {% hint style="warning" %}
+   The sentences marked with ✅ are related to the content of your report. Please pay attention.
+   {% endhint %}
+   
 
 3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
 
-   > [!WARNING]
-   > **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+   {% hint style="warning" %}
+   **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+   {% endhint %}
+
+

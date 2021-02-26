@@ -5,8 +5,9 @@ The operating system of our experimental environment is Ubuntu 18.04 which is a 
 1. Our experiments involve changes to the network. Using a virtual machine (VM) can avoid impact on your computer.
 2. We will introduce Mininet and Switchyard later. It is much more easier to install and run them on Linux.
 
-> [!NOTE]
-> You are also free to use your favorite virtualization software for the lab assignment but you will most probably have to deal with the possible issues on yourself.
+{% hint style="info" %}
+You are also free to use your favorite virtualization software for the lab assignment but you will most probably have to deal with the possible issues on yourself.
+{% endhint %}
 
 ## Install VirtualBox
 

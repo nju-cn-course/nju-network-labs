@@ -52,8 +52,9 @@ There are three things to accomplish for this project:
 
 Details for each of these items are given below.
 
-> [!NOTE]
-> The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% hint style="info" %}
+The sentences marked with ✅ are related to the content of your report. Please pay attention.
+{% endhint %}
 
 ### Task 1: Preparation
 
@@ -117,10 +118,12 @@ To submit your work, you need to do the following things.
      └─...
    ```
 
-  > [!WARNING]
-  > The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+  {% hint style="warning" %}
+  The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+  {% endhint %}
 
 3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
 
-  > [!WARNING]
-  > **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+  {% hint style="warning" %}
+  **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+  {% endhint %}

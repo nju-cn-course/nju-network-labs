@@ -4,8 +4,9 @@ Mininet enables you to quickly create, interact with, customize and share a soft
 
 The most useful material is their website. Here is the [Mininet Walkthrough](http://mininet.org/walkthrough/). At this stage you will encounter some concepts you are not familiar with such as switches and hosts, but remember to come back after you have learned them. In this section, we will have a small practice of Mininet.
 
-> [!NOTE]
-> Ignore the content about switches like Open vSwitch (OVS) setting up.
+{% hint style="info" %}
+Ignore the content about switches like Open vSwitch (OVS) setting up.
+{% endhint %}
 
 We expect that you will spend 2 days on this.
 
@@ -43,8 +44,9 @@ So let's start with Mininet startup options. Type the following command to displ
 $ sudo mn -h
 ```
 
-> [!WARNING|style:flat]
-> Commands start with `sudo` or run as a superuser (prompt like `#`) are dangerous. Avoid doing things like that. But you need run Mininet as a superuser so be careful.
+{% hint style="warning" %}
+Commands start with `sudo` or run as a superuser (prompt like `#`) are dangerous. Avoid doing things like that. But you need run Mininet as a superuser so be careful.
+{% endhint %}
 
 Then let's build a Mininet default topology.
 
@@ -282,11 +284,10 @@ $ sudo python examples/start_mininet.py
 
 In this topology, hosts can not `ping` each other because the device named `hub` has no routing rules configured, so exit here. In the section of Switchyard, we will make it work.
 
-> [!NOTE]
-> Mininet topology scripts are written in Python 2. If you want to use Python 3 instead, you should install `mininet` module of Python 3, i.e. run command:
->
-> ```shell
-> $ pip3 install mininet
-> ```
-> Then run the script with `python3`.
-
+{% hint style="info" %}
+Mininet topology scripts are written in Python 2. If you want to use Python 3 instead, you should install `mininet` module of Python 3, i.e. run command:
+```shell
+$ pip3 install mininet
+```
+Then run the script with `python3`.
+{% endhint %}

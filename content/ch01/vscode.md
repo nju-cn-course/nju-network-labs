@@ -14,8 +14,9 @@ $ sudo apt install ./<file>.deb
 
 ## Develope Switchyard with VSC
 
-> [!TIP]
-> Here we will get in touch with Switchyard in advance. You can just skim the content of Switchyard now. After reading the section [Switchyard](switchyard.md), come back again.
+{% hint style="success" %}
+Here we will get in touch with Switchyard in advance. You can just skim the content of Switchyard now. After reading the section [Switchyard](switchyard.md), come back again.
+{% endhint %}
 
 Open the folder of Switchyard in VSC. You can open files in the explorer and edit them.
 

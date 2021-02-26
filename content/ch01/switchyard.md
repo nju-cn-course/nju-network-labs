@@ -38,8 +38,9 @@ To create a new virtual environment, you could do something like the following *
 $ python3 -m venv syenv
 ```
 
-> [!WARNING]
-> Many students create their virtual environment under `~` so there is a folder `~/syenv`, which is **WRONG**. The right path is `~/switchyard/syenv`.
+{% hint style="warning" %}
+Many students create their virtual environment under `~` so there is a folder `~/syenv`, which is **WRONG**. The right path is `~/switchyard/syenv`.
+{% endhint %}
 
 After this command, you will find a folder `syenv` in `switchyard`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
@@ -250,11 +251,12 @@ In Switchyard, the device you want to be the hub will run this script and act li
 
 ## Running in the Test Environment
 
-> [!NOTE|style:flat]
-> You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. In the root dictionary of Switchyard, run
-> ```
-> $ source ./syenv/bin/activate
-> ```
+{% hint style="info" %}
+You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. In the root dictionary of Switchyard, run
+```
+$ source ./syenv/bin/activate
+```
+{% endhint %}
 
 You can test your hub code with your test file in Switchyard test mode. At minimum you would invoke `swyard` as follows.
 

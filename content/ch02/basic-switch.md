@@ -57,8 +57,9 @@ In the window that opens (`xterm` on the node "switch"), activate venv and run y
 (syenv) # swyard myswitch.py
 ```
 
-> [!NOTE]
-> Note that to run `swyard` in Mininet in a root shell (such as the shell that is open in response to the `xterm` command), you will need to activate the Python virtual environment which has Switchyard installed in it. Refer to the Switchyard documentation for more information.
+{% hint style="info" %}
+Note that to run `swyard` in Mininet in a root shell (such as the shell that is open in response to the `xterm` command), you will need to activate the Python virtual environment which has Switchyard installed in it. Refer to the Switchyard documentation for more information.
+{% endhint %}
 
 To examine whether your switch is behaving correctly, you can do the following:
 

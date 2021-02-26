@@ -22,8 +22,9 @@ Remember that you can get a list of interfaces configured for the router by call
 
 If the destination IP address is one that is assigned to an interface of your Router, you should create and send an appropriate ARP reply. (If the destination IP address is not assigned to one of the router's interfaces, you should not respond with an ARP reply, even if you have enough information to do so.) The ARP reply should be sent out the same interface on which the ARP request arrived.
 
-> [!TIP]
-> The Switchyard documentation has details on what is returned by the `interfaces` method. You may wish to call this method in the constructor of the Router class and create some internal data structure for the Router, so it can keep track of its own interfaces.
+{% hint style="success" %}
+The Switchyard documentation has details on what is returned by the `interfaces` method. You may wish to call this method in the constructor of the Router class and create some internal data structure for the Router, so it can keep track of its own interfaces.
+{% endhint %}
 
 ### Received Other Packets
 
@@ -63,8 +64,9 @@ Once the Switchyard tests pass, you should test your router in Mininet. There is
 
 ![router topology](assets/router_topology.png)
 
-> [!NOTE]
-> Note that the above topology may **not** be the same as the one implied by the Switchyard tests.
+{% hint style="success" %}
+Note that the above topology may **not** be the same as the one implied by the Switchyard tests.
+{% endhint %}
 
 To test your router in Mininet, you can do the following:
 
@@ -86,8 +88,9 @@ To test your router in Mininet, you can do the following:
    client# wireshark -k &
    ```
 
-   > [!NOTE]
-   > You'll get some warnings from Wireshark about running as root, which you can safely ignore.
+   {% hint style="success" %}
+   You'll get some warnings from Wireshark about running as root, which you can safely ignore.
+   {% endhint %}
 
 4. Open an xterm on the router node:
 

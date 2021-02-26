@@ -68,7 +68,9 @@ queue waiting for ARP responses, with the class containing variables to
 hold the most recent time an ARP request was sent, and the number of
 retries, among other things.
 
-> [!NOTE]
+{% hint style="success" %}
+
+{% endhint %}
 > You *can* create a separate Python thread to handle ARP
 > requests. Switchyard is thread-safe and this is an acceptable pattern.
 > You may find it easier, however, to simply handle everything in the
@@ -118,9 +120,9 @@ network topology:
 
 ![router2_topology](router2_topology.png)
 
-> [!NOTE]
-> The above topology is not the same as the one implied by the
-> Switchyard tests.
+{% hint style="info" %}
+The above topology is not the same as the one implied by the Switchyard tests.
+{% endhint %}
 
 To test your router in Mininet, open up a terminal on the virtual
 machine, and cd (if necessary) to the folder where your project files
@@ -137,20 +139,15 @@ Once Mininet starts up, you should open an xterm on the router node
 router# swyard myrouter.py
 ```
 
-> [!NOTE]
-> Again, you may need to activate your
-> Python virtual environment in order for the above command to work
-> correctly.
+{% hint style="info" %}
+Again, you may need to activate your Python virtual environment in order for the above command to work correctly.
+{% endhint %}
 
 <div></div>
 
-> [!TIP]
-> When you run your router in Mininet, you'll almost certainly
-> receive packets that you didn't ask for! In particular, you'll likely
-> receive non-IPv4 and non-ARP packets (you'll likely receive some IPv6
-> packets and some other fun stuff). You should just ignore these non-IPv4
-> and non-ARP packets (and your router should not crash when it receives
-> them!)
+{% hint style="success" %}
+When you run your router in Mininet, you'll almost certainly receive packets that you didn't ask for! In particular, you'll likely receive non-IPv4 and non-ARP packets (you'll likely receive some IPv6 packets and some other fun stuff). You should just ignore these non-IPv4 and non-ARP packets (and your router should not crash when it receives them!)
+{% endhint %}
 
 At this point, you should be able to open another xterm on any one of
 the other nodes and send a ping (ICMP echo request) to any of the IP
