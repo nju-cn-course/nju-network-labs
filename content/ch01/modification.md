@@ -2,21 +2,23 @@
 
 ## Preparation
 
-Let's start with our example files.
+Get the Lab-1 assignment template codes:
 
-Create a directory named `lab_1` in `~/switchyard`. Your should start by copying the template files `examples/start_mininet.py`, `examples/myhub.py` and `examples/hubtests.py` into `lab_1`. And your project will look like
+1. Click [Lab-1](https://classroom.github.com/a/Re9pXmXp) and accept this assignment. Wait for a few seconds and refresh the page.
+2. Click the URL to the repository on the page which is similar to https://github.com/nju-cn-course/lab-1-YourName.
+3. Click the green “Code” button and click the icon. You will get the URL in your clipboard similar to https://github.com/nju-cn-course/lab-1-YourName.git.
 
-```
-switchyard/
-  ├─docs/
-  ├─.../
-+ ├─lab_1/
-+ │ ├─hubtests.py
-+ │ ├─myhub.py
-+ │ └─start_mininet.py
-  ├─.gitignore
-  └─...
-```
+![github_clone](assets/github_clone.png)
+
+4. Go to a proper directory (e.g. `~/networkLab`) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
+
+   ```shell
+   $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
+   ```
+
+   After a few seconds, there will be a new directory int you current directory named `Lab-1-YourName`.
+
+5. Edit the source codes in `Lab-1-YourName` directory following steps below.
 
 ## Play the Tutorial Again
 
@@ -26,12 +28,6 @@ You have done the tutorial. However it is necessary to work by yourself. So modi
 We suggest that you can commit in Git when you complete one step.
 {% endhint %}
 
-<div></div>
-
-{% hint style="warning" %}
-All of your modifications should be done on the files under your directory `lab_1`. We will check and compare the **git commits** to judge the originality of your work. So remember to commit every time you complete one small task.
-{% endhint %}
-
 ### Step 1: Modify the Mininet topology
 
 In the section [Mininet](mininet.md), we introduced how to construct a topology. So here we have two options for you, choose **one** to implement. ✅ Then show the details of how you build the topology in your report.
@@ -39,22 +35,22 @@ In the section [Mininet](mininet.md), we introduced how to construct a topology.
 - Delete `server2` in the topology,
 - Or create a different topology containing 6 nodes using hosts and hubs (don't use other kinds of devices).
 
-The file you need to modify is `lab_1/start_mininet.py`.
+The file you need to modify is `start_mininet.py`.
 
 ### Step 2: Modify the logic of a device
 
 In the section [Switchyard](switchyard.md), we introduced how to program a device. Your task is to count how many packets pass through a hub in and out. You need to log the statistical result every time you receive one packet with the format of each line `in:<ingress packet count> out:<egress packet count>`. For example, if there is a packet that is not addressed to the hub itself, then the hub may log `in:1 out:2`. ✅ Then show the log of your hub when running it in Mininet and how you implement it in your report.
 
-The file you need to modify is `lab_1/myhub.py`.
+The file you need to modify is `myhub.py`.
 
 ### Step 3: Modify the test scenario of a device
 
 In the section [Switchyard](switchyard.md), we introduced how to write the test case. So here we have two options for you, choose **one** to implement. ✅ Then show the details of your test cases in your report.
 
-- Create one test case by using the given function `mk_pkt` with different arguments,
+- Create one test case by using the given function `new_packet` with different arguments,
 - Or create one test case with your handmade packet.
 
-The file you need to modify is `lab_1/hubtests.py`.
+The file you need to modify is `testcases/myhub_testscenario.py`.
 
 ### Step 4: Run your device in Mininet
 
@@ -63,3 +59,29 @@ In the section [Switchyard](switchyard.md), we introduced how to run Switchyard 
 ### Step 5: Capture using Wireshark
 
 Both in section [Wireshark](wireshark.md) and [Switchyard](switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host (no hub) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.
+
+## Hand in
+
+Your report should be a PDF file named `report.pdf` and be placed in the Lab direcotry which is `Lab-1-YourName` in this example. Add the report to git and commit.
+
+Finally, the directory should be in this structure:
+
+```
+.
+├── README.md
+├── myhub.py
+├── report.pdf
+├── start_mininet.py
+└── testcases
+    ├── myhub_testscenario.py
+    └── test_lab1.py
+```
+
+After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
+
+```shell
+$ git push
+```
+
+After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
+

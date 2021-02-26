@@ -42,15 +42,11 @@ Meet the requirements for using Mininet, Wireshark and Switchyard. At the meanti
 
 [Start your task here](workflow.md)
 
-### Task 3: NJU GitLab
+### Task 3: GitHub Classroom
 
-Sign up on NJU GitLab and prepare for submission.
+Sign up on GitHub and prepare for submission.
 
-[Start your task here](nju-gitlab.md)
-
-{% hint style="danger" %}
-**Do NOT skip** this task. We use NJU GitLab to collect your projects.
-{% endhint %}
+[Start your task here](github-classroom.md)
 
 ### Task 4: Your Modification
 

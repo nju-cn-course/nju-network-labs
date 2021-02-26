@@ -20,7 +20,7 @@ You can find instructions [here](https://gitee.com/pavinberg/switchyard), the re
 
 If you can't find the folder `switchyard` in your home dictionary, you need to get the source code of Switchyard.
 
-```
+```shell
 $ git clone https://gitee.com/pavinberg/switchyard.git
 ```
 
@@ -34,7 +34,7 @@ You can install Switchyard and the necessary related packages in an isolated Pyt
 
 To create a new virtual environment, you could do something like the following **under your workspace folder `switchyard`**.
 
-```
+```shell
 $ python3 -m venv syenv
 ```
 
@@ -44,7 +44,7 @@ Many students create their virtual environment under `~` so there is a folder `~
 
 After this command, you will find a folder `syenv` in `switchyard`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
-```
+```shell
 $ source ./syenv/bin/activate
 ```
 
@@ -52,7 +52,7 @@ Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to rep
 
 Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
 
-```
+```shell
 $ python3 -m pip install switchyard
 ```
 
@@ -74,7 +74,7 @@ A test scenario is Switchyard’s term for a series of tests that verify a progr
 
 To start off, here is an example of an empty test scenario:
 
-```py
+```python
 from switchyard.lib.userlib import *
 
 scenario = TestScenario("test example")
@@ -215,34 +215,30 @@ import switchyard
 from switchyard.lib.userlib import *
 
 
-def process_packet(recv: switchyard.llnetbase.ReceivedPacket):
-    _, fromIface, packet = recv
-    log_debug (f"In {net.name} received packet {packet} on {fromIface}"
-    eth = packet.get_header(Ethernet)
-    if eth is None:
-        log_info("Received a non-Ethernet packet?!")
-        return
-    if eth.dst in mymacs:
-        log_info("Received a packet intended for me")
-    else:
-        for intf in my_interfaces:
-            if dev != intf.name:
-                log_info (f"Flooding packet {packet} to {intf.name}"
-                net.send_packet(intf, packet)
-
-
 def main(net: switchyard.llnetbase.LLNetBase):
     my_interfaces = net.interfaces()
     mymacs = [intf.ethaddr for intf in my_interfaces]
 
     while True:
         try:
-            recv = net.recv_packet()
+            _, fromIface, packet = net.recv_packet()
         except NoPackets:
             continue
         except Shutdown:
             break
-        process_packet(recv)
+
+        log_debug (f"In {net.name} received packet {packet} on {fromIface}")
+        eth = packet.get_header(Ethernet)
+        if eth is None:
+            log_info("Received a non-Ethernet packet?!")
+            return
+        if eth.dst in mymacs:
+            log_info("Received a packet intended for me")
+        else:
+            for intf in my_interfaces:
+                if fromIface!= intf.name:
+                    log_info (f"Flooding packet {packet} to {intf.name}")
+                    net.send_packet(intf, packet)
 
     net.shutdown()
 ```
@@ -253,14 +249,14 @@ In Switchyard, the device you want to be the hub will run this script and act li
 
 {% hint style="info" %}
 You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. In the root dictionary of Switchyard, run
-```
+```shell
 $ source ./syenv/bin/activate
 ```
 {% endhint %}
 
 You can test your hub code with your test file in Switchyard test mode. At minimum you would invoke `swyard` as follows.
 
-```
+```shell
 $ swyard -t examples/test_myhub.py examples/myhub.py
 ```
 
@@ -276,13 +272,13 @@ In the test environment, here is no *true* traffic here. The device only take th
 
 First let's start our topology we provided at `examples/start_mininet.py`.
 
-```
+```shell
 $ sudo python examples/start_mininet.py
 ```
 
 Then run your hub code to the device you what. Here must be the root of our star shape topology named `hub`. It is better to open xterm on it so you can see the output of it.
 
-```
+```shell
 mininet> xterm hub
 ```
 
