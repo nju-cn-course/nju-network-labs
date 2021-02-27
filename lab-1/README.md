@@ -4,7 +4,7 @@
 
 In this chapter we will introduce all preparations for our network experiments. Then your are going to modify the examples we provide according to our requirements.
 
-Lab-1 assignment in Github Classroom: https://classroom.github.com/a/Re9pXmXp
+Lab-1 assignment in Github Classroom: [https://classroom.github.com/a/Re9pXmXp](https://classroom.github.com/a/Re9pXmXp)
 
 ## Details
 
@@ -48,7 +48,7 @@ Meet the requirements for using Mininet, Wireshark and Switchyard. At the meanti
 
 Sign up on GitHub and prepare for submission.
 
-[Start your task here](github-classroom.md)
+[Start your task here](https://github.com/Pavinberg/nju-network-labs/tree/05e73b4de538b9db8d841b05df5fff74dcf67066/lab-1/github-classroom.md)
 
 ### Task 4: Your Modification
 
@@ -58,7 +58,7 @@ After Task 1 2 3, you are ready to do some exercises on our platform and count 4
 
 ## Handing it in
 
-Create a directory named `report/` in your repository and place your report, capture files and other materials in it. 
+Create a directory named `report/` in your repository and place your report, capture files and other materials in it.
 
 ### Report
 
@@ -102,20 +102,20 @@ In this case, running the command `sudo chown $USER:$USER ./lab_1.pcap` can chan
 
 Finally, the directory should be in this structure:
 
-```
+```text
 .
 ├── README.md
 ├── myhub.py
 ├── report
-│   ├── 123456789拾佰仟_lab_1.pdf
-│   └── lab_1.pcap
+│   ├── 123456789拾佰仟_lab_1.pdf
+│   └── lab_1.pcap
 ├── start_mininet.py
 └── testcases
     ├── myhub_testscenario.py
     └── test_lab1.py
 ```
 
-Commit the change. 
+Commit the change.
 
 {% hint style="warning" %}
 **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
@@ -123,7 +123,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```shell
+```text
 $ git push
 ```
 

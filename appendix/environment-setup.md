@@ -57,7 +57,7 @@ sudo apt-get install wireshark
 
 You need to configure wireshark during installation. For non-superusers capturing packets, choose _Yes_ here.
 
-![configure-wireshark](../.gitbook/assets/configure-wireshark.png)
+![configure-wireshark](../.gitbook/assets/configure-wireshark%20%281%29.png)
 
 Then add your user to `wireshark` user group to allow you capturing packets.
 
