@@ -73,7 +73,19 @@ Out: 2020-5-27, due 2020-6-17.
 We encourage discussions with others to clarify questions about homework problems and programming assignment problem statements. However
 
 {% hint style="danger" %}
-1. Programming solutions must be your own.
-2. Do not make your remote assignment repository public.
+1. Programming solutions must be your own. If we find you plagiarize, either from your classmates or Internet, you will get **0 score** of this lab.
+2. Do **NOT** make your remote assignment repository public.
 {% endhint %}
+
+## Feedback
+
+You can use pull requests of each lab to ask questions about the lab or give us feedback.
+
+For example, if you want to feedback about lab-1, go to GitHub lab-1 repository page:
+
+1. Click “Pull requests”
+
+![pull_request](.gitbook/assets/pull_request.png)
+
+2. Click “Feedback” and enter you question in the conversation box.
 

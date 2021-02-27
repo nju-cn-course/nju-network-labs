@@ -12,3 +12,4 @@ The overall workflow to submit an assignment is as follows:
 
 You will walk through the workflow in [Task 4](modification.md).
 
+For each lab, you can use pull request to raise issues and give us feedback.

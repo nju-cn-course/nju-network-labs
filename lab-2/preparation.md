@@ -1,42 +1,34 @@
 # Task 1: Preparation
 
-There is an example of a switch without learning implemented in `switchyard/examples/exercises/learning_switch/myswitch.py`. Let's start with it.
+1. Clone the [Lab-2 assignment](https://classroom.github.com/a/HimykJzS) template codes.
 
-1. Create a directory named `lab_2` in `switchyard`.
-2. Copy `examples/exercises/learning_switch/switchtopo.py` to `lab_2/start_mininet.py`.
-3. Make 4 copies of `examples/exercises/learning_switch/myswitch.py` to:
-   1. `lab_2/myswitch.py`: Your basic learning switch.
-   2. `lab_2/myswitch_to.py`: Your learning switch with timeout based entry removal.
-   3. `lab_2/myswitch_lru.py`: Your learning switch with LRU based entry removal.
-   4. `lab_2/myswitch_traffic.py`: Your learning switch with traffic volume based entry removal.
-4. \(Optional\) Create your test files in `lab_2`.
-   1. `lab_2/mytests.py`: Your test file of `lab_2/myswitch.py`.
-   2. `lab_2/mytests_to.py`: Your test file of `lab_2/myswitch_to.py`.
-   3. `lab_2/mytests_lru.py`: Your test file of `lab_2/myswitch_lru.py`.
-   4. `lab_2/mytests_traffic.py`: Your test file of `lab_2/myswitch_traffic.py`.
+2. `myswitch.py` is a template code. Make 4 copies of `myswitch.py` to:
+   1. `myswitch.py`: Your basic learning switch.
+   2. `myswitch_to.py`: Your learning switch with timeout based entry removal.
+   3. `myswitch_lru.py`: Your learning switch with LRU based entry removal.
+   4. `myswitch_traffic.py`: Your learning switch with traffic volume based entry removal.
 
-Though we will provide the test files, they are incomprehensible. So you should still write test scenarios that test all aspects of your code. You can find our test files below. Download it and you will use it to test your switch later. You can unzip the test files we provide into the folder `lab_2`.
+3. \(Optional\) Create your test files.
+   1. `mytests.py`: Your test file of `myswitch.py`.
+   2. `mytests_to.py`: Your test file of `myswitch_to.py`.
+   3. `mytests_lru.py`: Your test file of `myswitch_lru.py`.
+   4. `mytests_traffic.py`: Your test file of `myswitch_traffic.py`.
 
-[Download compiled test cases here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/).
+Though we will provide the test files, they are incomprehensible. So you should still write test scenarios that test all aspects of your code. You can find our test files in `testcases/`.
 
-Finally, your project will look like
+Finally, your project will look like:
 
-```text
-switchyard
-  ├─docs/
-  ├─.../
-+ ├─lab_2/
-+ │ ├─myswitch.py
-+ │ ├─myswitch_to.py
-+ │ ├─myswitch_lru.py
-+ │ ├─myswitch_traffic.py
-  │ ├─...
-+ │ └─start_mininet.py
-  ├─.gitignore
-  └─...
 ```
-
-{% hint style="warning" %}
-All of your modifications should be done on the files under your directory `lab_2`. We will check and compare the **git commits** to judge the originality of your work. So remember to commit every time you complete one small task.
-{% endhint %}
+.
+├── myswitch.py
+├── myswitch_lru.py
+├── myswitch_to.py
+├── myswitch_traffic.py
+├── start_mininet.py
+├── ...
+└── testcases
+    ├── switchtests_lru.srpy
+    ├── switchtests_to.srpy
+    └── switchtests_traffic.srpy
+```
 

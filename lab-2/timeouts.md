@@ -17,19 +17,19 @@ Your switch may have a table like:
 
 ## Coding
 
-Your task is to implement the logic in the above flowchart, using the Switchyard framework. You can start with copying the content of `lab_2/myswitch.py` to `lab_2/myswitch_to.py`, which is the only file you'll need to modify.
+Your task is to implement the logic in the above flowchart, using the Switchyard framework. You can start with copying the content of `myswitch.py` to `myswitch_to.py`, which is the only file you'll need to modify.
 
 ## Testing
 
 You should first develop your switch code using the Switchyard test framework. Assuming you have installed Switchyard in a Python virtual environment and have activated that venv, you should run:
 
-```text
-(syenv) $ swyard -t lab_2/switchtests_to.srpy lab_2/myswitch_to.py
+```bash
+(syenv) $ swyard -t testcases/switchtests_to.srpy myswitch_to.py
 ```
 
-The above command it will execute a series of test cases against your program and display whether the tests pass or fail. The file `switchtests_to.srpy` is the test file we provide.
+The above command it will execute a series of test cases against your program and display whether the tests pass or fail. The file `testcases/switchtests_to.srpy` is the test file we provide.
 
-✅ In the report, show the test result of your switch.  
+✅ In the report, show the test result of your switch. 
 \(Optional\) If you have written the test files yourself, show how you test the timeout mechanism.
 
 Once you get the tests to pass, you can try running your code in Mininet.

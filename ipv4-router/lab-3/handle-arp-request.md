@@ -32,7 +32,7 @@ If a packet that you receive in the router is not an ARP request, you should ign
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_3/myrouter.py`.
+Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
 The Switchyard documentation contains a section introducing how Packet parsing and construction works. This is strongly recommended background reading. You will also probably find the API reference to be helpful for packet parsing You may also make use of two helper functions \(defined in `switchyard.lib.packet`, which is already imported in the template file\).
 
@@ -48,7 +48,7 @@ Note that these two functions above return a full `Packet` object including `Eth
 For initial testing and debugging of your code, you can run the Switchyard test scenario \(`routertests1.srpy`\). Run it like this:
 
 ```text
-$ swyard -t lab_3/routertests1.srpy myrouter.py
+$ swyard -t testcases/routertests1.srpy myrouter.py
 ```
 
 Read each individual test case output carefully \(yes, it can be a lot to read!\) since each test case has an explanation for what your code should be doing.
@@ -72,8 +72,8 @@ To test your router in Mininet, you can do the following:
 
 1. Open up a terminal on the virtual machine, and cd \(if necessary\) to the folder where your project files are located \(or transfer them into the virtual machine\). Then type the following to get Mininet started:
 
-   ```text
-   $ sudo python lab_3/start_mininet.py
+   ```bash
+   $ sudo python start_mininet.py
    ```
 
 2. Open up an xterm on the client node:
@@ -84,7 +84,7 @@ To test your router in Mininet, you can do the following:
 
 3. Start up Wireshark on the client. From the xterm running on the client, type:
 
-   ```text
+   ```bash
    client# wireshark -k &
    ```
 
@@ -98,13 +98,13 @@ To test your router in Mininet, you can do the following:
 
 5. Start your router in the Python virtual environment:
 
-   ```text
+   ```bash
    (syenv) router# swyard lab_3/myrouter.py
    ```
 
 6. Now, in the xterm running on the client, try to send an ICMP echo request to the IP address at the "other end" of the link between the client and the router.
 
-   ```text
+   ```bash
    client# ping -c3 10.1.1.2
    ```
 

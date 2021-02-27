@@ -123,9 +123,8 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```bash
 $ git push
 ```
 
 After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
-

@@ -21,7 +21,7 @@ Your switch may have a table like:
 
 ## Coding
 
-Your task is to implement the logic in the above flowchart, using the Switchyard framework. The starter file is named `lab_2/myswitch.py`, which is the only file you'll need to modify.
+Your task is to implement the logic in the above flowchart, using the Switchyard framework. The starter file is named `myswitch.py`, which is the only file you'll need to modify.
 
 Some links to Switchyard API documentation which you may find helpful are:
 
@@ -37,11 +37,11 @@ You can test your basic learning switch yourself. No test results need to show i
 
 ## Deploying
 
-To run your switch in Mininet, run the `lab_2/start_mininet.py` custom topology script. It will create a small network consisting of a single switch with three hosts \(client, server1, and server2\) in the following configuration.
+To run your switch in Mininet, run the `start_mininet.py` custom topology script. It will create a small network consisting of a single switch with three hosts \(client, server1, and server2\) in the following configuration.
 
 To start up Mininet using this script, just type:
 
-```text
+```bash
 $ sudo python lab_2/start_mininet.py
 ```
 
@@ -53,7 +53,7 @@ mininet> xterm switch
 
 In the window that opens \(`xterm` on the node "switch"\), activate venv and run your switch in "real" \(non-test\) mode:
 
-```text
+```bash
 (syenv) # swyard myswitch.py
 ```
 
