@@ -53,7 +53,7 @@ Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to rep
 Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
 
 ```shell
-$ python3 -m pip install switchyard
+$ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
 ```
 
 Then I suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore` if there is not.

@@ -60,28 +60,3 @@ In the section [Switchyard](switchyard.md), we introduced how to run Switchyard 
 
 Both in section [Wireshark](wireshark.md) and [Switchyard](switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host (no hub) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.
 
-## Hand in
-
-Your report should be a PDF file named `report.pdf` and be placed in the Lab direcotry which is `Lab-1-YourName` in this example. Add the report to git and commit.
-
-Finally, the directory should be in this structure:
-
-```
-.
-├── README.md
-├── myhub.py
-├── report.pdf
-├── start_mininet.py
-└── testcases
-    ├── myhub_testscenario.py
-    └── test_lab1.py
-```
-
-After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
-
-```shell
-$ git push
-```
-
-After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
-

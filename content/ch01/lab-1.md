@@ -4,6 +4,8 @@
 
 In this chapter we will introduce all preparations for our network experiments. Then your are going to modify the examples we provide according to our requirements.
 
+Lab-1 assignment in Github Classroom: https://classroom.github.com/a/Re9pXmXp
+
 ## Details
 
 Our lab assignments are based on CS640 in University of Wisconsin. Most materials are the same. In the future, we will improve the experiment based on your feedback.
@@ -56,9 +58,11 @@ After Task 1 2 3, you are ready to do some exercises on our platform and count 4
 
 ## Handing it in
 
+Create a directory named `report/` in your repository and place your report, capture files and other materials in it. 
+
 ### Report
 
-We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/). You need to submit the report in your repository named `<学号><姓名>_lab_1`. The format of your report can be Microsoft Doc or PDF. An example is `123456789拾佰仟_lab_1.pdf`.
+We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_1.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_1.pdf`.
 
 ### Capture file
 
@@ -92,35 +96,34 @@ In this case, running the command `sudo chown $USER:$USER ./lab_1.pcap` can chan
 As we mentioned before, be careful when using `sudo` since it may have potential risks.
 {% endhint %}
 
-### Submit to NJU GitLab
+### Submit to GitHub Classroom
 
-When you are ready to submit, do the following.
+Finally, the directory should be in this structure:
 
-1. Modify your code according to Task 3, complete your report and save your capture file.
+```
+.
+├── README.md
+├── myhub.py
+├── report
+│   ├── 123456789拾佰仟_lab1.pdf
+│   └── lab_1.pcap
+├── start_mininet.py
+└── testcases
+    ├── myhub_testscenario.py
+    └── test_lab1.py
+```
 
-2. When you have done your work, put your report, code and capture file in the folder `lab_1` and commit them. Tag the commit named `<学号/lab_1>` which you want to submit. An example is `123456789/lab_1`. For more about tag, read [Git 基础 - 打标签](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%89%93%E6%A0%87%E7%AD%BE). Finally your project will look like
-
-   ```
-   switchyard/
-     ├─docs/
-     ├─.../
-   m ├─lab_1/
-   + │ ├─123456789拾佰仟_lab_1.pdf
-   m │ ├─hubtests.py
-   + │ ├─lab_1.pcapng
-   m │ ├─myhub.py
-   m │ └─start_mininet.py
-     ├─.gitignore
-     └─...
-   ```
-
-{% hint style="warning" %}
-The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
-{% endhint %}
-
-3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
+Commit the change. 
 
 {% hint style="warning" %}
 **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
 {% endhint %}
+
+After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
+
+```shell
+$ git push
+```
+
+After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
 

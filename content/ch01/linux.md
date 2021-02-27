@@ -21,7 +21,7 @@ After completing download, install VirtualBox first then the extension pack.
 
 To ensure that your experimental environment is consistent, we provide a VM image. This image has Switchyard, Mininet and Wireshark installed so you do not need to worry about setting up the environment.
 
-You can find the VM image [here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/).
+You can find the VM image [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/).
 
 - User name: `njucs`
 - Password: `123`
