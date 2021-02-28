@@ -63,13 +63,13 @@ Two special cases to consider:
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_4/myrouter.py`.
+Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
 There are a couple functions and methods in the [Python 3's `ipaddress` library](https://docs.python.org/3/library/ipaddress.html) \(also available through Switchyard's IP address library\) that are helpful for building forwarding table entries and/or for matching destination IP addresses against forwarding table entries:
 
 * To find out the length of a subnet prefix, you can use the following code pattern:
 
-  ```text
+  ```python
   from switchyard.lib.address import *
   netaddr = IPv4Network('172.16.0.0/255.255.255.0')
   netaddr.prefixlen # -> 24
@@ -79,7 +79,7 @@ Note in the code above that you simply need to concatenate an IP address with '/
 
 * The `IPv4Address` class can be converted to an integer using the standard `int()` type conversion function. This function will return the 32-bit unsigned integer representation of an IP address. Remember that you can use bit-wise operations on Python integers \(`&` is bitwise AND, `|` is bitwise OR, `~` is bitwise NOT, `^` is bitwise XOR\). For example, if we wanted to check whether a given address matches a prefix, we might do something like this:
 
-  ```text
+  ```python
   prefix = IPv4Address('172.16.0.0')
   destaddr = IPv4Address('172.16.23.55')
   matches = (int(prefix) & int(destaddr)) == int(prefix)
@@ -88,7 +88,7 @@ Note in the code above that you simply need to concatenate an IP address with '/
 
 You can also use capabilities in the `IPv4Network` class to do the same thing:
 
-```text
+```python
 prefixnet = IPv4Network('172.16.0.0/16')
 # same as IPv4Network('172.16.0.0/255.255.0.0')
 matches = destaddr in prefixnet

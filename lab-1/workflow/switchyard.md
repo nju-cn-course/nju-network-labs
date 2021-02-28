@@ -34,7 +34,7 @@ You can install Switchyard and the necessary related packages in an isolated Pyt
 
 To create a new virtual environment, you could do something like the following **under your workspace folder `switchyard`**.
 
-```text
+```bash
 $ python3 -m venv syenv
 ```
 
@@ -44,7 +44,7 @@ Many students create their virtual environment under `~` so there is a folder `~
 
 After this command, you will find a folder `syenv` in `switchyard`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
-```text
+```bash
 $ source ./syenv/bin/activate
 ```
 
@@ -52,7 +52,7 @@ Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to rep
 
 Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
 
-```text
+```bash
 $ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
 ```
 
@@ -257,7 +257,7 @@ $ source ./syenv/bin/activate
 
 You can test your hub code with your test file in Switchyard test mode. At minimum you would invoke `swyard` as follows.
 
-```text
+```bash
 $ swyard -t examples/test_myhub.py examples/myhub.py
 ```
 
@@ -273,7 +273,7 @@ In the test environment, here is no _true_ traffic here. The device only take th
 
 First let's start our topology we provided at `examples/start_mininet.py`.
 
-```text
+```bash
 $ sudo python examples/start_mininet.py
 ```
 
@@ -285,7 +285,7 @@ mininet> xterm hub
 
 Then run your hub code on it. Remember activate your Python virtual environment first. Replace `<Switchyard folder path>` to the path of Switchyard.
 
-```text
+```bash
 # source <Switchyard folder path>/syenv/bin/activate
 # swyard examples/myhub.py
 ... here is your hub logs ...

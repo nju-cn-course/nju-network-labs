@@ -37,6 +37,8 @@ This is the second in a set of exercises that have the ultimate goal of creating
 
 The goal of this stage is to accomplish **\#2** and **\#3** above.
 
+Lab-4 assignment in Github Classroom: https://classroom.github.com/a/pFaSMI1U
+
 ## Your Tasks
 
 After Lab 3, you have implemented the response to ARP on the starter template: `myrouter.py`. Now, on the basis of Lab 3, we continue to improve the router to implement the function of packets forwarding.
@@ -67,34 +69,43 @@ Send an ARP query to create a new Ethernet header and forward the packet.
 
 ## Handing it in
 
+Create a directory named `report/` in your repository and place your report, capture files and other materials in it.
+
 ### Report
 
-We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/). You need to submit the report in your repository named `<学号><姓名>_lab_4`. The format of your report can be Microsoft Doc or PDF. An example is `123456789拾佰仟_lab_4.pdf`.
+We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_4.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_4.pdf`.
 
-### Submit to NJU GitLab
+### Capture file
 
-To submit your work, you need to do the following things.
+The capture file's name should be `lab_4.pcapng` or `lab_4.pcap`.
 
-1. Modify your code and complete your report.
-2. When you have done your work, put your report and code in the folder `lab_4` then commit them. Tag the commit named `<学号/lab_4>` which you want to submit. An example is `123456789/lab_4`. Finally your project will look like
+### Submit to GitHub Classroom
 
-   ```text
-   switchyard
-     ├─docs/
-     ├─.../
-   + ├─lab_4/
-   + │ ├─123456789拾佰仟_lab_4.pdf
-   + │ ├─myrouter.py
-   + │ ├─forwarding_table.txt
-     │ ├─...
-   + │ └─start_mininet.py
-     ├─.gitignore
-     └─...
-   ```
+Finally, the directory should be in this structure:
 
-   The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+```text
+.
+├── README.md
+├── myrouter.py
+├── report
+│   ├── 123456789拾佰仟_lab_4.pdf
+│   └── lab_4.pcap
+├── start_mininet.py
+└── testcases
+    └── routertests2.srpy
+```
 
-3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
+Commit the change.
 
-   **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+{% hint style="warning" %}
+**Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+{% endhint %}
+
+After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
+
+```text
+$ git push
+```
+
+After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
 
