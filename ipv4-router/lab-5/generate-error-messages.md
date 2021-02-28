@@ -63,7 +63,7 @@ Note that the test scenario file is not included in this repository, but is avai
 
 Once the Switchyard tests pass, you should test your router in Mininet. There is a `start_mininet.py` script available for building the following network topology:
 
-![router2\_topology](../../.gitbook/assets/router2_topology%20%281%29.png)
+![router2\_topology](../../.gitbook/assets/router2_topology%20%282%29.png)
 
 \(Note that the above topology is not the same as the one implied by the Switchyard tests.\)
 

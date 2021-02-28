@@ -5,24 +5,21 @@
 Get the Lab-1 assignment template codes:
 
 1. Click [Lab-1](https://classroom.github.com/a/Re9pXmXp) and accept this assignment. Wait for a few seconds and refresh the page.
-
 2. Click the URL to the repository on the page which is similar to [https://github.com/nju-cn-course/lab-1-YourName](https://github.com/nju-cn-course/lab-1-YourName).
-
-3. Clone the repository to your local machine. 
-
-   - Click the green “Code” button and click the icon. You will get the URL in your clipboard similar to [https://github.com/nju-cn-course/lab-1-YourName.git](https://github.com/nju-cn-course/lab-1-YourName.git).
+3. Clone the repository to your local machine.
+   * Click the green “Code” button and click the icon. You will get the URL in your clipboard similar to [https://github.com/nju-cn-course/lab-1-YourName.git](https://github.com/nju-cn-course/lab-1-YourName.git).
 
 ![github\_clone](../.gitbook/assets/github_clone.png)
-   
-- Go to a proper directory \(e.g. `~/networkLab`\) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
-   
+
+* Go to a proper directory \(e.g. `~/networkLab`\) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
+
   ```bash
      $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
-     ```
-   
+  ```
+
   After a few seconds, there will be a new directory int you current directory named `Lab-1-YourName`.
-   
-4. Edit the source codes in `Lab-1-YourName` directory following steps below.
+
+* Edit the source codes in `Lab-1-YourName` directory following steps below.
 
 ## Play the Tutorial Again
 

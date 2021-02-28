@@ -51,5 +51,6 @@
   * [Task 5: Testing](lab-7/testing.md)
 * [Appendix](appendix/README.md)
   * [Environment Setup](appendix/environment-setup.md)
+  * [Multithread programming](appendix/multithread-programming.md)
   * [About This Repository](appendix/about-this-repository.md)
 

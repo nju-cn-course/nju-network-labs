@@ -85,11 +85,11 @@ For example, if you want to feedback about lab-1, go to GitHub lab-1 repository 
 
 1. Click “Pull requests”
 
-   ![pull_request](.gitbook/assets/pull_request.png)
+   ![pull\_request](.gitbook/assets/pull_request.png)
 
 2. Click “Feedback” and enter you question in the conversation box.
 
 ## Contribution
 
-The Switchyard testing framework for multithread is still in experimental stage where we need your contribution. For details, please refer to [multithread programming](appendix/multithread-programming.md) when you are doing [Lab-4](ipv4-router/lab-4/README.md). 
+The Switchyard testing framework for multithread is still in experimental stage where we need your contribution. For details, please refer to [multithread programming](appendix/multithread-programming.md) when you are doing [Lab-4](ipv4-router/lab-4/).
 

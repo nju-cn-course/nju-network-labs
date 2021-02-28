@@ -79,7 +79,7 @@ Your task is to implement the logic described above. The start file is named `my
 You will need to carefully structure your code to be able to receive and process incoming packets while you are waiting for replies to ARP requests. A suggested method is to create a queue that contains information about IP packets awaiting ARP resolution. Each time through the main while loop in your code, you can process the items in the queue to see whether an ARP request retransmission needs to be sent. If you receive an ARP reply packet, you could remove an item from the queue, update the ARP table, construct the Ethernet header, and send the packet. You might create a separate class to represent packets in the queue waiting for ARP responses, with the class containing variables to hold the most recent time an ARP request was sent, and the number of retries, among other things.
 
 {% hint style="success" %}
-You *can* create a separate Python thread to handle ARP requests. Programming in multithread is common in network applications and we encourage you to give it a try. Yet Switchyard testing framework for multithread is still in experimental stage which means you may find some issues when testing your code using the TestScenario. However, if you complete the lab in multithread pattern or find out the problem and solve the issue, you will get a **bonus** in the lab. For details please refer to [Multithread Programming](../../appendix/multithread-programming.md).
+You _can_ create a separate Python thread to handle ARP requests. Programming in multithread is common in network applications and we encourage you to give it a try. Yet Switchyard testing framework for multithread is still in experimental stage which means you may find some issues when testing your code using the TestScenario. However, if you complete the lab in multithread pattern or find out the problem and solve the issue, you will get a **bonus** in the lab. For details please refer to [Multithread Programming](../../appendix/multithread-programming.md).
 {% endhint %}
 
 For keeping track of how long it has been since an ARP request has been sent, you can use the built-in `time` module. It has a `time` function that returns the current time in seconds \(as a floating point value\) \(e.g., `time.time()` \# → current time in seconds as a float\).
@@ -109,7 +109,7 @@ Note that the test scenario file is not included in this repository, but is avai
 
 Once the Switchyard tests pass, you should test your router in Mininet. There is a `start_mininet.py` available for building the following network topology:
 
-![router2\_topology](../../.gitbook/assets/router2_topology.png)
+![router2\_topology](../../.gitbook/assets/router2_topology%20%281%29.png)
 
 {% hint style="info" %}
 The above topology is not the same as the one implied by the Switchyard tests.
@@ -151,7 +151,7 @@ client# ping -c2 192.168.100.1
 
 You will see the Wireshark on the `router-eth2` capture these packets.
 
-![router2\_pcap](../../.gitbook/assets/router2_pcap.png)
+![router2\_pcap](../../.gitbook/assets/router2_pcap%20%281%29.png)
 
 Testing your router in the "live" network \(i.e., in Mininet\) is a major step: if it passes all the tests then works in Mininet when trying various examples of pinging hosts, you might have done things correctly!
 

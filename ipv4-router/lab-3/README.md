@@ -12,7 +12,7 @@ This is the first in a series of exercises that have the ultimate goal of creati
 
 The goal of this first stage of building the router is to accomplish item **\#1** above: respond to ARP requests.
 
-Lab-3 assignment in Github Classroom: https://classroom.github.com/a/9QvgOqHw
+Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/9QvgOqHw](https://classroom.github.com/a/9QvgOqHw)
 
 ## Your Tasks
 
@@ -63,8 +63,8 @@ Finally, the directory should be in this structure:
 ├── README.md
 ├── myrouter.py
 ├── report
-│   ├── 123456789拾佰仟_lab_3.pdf
-│   └── lab_3.pcap
+│   ├── 123456789拾佰仟_lab_3.pdf
+│   └── lab_3.pcap
 ├── start_mininet.py
 └── testcases
     ├── routertests1.srpy

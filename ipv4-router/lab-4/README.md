@@ -37,7 +37,7 @@ This is the second in a set of exercises that have the ultimate goal of creating
 
 The goal of this stage is to accomplish **\#2** and **\#3** above.
 
-Lab-4 assignment in Github Classroom: https://classroom.github.com/a/pFaSMI1U
+Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/pFaSMI1U](https://classroom.github.com/a/pFaSMI1U)
 
 ## Your Tasks
 
@@ -88,8 +88,8 @@ Finally, the directory should be in this structure:
 ├── README.md
 ├── myrouter.py
 ├── report
-│   ├── 123456789拾佰仟_lab_4.pdf
-│   └── lab_4.pcap
+│   ├── 123456789拾佰仟_lab_4.pdf
+│   └── lab_4.pcap
 ├── start_mininet.py
 └── testcases
     └── routertests2.srpy
