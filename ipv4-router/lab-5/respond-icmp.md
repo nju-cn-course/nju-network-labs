@@ -46,7 +46,7 @@ Prior to making a forwarding decision for an incoming IP packet \(i.e., a forwar
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_5/myrouter.py`.
+Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
 ✅ In the report, show how you implement the logic of responding to ICMP echo requests.
 

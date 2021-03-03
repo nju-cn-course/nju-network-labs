@@ -20,7 +20,7 @@ The middlebox should read a text file to get parameters. Parse this file to setu
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_6/middlebox.py`.
+Your task is to implement the logic described above. The start file is named `middlebox.py`.
 
 ✅ In the report, show how you implement the features of middlebox.
 

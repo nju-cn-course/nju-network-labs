@@ -36,7 +36,7 @@ You will need to encode the sequence number in to your packets, which will be in
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_6/blastee.py`.
+Your task is to implement the logic described above. The start file is named `blastee.py`.
 
 ✅ In the report, show how you implement the features of blastee.
 

@@ -97,7 +97,7 @@ Once the blaster finishes transmission \(which happens upon successfully receivi
 
 ## Coding
 
-Your task is to implement the logic described above. The start file is named `lab_6/blaster.py`.
+Your task is to implement the logic described above. The start file is named `blaster.py`.
 
 ✅ In the report, show how you implement the features of blaster.
 

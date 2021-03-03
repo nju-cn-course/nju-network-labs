@@ -2,7 +2,9 @@
 
 ## Testing your code
 
-Good news: you aren't going to write test cases to test your implementation. Bad news: you still need to test your code. In order to make sure that your blaster, blastee and middlebox function correctly you will have to use Mininet. The process will be explained below.
+Good news: you aren't going to write test cases to test your implementation. 
+
+Bad news: you still need to test your code. In order to make sure that your blaster, blastee and middlebox function correctly you will have to use Mininet. The process will be explained below.
 
 ## Running your code
 
@@ -32,7 +34,7 @@ Instead of running your implementations with test scenarios, you will be running
 
 You will need to specify some parameters for each agent when running them. To my knowledge, it is not possible to pass custom parameters to Switchyard \(probably why you assumed there was a forwarding\_table.txt file in your working directory in last project as well\). However, this is not going to keep us from passing parameters to our agents. Just like in the previous project you will assume that there will be 3 files in your working directory: **blaster\_params.txt**, **blastee\_params.txt** and **middlebox\_params.txt**.
 
-Your task is: run your code in Mininet as described above. Using different parameters to get different results and analyze them. Using Wireshark on different agent to prove that your blaster, blastee and middlebox function correctly.
+Your task is: run your code in Mininet as described above. Using different parameters to get different results and analyze them. Using Wireshark on different agent to prove that your blaster, blastee and middlebox function is correct.
 
 ✅ Write the procedure and analysis in your report with screenshots.
 

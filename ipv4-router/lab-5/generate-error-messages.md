@@ -24,25 +24,41 @@ Again, refer to the Switchyard documentation on [ICMP headers](https://pavinberg
 
 ### Coding
 
-Your task is to implement the logic described above. The start file is named `lab_5/myrouter.py`.
+Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
 For creating any ICMP error packet \(i.e., any of the packets in the table above\), you must include as the "data" payload of the ICMP header up to the first 28 bytes of the original packet, starting with the IPv4 header. \(That is, your ICMP message will include part of the packet that caused the problem.\) The switchyard documentation has an example of doing this, and an example is also given below. Also, be careful to make sure that the newly constructed IP packet you send has a non-zero TTL --- by default, when you create a new IPv4 header, the TTL value is zero \(0\). A code formula for including the "dead" packet in the ICMP payload is shown below:
 
-> > > origpkt = Ethernet\(\) + IPv4\(\) + ICMP\(\) \# assume this is the packet that caused the error i = origpkt.get\_header\_index\(Ethernet\) del origpkt\[i\] \# remove Ethernet header --- the errored packet contents sent with
-> > >
-> > > ```text
-> > >        # the ICMP error message should not have an Ethernet header
-> > > ```
-> > >
-> > > icmp = ICMP\(\) icmp.icmptype = ICMPType.TimeExceeded icmp.icmpdata.data = origpkt.to\_bytes\(\)\[:28\] str\(icmp\) "ICMP TimeExceeded:TTLExpired 28 bytes of raw payload \(b'E\x00\x00\x1c\x00\x00\x00\x00\x00\x01'\) OrigDgramLen: 0" ip = IPv4\(\) ip.protocol = IPProtocol.ICMP \# protocol defaults to ICMP;
-> > >
-> > > ```text
-> > >                           # setting it explicitly here anyway
-> > > ```
-> > >
-> > > ## would also need to set ip.src, ip.dst, and ip.ttl to something non-zero
-> > >
-> > > pkt = ip + icmp print\(pkt\) IPv4 0.0.0.0-&gt;0.0.0.0 ICMP \| ICMP TimeExceeded:TTLExpired 28 bytes of raw payload \(b'E\x00\x00\x1c\x00\x00\x00\x00\x00\x01'\) OrigDgramLen: 28
+```python
+# assume this is the packet that caused the error
+origpkt = Ethernet() + IPv4() + ICMP() 
+
+i = origpkt.get_header_index(Ethernet)
+# remove Ethernet header --- the errored packet contents sent with
+# the ICMP error message should not have an Ethernet header
+del origpkt[i]
+
+icmp = ICMP()
+icmp.icmptype = ICMPType.TimeExceeded
+icmp.icmpdata.data = origpkt.to_bytes()[:28]
+print(icmp)
+# ICMP TimeExceeded:TTLExpired 28 bytes of raw payload 
+# (b'E\x00\x00\x1c\x00\x00\x00\x00\x00\x01') OrigDgramLen: 0
+
+ip = IPv4()
+ip.protocol = IPProtocol.ICMP
+# protocol defaults to ICMP
+# setting it explicitly here anyway
+
+# would also need to set ip.src, ip.dst, and ip.ttl to 
+# something non-zero
+
+pkt = ip + icmp
+print(pkt)
+# IPv4 0.0.0.0->0.0.0.0 ICMP | ICMP TimeExceeded:TTLExpired 
+# 28 bytes of raw payload (b'E\x00\x00\x1c\x00\x00\x00\x00\x00\x01')
+# OrigDgramLen: 28
+
+```
 
 ✅ In the report, show how you implement the logic of generating ICMP error messages.
 

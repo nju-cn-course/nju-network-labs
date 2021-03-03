@@ -4,6 +4,8 @@
 
 In your final assignment you are going to build a reliable communication library in Switchyard that will consist of 3 agents. At a high level, a **blaster** will send data packets to a **blastee** through a **middlebox**. As you should all know by now, IP only offers a best-effort service of delivering packets between hosts. This means all sorts of bad things can happen to your packets once they are in the network: they can get lost, arbitrarily delayed or duplicated. Your communication library will provide additional delivery guarantees by implementing some basic mechanisms at the blaster and blastee. Let's move on to the details.
 
+Lab-6 assignment in Github Classroom: [https://classroom.github.com/a/0zPMNWtr](https://classroom.github.com/a/0zPMNWtr)
+
 ## Your Tasks
 
 In the source directory for this exercise, you can find the starter files: `middlebox.py`, `blastee.py` and `blaster.py`.
@@ -52,38 +54,46 @@ Please carefully read the [FAQ](faq.md) section, for more specific details regar
 
 ## Handing it in
 
+Create a directory named `report/` in your repository and place your report, capture files and other materials in it.
+
 ### Report
 
-We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/). You need to submit the report in your repository named `<学号><姓名>_lab_6`. The format of your report can be Microsoft Doc or PDF. An example is `123456789拾佰仟_lab_6.pdf`.
+We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_6.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_6.pdf`.
 
-### Submit to NJU GitLab
+### Capture file
 
-To submit your work, you need to do the following things.
+The capture file's name should be `lab_6.pcapng` or `lab_6.pcap`.
 
-1. Modify your code and complete your report.
-2. When you have done your work, put your report and code in the folder `lab_6` then commit them. Tag the commit named `<学号/lab_6>` which you want to submit. An example is `123456789/lab_6`. Finally your project will look like
+### Submit to GitHub Classroom
 
-   ```text
-   switchyard
-     ├─docs/
-     ├─.../
-   + ├─lab_6/
-   + │ ├─123456789拾佰仟_lab_6.pdf
-   + │ ├─middlebox.py
-   + │ ├─middlebox_params.txt
-   + │ ├─blastee.py
-   + │ ├─blastee_params.txt
-   + │ ├─blaster.py
-   + │ ├─blaster_params.txt   
-     │ ├─...
-   + │ └─start_mininet.py
-     ├─.gitignore
-     └─...
-   ```
+Finally, the directory should be in this structure:
 
-   The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+```text
+.
+├── README.md
+├── blastee.py
+├── blastee_params.txt
+├── blaster.py
+├── blaster_params.txt
+├── middlebox.py
+├── middlebox_params.txt
+├── report
+│   ├── 123456789拾佰仟_lab_6.pdf
+│   └── lab_6.pcap
+└── start_mininet.py
+```
 
-3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
+Commit the change.
 
-   **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+{% hint style="warning" %}
+**Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+{% endhint %}
+
+After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
+
+```text
+$ git push
+```
+
+After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
 

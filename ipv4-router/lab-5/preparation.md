@@ -1,32 +1,21 @@
 # Task 1: Preparation
 
-You can start with copying the content of `lab_4/myrouter.py` to `lab_5/myrouter.py`.
+You can start with copying the content from Lab-4 to Lab-5.
 
-1. Create a directory named `lab_5` in `switchyard`.
-2. Copy `lab_4/start_mininet.py` to `lab_5/start_mininet.py`.
-3. Copy `lab_4/myrouter.py` to `lab_5/myrouter.py`.
-4. Copy `lab_4/forwarding_table.txt` to `lab_5/forwarding_table.txt`.
+1. Clone the [Lab-5](https://classroom.github.com/a/VlkKYsUN) assignment template codes. You should focus on `myrouter.py` to implement our router.
+2. Copy `start_mininet.py` from Lab-4 to this repository.
+3. Copy `myrouter.py` from Lab-4 to this repository.
 
-Though we will provide the test files, they are incomprehensible. So you should still write test scenarios that test all aspects of your code. You can find our test files below. Download it and you will use it to test your switch later. You can unzip the test files we provide into the folder `lab_5`.
-
-[Download compiled test cases here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/).
-
-Finally, your project will look like
+Finally, your project will look like:
 
 ```text
-switchyard
-  ├─docs/
-  ├─.../
-+ ├─lab_5/
-+ │ ├─myrouter.py
-+ │ ├─forwarding_table.txt
-  │ ├─...
-+ │ └─start_mininet.py
-  ├─.gitignore
-  └─...
+.
+├── README.md
+├── forwarding_table.txt
+├── myrouter.py
+├── start_mininet.py
+└── testcases
+    ├── routertests3.srpy
+    └── routertests3_template.py
 ```
-
-{% hint style="warning" %}
-All of your modifications should be done on the files under your directory `lab_5`. We will check and compare the **git commits** to judge the originality of your work. So remember to commit every time you complete one small task.
-{% endhint %}
 
