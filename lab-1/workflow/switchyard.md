@@ -18,49 +18,46 @@ We expect that it will take you up to 4 days on this. It may be a little bit tri
 
 You can find instructions [here](https://gitee.com/pavinberg/switchyard), the repository of Switchyard on Gitee. A quick note here for Ubuntu. Notice that Switchyard needs python 3.6+ .
 
-If you can't find the folder `switchyard` in your home dictionary, you need to get the source code of Switchyard.
+If you downloaded the Ubuntu VM image from [NJU box](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/), you can **skip** the first two steps.
 
-```text
-$ git clone https://gitee.com/pavinberg/switchyard.git
-```
+1. Get the source code of Switchyard in your home directory \(or anywhere you like\) by input the commad below which will create a directory named `switchyard`
 
-Then you need to get some dependent softwares and libraries.
+   ```text
+   $ git clone https://gitee.com/pavinberg/switchyard.git
+   ```
 
-```text
-$ sudo apt-get install libffi-dev libpcap-dev python3-dev python3-pip
-```
+2. Get some dependent softwares and libraries
 
-You can install Switchyard and the necessary related packages in an isolated Python virtual environment \("venv"\), which is the recommended path, or in the system directories, which is often less desirable. The venv route is highly suggested, since it makes all installation "local" and can easily destroyed, cleaned up, and recreated.
+   ```text
+   $ sudo apt-get install libffi-dev libpcap-dev python3-dev python3-pip
+   ```
 
-To create a new virtual environment, you could do something like the following **under your workspace folder `switchyard`**.
+3. Install Switchyard and the necessary related packages in an isolated Python virtual environment \("venv"\), which is the recommended path, or in the system directories, which is often less desirable. The venv route is highly suggested, since it makes all installation "local" and can easily destroyed, cleaned up, and recreated.  
+   To **create** a new virtual environment, you could do something like the following under your workspace folder `switchyard`.
 
-```bash
-$ python3 -m venv syenv
-```
+   ```bash
+   $ python3 -m venv syenv
+   ```
 
-{% hint style="warning" %}
-Many students create their virtual environment under `~` so there is a folder `~/syenv`, which is **WRONG**. The right path is `~/switchyard/syenv`.
-{% endhint %}
+4. After this command, you will find a folder `syenv` in `switchyard`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to **activate** the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
-After this command, you will find a folder `syenv` in `switchyard`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
+   ```bash
+   $ source ./syenv/bin/activate
+   ```
 
-```bash
-$ source ./syenv/bin/activate
-```
+   Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the venv module.
 
-Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the venv module.
+5. Finally, **install Switchyard**. All the required additional libraries should be automatically installed, too. ****
 
-Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
+   ```bash
+   $ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
+   ```
 
-```bash
-$ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
-```
+6. At last, we suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore` if there is not.
 
-Then I suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore` if there is not.
-
-```text
-syenv/
-```
+   ```text
+   syenv/
+   ```
 
 ## Prepare Your Test Script
 

@@ -5,6 +5,9 @@ Switchyard and Mininet are developed in Python. So you need to program in Python
 * [廖雪峰的 Python 3 教程](https://www.liaoxuefeng.com/wiki/1016959663602400)
 * [Python 教程](https://docs.python.org/zh-cn/3/tutorial/index.html)
 * [Learn Python - Free Interactive Python Tutorial](https://www.learnpython.org/)
+* [Python 编程：从入门到实践](https://box.nju.edu.cn/library/a62f5af1-85e5-4333-a00a-0e9942bcf3d7/ComputerNetwork2021Spring/)
+
+Once you are experienced in Python, we recommend [RealPython](https://realpython.com) to learn the advanced usage of Python modules.
 
 Our VM is Python preinstalled \(both version 2 and 3\) so you can skip installing. If you setup the environment on your own, you need to install Python 2 and Python 3.6+. Topics you need to know about Python are listed here:
 

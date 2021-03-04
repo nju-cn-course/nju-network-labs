@@ -24,9 +24,7 @@ You will need to build the forwarding table from two sources:
 
   \(or `net.ports()`\) method
 
-* and by reading in the contents of a file
-
-  named `forwarding_table.txt`.
+* and by reading in the contents of a file named `forwarding_table.txt`.
 
 An example forwarding table file is found in the project directory, and is also recreated each time you either run the test scripts or run your router in Mininet. Your code can simply assume that a file named `forwarding_table.txt` exists in the current working directory.
 
@@ -36,7 +34,7 @@ Your forwarding table _may_ be different for the test scenario and for Mininet t
 
 Note that for each interface object in the list obtained from `net.interfaces()` \(or, equivalently, `net.ports()`\), the IP address assigned to the interface and the network mask are available \(see the Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)\).
 
-The file `forwarding_table.txt` can be assumed to exist in the same directory where your router is starting up \(again, this file is produced by the Switchyard test scenario or by the Mininet startup script\), and is structured such that each line contains 4 space-separated items: the network address, the subnet mask, the next hop address, and the interface through which packets should be forwarded. Here are some example lines:
+The file `forwarding_table.txt` can be assumed to exist in the same directory where your router is starting up \(again, this file is produced by the Switchyard test scenario or by the Mininet startup script\), and is structured such that each line contains 4 space-separated items: the **network address**, the **subnet mask**, the **next hop address**, and the **interface** through which packets should be forwarded. Here are some example lines:
 
 ```text
 172.16.0.0 255.255.255.0 192.168.1.2 router-eth0
@@ -44,6 +42,19 @@ The file `forwarding_table.txt` can be assumed to exist in the same directory wh
 ```
 
 In the first line, the network address is `172.16.0.0` and the subnet mask is `255.255.0.0`. The next hop IP address is `192.168.1.2`, and the interface through which to forward packets is named `router-eth0`.
+
+> Now let's give you an example to create your routing table:
+>
+> If you have a router with 2 interfaces. Their IP addresses are `192.168.1.1` and `172.16.1.1`  both with netmask `255.255.255.0` . Then you should first have two items in your routing table:
+>
+> | network address | subnet address | next hop address | interface |
+> | :--- | :--- | :--- | :--- |
+> | 192.168.1.0 | 255.255.255.0 | 0.0.0.0 | router-eth0 |
+> | 172.16.1.0 | 255.255.255.0 | 0.0.0.0 | router-eth1 |
+>
+> The IP address `0.0.0.0` means that if a packet's destination IP matches this network address, just throw the packet out of this interface, expecting that the next hop is the destination.
+>
+> At last, append the items read from `forwarding_table.txt`  to the routing table.
 
 ### Match Destination IP Addresses against Forwarding Table
 
