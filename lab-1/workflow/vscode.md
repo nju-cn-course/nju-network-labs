@@ -1,6 +1,6 @@
 # VS Code
 
-You can use Visual Studio Code \(VSC\) to develope your projects. I will show how to install it and introduce some plugins may help you. This tutorial is prepared for those who want to take full control of Switchyard in one editor. We use Ubuntu 18.04 here. As we have provided the VM image with VSC preinstalled, you can skip the installation.
+You can use Visual Studio Code \(VSC\) to develope your projects. Visual Studio Code is currently one of the most welcomed editor. It is open-source and has a large number of extensions. I will show how to install it and introduce some plugins may help you. This tutorial is prepared for those who want to take full control of Switchyard in one editor. We use Ubuntu 18.04 here. As we have provided the VM image with VSC preinstalled, you can skip the installation.
 
 We expect that you will spend several hours on this.
 
@@ -47,4 +47,13 @@ Set break point in your code and click the configuration to debug.
 ## Run Switchyard
 
 This part is not VSC integrated, you need to run Switchyard in the terminal. Read the section [Switchyard](switchyard.md) for more.
+
+## Other editor/IDE
+
+You of course can use other editors or IDEs if you prefer. Some other powerful tools you can choose are:
+
+* IDE: PyCharm, Visual Studio
+* Editor: Vim, Emacs
+
+However, if you have always been using an IDE, we recommend you try out an editor.
 

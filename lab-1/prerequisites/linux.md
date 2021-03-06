@@ -11,6 +11,8 @@ You are also free to use your favorite virtualization software for the lab assig
 
 ## Install VirtualBox
 
+VirtualBox is a free, open-soure, cross-platform VM hypervisor.
+
 First download the VirtualBox installer, you can find it [here](https://www.virtualbox.org/wiki/Download_Old_Builds_6_0). You can choose the latest VirtualBox installer. If the operating system of your host is Windows, then click the download link "Windows hosts". Another tool you need to download is "Extension Pack" which allows you resize your Linux display in VirtualBox. We highlight them in the picture below.
 
 ![VirtualBox download](../../.gitbook/assets/vb-download.png)
@@ -32,7 +34,7 @@ You can learn about importing a VM image in VirtualBox [here](https://docs.oracl
 
 Start your VM and check if your Linux runs well. You will find the display size is fixed to 800×600. To resize it you need to install the VirtualBox extension pack into your VM.
 
-You can learn about installing the extension at [here](https://support.huaweicloud.com/bestpractice-ims/zh-cn_topic_0104740159.html).
+You can learn about installing the extension at [here](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/intro-installing.html).
 
 ## Use Linux
 
@@ -44,6 +46,13 @@ Most of our operations will be completed inside the terminal. You need to know
 * Run programs
 
 A tutorial of Linux can be found at [鸟哥的 Linux 私房菜 —— 基础学习篇](http://cn.linux.vbird.org/linux_basic/linux_basic.php). Select the part you want to know and read it.
+
+## Other hypervisor
+
+Instead of VirtualBox, you can also choose other VM hypervisors. Here we list some of them:
+
+* VMware Workstation Player: free on Windows and Linux
+* VMware Fusion: free on macOS 11.0.0+ \(Big Sur\)
 
 ## Customize Your own VM
 

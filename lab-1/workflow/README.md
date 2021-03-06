@@ -9,3 +9,5 @@ You will see an example of the network hub, a network hardware device for connec
 * [Wireshark](wireshark.md)
 * [Switchyard](switchyard.md)
 
+![Overview](../../.gitbook/assets/overview.png)
+

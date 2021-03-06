@@ -14,7 +14,7 @@ Get the Lab-1 assignment template codes:
       $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
      ```
 
-     After a few seconds, there will be a new directory int you current directory named `Lab-1-YourName`.
+     After a few seconds, there will be a new directory in you current directory named `Lab-1-YourName`.
 
    * Edit the source codes in `Lab-1-YourName` directory following steps below.
 
