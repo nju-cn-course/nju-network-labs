@@ -13,9 +13,11 @@ You are also free to use your favorite virtualization software for the lab assig
 
 VirtualBox is a free, open-soure, cross-platform VM hypervisor.
 
-First download the VirtualBox installer, you can find it [here](https://www.virtualbox.org/wiki/Download_Old_Builds_6_0). You can choose the latest VirtualBox installer. If the operating system of your host is Windows, then click the download link "Windows hosts". Another tool you need to download is "Extension Pack" which allows you resize your Linux display in VirtualBox. We highlight them in the picture below.
+First download the VirtualBox installer, you can find it [here](https://www.virtualbox.org/wiki/Downloads). You can choose the latest VirtualBox installer. If the operating system of your host is Windows, then click the download link "Windows hosts". Download "OS X hosts" for macOS. Another tool you need to download is "Extension Pack" which allows you resize your Linux display in VirtualBox. 
 
 ![VirtualBox download](../../.gitbook/assets/vb-download.png)
+
+If you have network issue when visiting the official website, we provide the installers in [NJU box](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/).
 
 After completing download, install VirtualBox first then the extension pack.
 
