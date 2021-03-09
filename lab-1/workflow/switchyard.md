@@ -8,7 +8,7 @@ We expect that you have complete [How to use Mininet](mininet.md) and [How to us
 
 * `examples/start_mininet.py`
 * `examples/myhub.py`
-* `examples/hubtests.py`
+* `examples/myhub_testscenario.py`
 
 The [Switchyard documentation](https://pavinberg.gitee.io/switchyard/) also uses these files to show many useful APIs. Again, this document is very important. You need to read it whenever you get confused with the APIs or Switchyard itself. In this section we do not show you the APIs but the workflow and a little code explanation.
 
@@ -79,7 +79,7 @@ scenario = TestScenario("test example")
 
 For more about writing tests, you need to read [Test Scenario Creation](https://pavinberg.gitee.io/switchyard/test_scenario_creation.html).
 
-In later lab assignments, you need to construct test script yourself. But this time we have a template test script helps you. Here is the test script `examples/test_myhub.py` for our hub.
+In later lab assignments, you need to construct test script yourself. But this time we have a template test script helps you. Here is the test script `examples/myhub_testscenario.py` for our hub.
 
 ```python
 #!/usr/bin/env python3
@@ -255,7 +255,7 @@ $ source ./syenv/bin/activate
 You can test your hub code with your test file in Switchyard test mode. At minimum you would invoke `swyard` as follows.
 
 ```bash
-$ swyard -t examples/test_myhub.py examples/myhub.py
+$ swyard -t examples/myhub_testscenario.py examples/myhub.py
 ```
 
 Note that the `-t` option puts swyard in test mode. The argument to the `-t` option should be the name of the test scenario to be executed, and the final argument is the name of your code.

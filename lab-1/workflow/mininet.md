@@ -238,7 +238,7 @@ def reset_macs(net, node, macbase):
         ifnum += 1
 
     for intf in node_object.intfList():
-        print node, intf, node_object.MAC(intf)
+        print(node, intf, node_object.MAC(intf))
 
 
 def set_route(net, fromnode, prefix, nextnode):
@@ -285,12 +285,16 @@ $ sudo python examples/start_mininet.py
 In this topology, hosts can not `ping` each other because the device named `hub` has no routing rules configured, so exit here. In the section of Switchyard, we will make it work.
 
 {% hint style="info" %}
-Mininet topology scripts are written in Python 2. If you want to use Python 3 instead, you should install `mininet` module of Python 3, i.e. run command:
+Our VM provides Python mininet module for Python 2. If you want to use Python 3 instead, you should install `mininet` module of Python 3, i.e. run command:
 
 ```text
 $ pip3 install mininet
 ```
 
-Then run the script with `python3`.
+Then run the script with`python3:`
+
+```bash
+$ sudo python3 examples/start_mininet.py
+```
 {% endhint %}
 
