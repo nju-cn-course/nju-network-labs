@@ -26,6 +26,8 @@ If you downloaded the Ubuntu VM image from [NJU box](https://box.nju.edu.cn/d/f3
    $ git clone https://gitee.com/pavinberg/switchyard.git
    ```
 
+   This source code of Switchyard is just for your practise. We actually don't need you to use the source code here nor use the framework.
+
 2. Get some dependent softwares and libraries
 
    ```text
@@ -47,7 +49,7 @@ If you downloaded the Ubuntu VM image from [NJU box](https://box.nju.edu.cn/d/f3
 
    Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the venv module.
 
-5. Finally, **install Switchyard**. All the required additional libraries should be automatically installed, too. ****
+5. Finally, **install Switchyard**. All the required additional libraries should be automatically installed, too. _\*\*_
 
    ```bash
    $ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git

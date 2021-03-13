@@ -11,7 +11,7 @@
     * [Mininet](lab-1/workflow/mininet.md)
     * [Wireshark](lab-1/workflow/wireshark.md)
     * [Switchyard](lab-1/workflow/switchyard.md)
-  * [Task 3: GitHub Classroom](lab-1/github-classroom.md)
+  * [Task 3: Hand in & Find answers](lab-1/github-classroom.md)
   * [Task 4: Modification](lab-1/modification.md)
 * [Lab 2: Learning Switch](lab-2/README.md)
   * [Task 1: Preparation](lab-2/preparation.md)

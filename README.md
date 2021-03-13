@@ -12,6 +12,8 @@ Website: [https://cs.nju.edu.cn/lwz/networks/](https://cs.nju.edu.cn/lwz/network
 
 Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)
 
+Discussions: [http://114.212.81.3:8899/](http://114.212.81.3:8899/) \(NJU campus network only\)
+
 ## Contact
 
 Course QQ group: 685928389
@@ -30,7 +32,7 @@ Out: 2021-3-10, due 2021-3-24.
 
 ### Lab 2: Learning Switch
 
-Out: 2021-3-17, due 2021-3-31.
+Out: 2021-3-24, due 2021-4-7.
 
 [Start the lab here](lab-2/)
 
@@ -40,25 +42,25 @@ Out: 2021-3-17, due 2021-3-31.
 
 #### Lab 3: Respond to ARP
 
-Out: 2021-3-31, due 2021-4-14.
+Out: 2021-4-7, due 2021-4-21.
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2021-4-14, due 2021-4-28.
+Out: 2021-4-21, due 2021-5-8.
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2021-4-28, due 2021-5-12.
+Out: 2021-5-8, due 2021-5-19.
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2021-5-12, due 2021-6-2.
+Out: 2021-5-19, due 2021-6-2.
 
 [Start the lab here](lab-6/)
 
