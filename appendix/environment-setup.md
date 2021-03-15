@@ -30,7 +30,7 @@ You'll need to replace `syenv` with whatever you named the virtual environment. 
 Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
 
 ```text
-python3 -m pip install switchyard
+python3 -m pip install .
 ```
 
 Then I suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore`
