@@ -64,7 +64,7 @@ Out: 2021-5-19, due 2021-6-2.
 
 [Start the lab here](lab-6/)
 
-### Lab 7: Firewall
+### Lab 7: ~~Firewall~~
 
 Out: 2021-6-2, due 2021-6-23.
 
