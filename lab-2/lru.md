@@ -20,7 +20,7 @@ Your switch may have a table like:
 | ... | ... | ... |
 
 {% hint style="info" %}
-You may notice that it is not efficient to update the age of all other rules every time you use a table rule. Because it the time complexity is O(N) for each table query operation, where N is the number of rules in table. So more efficient implementation of LRU algorithm is encouraged in this lab.
+You may notice that it is not efficient to update the age of all other rules every time you use a table rule. Because it the time complexity is O(N) for each table query operation, where N is the number of rules in the table. So more efficient implementation of LRU algorithm is encouraged in this lab.
 {% endhint %}
 
 ## Coding
