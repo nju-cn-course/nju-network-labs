@@ -20,7 +20,7 @@ Your switch may have a table like:
 | ... | ... | ... |
 
 {% hint style="info" %}
-You may notice that it is not efficient to update the age of all other rules every time you use a table rule. Because the time complexity is O(N) for each table query operation, where N is the number of rules in the table. Besides, when you need to evict a table entry, you have to iterate all the table rules to find the item to be evicted. Therefore, more efficient implementation of LRU algorithm is encouraged in this lab.
+You may notice that it is not efficient to update the age of all other rules every time you use a table rule. Because the time complexity is O\(N\) for each table query operation, where N is the number of rules in the table. Besides, when you need to evict a table entry, you have to iterate all the table rules to find the item to be evicted. Therefore, more efficient implementation of LRU algorithm is encouraged in this lab.
 {% endhint %}
 
 ## Coding
@@ -29,13 +29,13 @@ Your task is to implement the logic in the above flowchart, using the Switchyard
 
 ## Testing
 
-Test your switch with the test file `testcases/switchtests_lru.srpy` we provide.
+Test your switch with the test file `testcases/myswitch_lru_testscenario.srpy` we provide.
 
-✅ In the report, show the test result of your switch.
-\(Optional\) If you have written the test files yourself, show how you test the LRU algorithm.
+✅ In the report, show the test result of your switch. \(Optional\) If you have written the test files yourself, show how you test the LRU algorithm.
 
 ## Deploying
 
 Run your switch in Mininet.
 
 ✅ In Mininet, test the LRU algorithm. Prove that the LRU algorithm works with your testing procedure in the report.
+

@@ -42,7 +42,7 @@ To run your switch in Mininet, run the `start_mininet.py` custom topology script
 To start up Mininet using this script, just type:
 
 ```bash
-$ sudo python lab_2/start_mininet.py
+$ sudo python start_mininet.py
 ```
 
 Once Mininet starts up, you should open a terminal window on the Mininet node named "switch":

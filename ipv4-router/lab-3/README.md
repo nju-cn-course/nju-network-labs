@@ -16,7 +16,7 @@ Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/9QvgOqHw](
 
 ## Your Tasks
 
-In the source directory for this exercise, there is a Python file to use as a starter template: `myrouter.py`. This file contains the outline of a Router class, and currently contains a constructor \(`__init__`\) method and a `router_main` method. This is just a starter template: you can refactor and redesign the code in any way you like.
+In the source directory for this exercise, there is a Python file to use as a starter template: `myrouter.py`. This file contains the outline of a Router class, and currently contains a constructor \(`__init__`\) method, a `start` method and a `handle_packet` method. This is just a starter template: you can refactor and redesign the code in any way you like.
 
 The main task for this exercise is to modify the Router class to do the following:
 
@@ -67,8 +67,8 @@ Finally, the directory should be in this structure:
 │   └── lab_3.pcap
 ├── start_mininet.py
 └── testcases
-    ├── routertests1.srpy
-    └── routertests1full.srpy
+    ├── myrouter1_testscenario.srpy
+    └── myrouter1full_testscenario.srpy
 ```
 
 Commit the change.

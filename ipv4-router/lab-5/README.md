@@ -92,8 +92,8 @@ Finally, the directory should be in this structure:
 │   └── lab_5.pcap
 ├── start_mininet.py
 └── testcases
-    ├── routertests3.srpy
-    └── routertests3_template.py
+    ├── myrouter3_testscenario.srpy
+    └── myrouter3__testscenario_template.py
 ```
 
 Commit the change.

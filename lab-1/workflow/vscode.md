@@ -24,7 +24,7 @@ Open the folder of Switchyard in VSC. You can open files in the explorer and edi
 
 Then there are some plugins you may want to install. For Python, check this extension and install it.
 
-![VSC-python](../../.gitbook/assets/vscode-python.png)
+![VSC-python](../../.gitbook/assets/vscode-python%20%281%29.png)
 
 Next open any Python files and you will see a pop-up message ask you whether you want to install a linter. Pylint is enough to use so install it.
 
@@ -32,11 +32,11 @@ Next open any Python files and you will see a pop-up message ask you whether you
 
 You have got almost every thing you need here. But you may what to format your document by right click on your editor and choose "Format Document". VSC will tell you that you need to install a formatter. Yapf is better for me but you are free to use others.
 
-![VSC-format](../../.gitbook/assets/vscode-format.gif)
+![VSC-format](../../.gitbook/assets/vscode-format%20%281%29.gif)
 
 ## Switch Python Virtual Environment
 
-We recommand using a virtual environment of Python for Switchyard module. We introduce this in Switchyard section that you need to activate the environment for Switchyard to be used. However, this activation **ONLY** takes effect in that exactly one terminal session, which means that the VS Code has no idea where is your Switchyard so that it cannot support features like code completion. 
+We recommand using a virtual environment of Python for Switchyard module. We introduce this in Switchyard section that you need to activate the environment for Switchyard to be used. However, this activation **ONLY** takes effect in that exactly one terminal session, which means that the VS Code has no idea where is your Switchyard so that it cannot support features like code completion.
 
 To solve this, tell VS Code to switch to the virtual environment you created.
 
@@ -48,7 +48,7 @@ Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command
 
 You can also set this in your workspace settings for running taks below.
 
-Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command Pallette_ and type "Preferences: Open Workspace Settings". This will create a `.vscode/settings.json` file in your workspace. 
+Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command Pallette_ and type "Preferences: Open Workspace Settings". This will create a `.vscode/settings.json` file in your workspace.
 
 Edit `.vscode/settings.json` like this:
 
@@ -104,16 +104,16 @@ Now let's see what is configured in the `tasks.json` . Recall that we normally r
 $ swyard -t examples/myhub_testscenario.py example/myhub.py
 ```
 
-Line 9 of `tasks.json` indicates that we want to run the exact Python we configured in `settings.json` as `python.pythonPath` . module `switchyard.swyard`  \(short for `python -m switchyard.swyard` \), which is the exactly `swyard` command we run when we want to start Switchyard. 
+Line 9 of `tasks.json` indicates that we want to run the exact Python we configured in `settings.json` as `python.pythonPath` . module `switchyard.swyard` \(short for `python -m switchyard.swyard` \), which is the exactly `swyard` command we run when we want to start Switchyard.
 
-Line 10-16 store the arguments for `swyard` command to run. 
+Line 10-16 store the arguments for `swyard` command to run.
 
-* `{fileDirname}/${fileBasenameNoExtension}_testscenario.py` in `launch.json` uses some _predefined variables_ \(that starts with '$"\) in VS Code: 
+* `{fileDirname}/${fileBasenameNoExtension}_testscenario.py` in `launch.json` uses some _predefined variables_ \(that starts with '$"\) in VS Code:
 
   * `${fileDirname}` : the directory name of current opened file. So when we opened `examples/myhub.py` in the editor, the `${fileDirname}` matches the directory of `examples` 
   * `${fileBasenameNoExtension}` : the base name of current file with no extension which means when we opened `examples/myhub.py` , this variable matches `myhub` 
 
-  So when we join the variables above, we will have 
+  So when we join the variables above, we will have
 
   `${fileDirname}/${fileBasenameNoExtension}_testscenario.py`
 
@@ -121,9 +121,9 @@ Line 10-16 store the arguments for `swyard` command to run.
 
   `"examples" + "/" + "myhub" "_testscenario.py"`
 
-  which results in 
+  which results in
 
-  `examples/myhub_testscenario.py` 
+  `examples/myhub_testscenario.py`
 
 * `${file}` is the current file name which in this case is `examples/myhub.py` .
 
@@ -138,17 +138,15 @@ You may wonder why this command is more complicated. The answer lies in the that
 
 ## Debug Switchyard with VSC
 
-[Switchyard document about debug](https://jsommers.github.io/switchyard/test_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pbd with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration. 
+[Switchyard document about debug](https://jsommers.github.io/switchyard/test_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pbd with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration.
 
-For example, if you want to debug `examples/myhub.py` with `examples/myhub_testscenario.py`, you need to create a `launch.json` for configuration. 
+For example, if you want to debug `examples/myhub.py` with `examples/myhub_testscenario.py`, you need to create a `launch.json` for configuration.
 
 1. Click the "Run and debug" icon in Activity Bar on the left \(which is usually a little beetle\), and click "create a launch.json file". Then choose "Python file". This will create a file named `.vscode/launch.json` in your opened directory which stores the configuration of the debugger.
 
- 
+![](../../.gitbook/assets/vsc-launch-json.png)
 
-   ![](../../.gitbook/assets/vsc-launch-json.png)
-
-2. Edit `.vscode/launch.json` as follows:
+1. Edit `.vscode/launch.json` as follows:
 
    ```javascript
    {
@@ -176,13 +174,13 @@ For example, if you want to debug `examples/myhub.py` with `examples/myhub_tests
 
    The configuration is similar to `tasks.json` described above. The `--nohandle` is a flag for Switchyard not to trap exaception which is described in its [documentation](https://pavinberg.gitee.io/switchyard/test_execution.html#if-you-don-t-like-pdb).
 
-3. Open `examples/myhub.py` file. Set a breakpoint in your code and click the configuration to debug. Or just simply click "Run -- Start Debugging" or press "F5" to start debugging `examples/myhub.py` .
+2. Open `examples/myhub.py` file. Set a breakpoint in your code and click the configuration to debug. Or just simply click "Run -- Start Debugging" or press "F5" to start debugging `examples/myhub.py` .
 
 You can use this way in your configuration to easily debug your Switchyard program for later experiments.
 
 ## For Assignment
 
-In the later section we introduced GitHub Classroom for assignment. For each assignment, you will have an independent directory. To use the VS Code configuration above, simply copy the whole directory `.vscode` to your new directory. For example: 
+In the later section we introduced GitHub Classroom for assignment. For each assignment, you will have an independent directory. To use the VS Code configuration above, simply copy the whole directory `.vscode` to your new directory. For example:
 
 ```bash
 $ cp -r ~/switchyard/.vscode /path/to/your/Lab-1-YourName

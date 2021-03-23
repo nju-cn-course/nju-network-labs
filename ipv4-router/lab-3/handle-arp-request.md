@@ -45,10 +45,10 @@ Note that these two functions above return a full `Packet` object including `Eth
 
 ## Testing
 
-For initial testing and debugging of your code, you can run the Switchyard test scenario \(`routertests1.srpy`\). Run it like this:
+For initial testing and debugging of your code, you can run the Switchyard test scenario \(`myrouter1_testscenario.srpy`\). Run it like this:
 
 ```text
-$ swyard -t testcases/routertests1.srpy myrouter.py
+$ swyard -t testcases/myrouter1_testscenario.srpy myrouter.py
 ```
 
 Read each individual test case output carefully \(yes, it can be a lot to read!\) since each test case has an explanation for what your code should be doing.

@@ -24,10 +24,10 @@ Your task is to implement the logic in the above flowchart, using the Switchyard
 You should first develop your switch code using the Switchyard test framework. Assuming you have installed Switchyard in a Python virtual environment and have activated that venv, you should run:
 
 ```bash
-(syenv) $ swyard -t testcases/switchtests_to.srpy myswitch_to.py
+(syenv) $ swyard -t testcases/myswitch_to_testscenario.srpy myswitch_to.py
 ```
 
-The above command it will execute a series of test cases against your program and display whether the tests pass or fail. The file `testcases/switchtests_to.srpy` is the test file we provide.
+The above command it will execute a series of test cases against your program and display whether the tests pass or fail. The file `testcases/myswitch_to_testscenario.srpy` is the test file we provide.
 
 ✅ In the report, show the test result of your switch. \(Optional\) If you have written the test files yourself, show how you test the timeout mechanism.
 

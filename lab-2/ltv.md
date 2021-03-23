@@ -23,7 +23,7 @@ Your task is to implement the logic in the above flowchart, using the Switchyard
 
 ## Testing
 
-Test your switch with the test file `testcases/switchtests_traffic.srpy` we provide.
+Test your switch with the test file `testcases/myswitch_traffic_testscenario.srpy` we provide.
 
 ✅ In the report, show the test result of your switch.  
 \(Optional\) If you have written the test files yourself, show how you test the least traffic volume algorithm.

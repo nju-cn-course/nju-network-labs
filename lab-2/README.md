@@ -90,9 +90,9 @@ Finally, the directory should be in this structure:
 │   └── lab_2.pcap
 ├── start_mininet.py
 └── testcases
-    ├── switchtests_lru.srpy
-    ├── switchtests_to.srpy
-    └── switchtests_traffic.srpy
+    ├── myswitch_lru_testscenario.srpy
+    ├── myswitch_to_testscenario.srpy
+    └── myswitch_traffic_testscenario.srpy
 ```
 
 Commit the change.

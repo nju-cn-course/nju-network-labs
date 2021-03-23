@@ -67,7 +67,7 @@ print(pkt)
 To test your router, you can use the same formula you've used in the past:
 
 ```text
-$ swyard -t routertests3.srpy myrouter.py
+$ swyard -t myrouter3_testscenario.srpy myrouter.py
 ```
 
 Note that the test scenario file is not included in this repository, but is available on the NJU Box.
