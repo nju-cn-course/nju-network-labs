@@ -19,6 +19,10 @@ Your switch may have a table like:
 | ab:cd:ef:fe:cd:ba | interface-0 | 2 |
 | ... | ... | ... |
 
+{% hint style="info" %}
+You may notice that it is not efficient to update the age of all other rules every time you use a table rule. Because it the time complexity is O(N) for each table query operation, where N is the number of rules in table. So more efficient implementation of LRU algorithm is encouraged in this lab.
+{% endhint %}
+
 ## Coding
 
 Your task is to implement the logic in the above flowchart, using the Switchyard framework. You can start with copying the content of `myswitch.py` to `myswitch_lru.py`, which is the only file you'll need to modify.
@@ -27,7 +31,7 @@ Your task is to implement the logic in the above flowchart, using the Switchyard
 
 Test your switch with the test file `testcases/switchtests_lru.srpy` we provide.
 
-✅ In the report, show the test result of your switch.  
+✅ In the report, show the test result of your switch.
 \(Optional\) If you have written the test files yourself, show how you test the LRU algorithm.
 
 ## Deploying
@@ -35,4 +39,3 @@ Test your switch with the test file `testcases/switchtests_lru.srpy` we provide.
 Run your switch in Mininet.
 
 ✅ In Mininet, test the LRU algorithm. Prove that the LRU algorithm works with your testing procedure in the report.
-
