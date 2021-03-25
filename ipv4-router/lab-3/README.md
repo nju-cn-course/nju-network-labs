@@ -52,7 +52,7 @@ We will provide a template of your lab assignment report [here](https://box.nju.
 
 ### Capture file
 
-The capture file's name should be `lab_3.pcapng` or `lab_3.pcap`.
+The capture file's name should start with "lab\_3", e.g. `lab_3.pcapng` or `lab_3.pcap`.
 
 ### Submit to GitHub Classroom
 
@@ -84,4 +84,8 @@ $ git push
 ```
 
 After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
+
+## Check with GitHub Action
+
+We set a GitHub Action in your repository to check if your directory structure and file names are correct. When you push your directory to the GitHub, it will automatically run the Action. If your directory structure is correct, you will see a green tick, else a red cross. Make sure it is correct in you final assignment.
 
