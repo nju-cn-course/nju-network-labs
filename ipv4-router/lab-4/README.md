@@ -4,36 +4,11 @@
 
 This is the second in a set of exercises that have the ultimate goal of creating the "brains" for an IPv4 router. The basic functions of an Internet router are to:
 
-1. Respond to ARP \(address resolution protocol\) requests for addresses
-
-   that are assigned to interfaces on the router. \(Remember that the
-
-   purpose of ARP is to obtain the Ethernet MAC address associated with
-
-   an IP address so that an Ethernet frame can be sent to another host
-
-   over the link layer.\)
-
-2. Receive and forward packets that arrive on links and are destined to
-
-   other hosts. Part of the forwarding process is to perform address
-
-   lookups \("longest prefix match" lookups\) in the forwarding table. We
-
-   will just use "static" routing in our router rather than implement a
-
-   dynamic routing protocol like RIP or OSPF.
-
-3. Make ARP requests for IP addresses that have no known Ethernet MAC
-
-   address. A router will often have to send packets to other hosts,
-
-   and needs Ethernet MAC addresses to do so.
-
+1. Respond to ARP \(address resolution protocol\) requests for addresses that are assigned to interfaces on the router. \(Remember that the purpose of ARP is to obtain the Ethernet MAC address associated with an IP address so that an Ethernet frame can be sent to another host over the link layer.\)
+2. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups \("longest prefix match" lookups\) in the forwarding table. We will just use "static" routing in our router rather than implement a dynamic routing protocol like RIP or OSPF.
+3. Make ARP requests for IP addresses that have no known Ethernet MAC address. A router will often have to send packets to other hosts, and needs Ethernet MAC addresses to do so.
 4. Respond to ICMP messages like echo requests \("pings"\).
-5. Generate ICMP error messages when necessary, such as when an IP
-
-   packet's TTL \(time to live\) value has been decremented to zero.
+5. Generate ICMP error messages when necessary, such as when an IP packet's TTL \(time to live\) value has been decremented to zero.
 
 The goal of this stage is to accomplish **\#2** and **\#3** above.
 
@@ -42,8 +17,6 @@ Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/pFaSMI1U](
 ## Your Tasks
 
 After Lab 3, you have implemented the response to ARP on the starter template: `myrouter.py`. Now, on the basis of Lab 3, we continue to improve the router to implement the function of packets forwarding.
-
-The main task for this exercise is to modify the Router class to do the following:
 
 {% hint style="info" %}
 The sentences marked with ✅ are related to the content of your report. Please pay attention.
@@ -89,10 +62,12 @@ Finally, the directory should be in this structure:
 ├── myrouter.py
 ├── report
 │   ├── 123456789拾佰仟_lab_4.pdf
-│   └── lab_4.pcap
+│   ├── lab_4.pcap
+│   └── ...
 ├── start_mininet.py
 └── testcases
-    └── myrouter2_testscenario.srpy
+    ├── myrouter2_testscenario.srpy
+    └── test_submit.py
 ```
 
 Commit the change.

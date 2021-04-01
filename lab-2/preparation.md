@@ -27,6 +27,7 @@ Finally, your project will look like:
 └── testcases
     ├── myswitch_lru_testscenario.srpy
     ├── myswitch_to_testscenario.srpy
-    └── myswitch_traffic_testscenario.srpy
+    ├── myswitch_traffic_testscenario.srpy
+    └── test_submit.py
 ```
 

@@ -19,7 +19,7 @@ Generally, the ARP table has a timeout mechanism. It indicates the time for whic
 
 Modify `myrouter.py` and add the cache table.
 
-It is more convenient if you are familiar with Object-Oriented Programming \(OOP\). You can construct a class to maintain the ARP cache table. A brief tutorial of OOP in Python is [here](https://www.liaoxuefeng.com/wiki/1016959663602400/1017495723838528). Though OOP is no need in our lab assignments.
+It is more convenient if you are familiar with Object-Oriented Programming \(OOP\). You can construct a class to maintain the ARP cache table. A brief tutorial of OOP in Python is [here](https://www.liaoxuefeng.com/wiki/1016959663602400/1017495723838528). Though OOP is not necessarily needed in our lab assignments.
 
 Another useful data structure in Python is `dict`. The data structure `dict` is a table. Each entry of the table contains one unique key and one value. The introduction of `dict` is [here](https://www.liaoxuefeng.com/wiki/1016959663602400/1017104324028448).
 

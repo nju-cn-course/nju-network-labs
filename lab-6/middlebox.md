@@ -8,15 +8,32 @@ So far so good. Now comes the fun part of the middlebox! Besides a very dumb for
 
 ### Parameters
 
-The middlebox should read a text file to get parameters. Parse this file to setup your device.
+The middlebox should be passed a parameter to setup the device:
 
-**middlebox\_params.txt** will contain the following line:
+* _droprate_: Percentage of packets \(non-ACK\) that your middlebox is going to drop, 0 ≤ _droprate_ ≤ 1
 
-```text
--d <drop_rate>
+To use this parameter, the `main` function of the Switchyard program should pass another keyword argument, e.g.
+
+```python
+def main(net, **kwargs):
 ```
 
-* _drop\_rate_: Percentage of packets \(non-ACK\) that your middlebox is going to drop, 0 ≤ _drop\_rate_ ≤ 1
+This syntax is [Python keyword argument](https://realpython.com/python-kwargs-and-args/#using-the-python-kwargs-variable-in-function-definitions) which can be used to pass multiple keyword arguments as a dicrtionary. 
+
+When we run the program with `swyard` pass the parameter using the `-g` parameter:
+
+```bash
+$ swyard middlebox.py -g "droprate=0.19"
+```
+
+Then the `kwargs` in the main function will be a dictionary with one pair:
+
+```python
+print(kwargs)
+# {'droprate': '0.19'}
+```
+
+So that we can use it in our program. Notice that the key and value of the dictionary are both `str` .
 
 ## Coding
 

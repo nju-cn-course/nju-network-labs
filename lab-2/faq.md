@@ -8,7 +8,7 @@
 
    **A:** Note that the flow chart for timeout based mechanism does not show when/how to purge the stale entries. Your implementation will obviously handle this as well. Keep in mind that there is not a limit on the number of entries that the table can hold for this mechanism.
 
-3. **Q:** How would the table look for the following sequence of packets in the LRU-based implementation: `(h1,h4)`, `(h2,h1)`, `(h3,h1)`, `(h4,h1)`, `(h5,h1)`, `(h6.h7)`, `(h4,h5)`? \(assuming that the network topology does not change\)
+3. **Q:** How would the table look for the following sequence of packets in the LRU-based implementation: `(h1, h4)`, `(h2, h1)`, `(h3, h1)`, `(h4, h1)`, `(h5, h1)`, `(h6, h7)`, `(h4, h5)`? \(assuming that the network topology does not change\)
 
    **A:** Assuming that the leftmost entry is the most recently used and the rightmost is the least recently used: `[h1] → [h1, h2] → [h1, h3, h2] → [h1, h4, h3, h2] → [h1, h5, h4, h3, h2] → [h6, h1, h5, h4, h3] → [h5, h6, h1, h4, h3]`
 

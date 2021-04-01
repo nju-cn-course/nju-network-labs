@@ -57,20 +57,16 @@ Notice that even though the blaster received some ACKs for its outstanding packe
 
 ### Parameters
 
-The blaster should read a text file to get parameters. Parse this file to setup your device.
+The blaster should be passed several parameters to setup the device:
 
-**blaster\_params.txt** will contain the following line:
-
-```text
--b <blastee_IP> -n <num> -l <length> -w <sender_window> -t <timeout> -r <recv_timeout>
-```
-
-* _blastee\_IP_: IP address of the blastee. This value has to match the IP address value in the `start_mininet.py` file
+* _blasteeIP_: IP address of the blastee. This value has to match the IP address value in the `start_mininet.py` file
 * _num_: Number of packets to be sent by the blaster
 * _length_: Length of the variable payload part of your packet in bytes, 0 ≤ _length_ ≤ 65535
-* _sender\_window_: Size of the sender window in packets
+* _senderWindow_: Size of the sender window in packets
 * _timeout_: Coarse timeout value in milliseconds
-* _recv\_timeout_: `recv_packet` timeout value in **milliseconds**. Blaster will block on `recv_packet` for at most _recv\_timeout_. This will be a pseudo-rate controller for the blaster
+* _recvTimeout_: `recv_packet` timeout value in **milliseconds**. Blaster will block on `recv_packet` for at most _recv\_timeout_. This will be a pseudo-rate controller for the blaster
+
+The way to get the parameters is the same as [Task 2](middlebox.md).
 
 ### Packet format
 

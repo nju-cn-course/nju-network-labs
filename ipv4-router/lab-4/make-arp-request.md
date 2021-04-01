@@ -4,65 +4,17 @@
 
 Once you do the forwarding table lookup for an IP destination address, the next steps are to:
 
-1. Decrement the TTL field in the IP header by 1 \(you could do this
-
-   prior to forwarding table lookup, too\). You can assume for this
-
-   project that the TTL value is greater than 0 after decrementing.
-
-   We'll handle "expired" TTLs in the next project.
-
-2. Create a new Ethernet header for the IP packet to be forwarded. To
-
-   construct the Ethernet header, you need to know the destination
-
-   Ethernet MAC address corresponding to the host to which the packet
-
-   should be forwarded. The next hop host is either:
-
-   1. the destination host, if the destination address is directly
-
-      reachable through one of the router interfaces \(i.e., the subnet
-
-      that the destination address belongs to is directly connected to
-
-      a router interface\), or
-
-   2. it is an IP address on a router through which the destination is
-
-      reachable.
+1. Decrement the TTL field in the IP header by 1 \(you could do this prior to forwarding table lookup, too\). You can assume for this project that the TTL value is greater than 0 after decrementing. We'll handle "expired" TTLs in the next project.
+2. Create a new Ethernet header for the IP packet to be forwarded. To construct the Ethernet header, you need to know the destination Ethernet MAC address corresponding to the host to which the packet should be forwarded. The next hop host is either:
+   1. the destination host, if the destination address is directly reachable through one of the router interfaces \(i.e., the subnet that the destination address belongs to is directly connected to a router interface\), or
+   2. it is an IP address on a router through which the destination is reachable.
 
 In either case, you will need to send an ARP query in order to obtain the Ethernet address corresponding to the next hop IP address. For handling ARP queries you should do the following:
 
-* Send an ARP request for the IP address needing to be "resolved"
-
-  \(i.e., the IP address for which you need the corresponding Ethernet
-
-  address\).
-
-  * The Switchyard reference documentation for the [ARP header](https://pavinberg.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header) has an
-
-    example of constructing an ARP request packet.
-
-* When an ARP reply is received, complete the Ethernet header for the
-
-  IP packet to be forwarded, and send it along. You should also create
-
-  a cache of IP addresses and the Ethernet MAC addresses that they
-
-  correspond to \(you have done in Lab 3 Task 3\). When you receive a response to an ARP query, add the
-
-  IP address → Ethernet address mapping to the cache so that you can
-
-  avoid doing an identical ARP query.
-
-* If no ARP reply is received within 1 second in response to an ARP
-
-  request, send another ARP request. Send up to \(exactly\) 5 ARP
-
-  requests for a given IP address. If no ARP reply is received after 5
-
-  requests, give up and drop the packet \(and do nothing else\).
+* Send an ARP request for the IP address needing to be "resolved" \(i.e., the IP address for which you need the corresponding Ethernet address\).
+  * The Switchyard reference documentation for the [ARP header](https://pavinberg.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header) has an example of constructing an ARP request packet.
+* When an ARP reply is received, complete the Ethernet header for the IP packet to be forwarded, and send it along. You should also create a cache of IP addresses and the Ethernet MAC addresses that they correspond to \(you have done in Lab 3 Task 3\). When you receive a response to an ARP query, add the IP address → Ethernet address mapping to the cache so that you can avoid doing an identical ARP query.
+* If no ARP reply is received within 1 second in response to an ARP request, send another ARP request. Send up to \(exactly\) 5 ARP requests for a given IP address. If no ARP reply is received after 5 requests, give up and drop the packet \(and do nothing else\).
 
 Lastly, refer to the Switchyard documentation details and examples for parsing and constructing packets containing Ethernet, ARP, and IP packet headers.
 

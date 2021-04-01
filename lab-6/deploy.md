@@ -27,12 +27,10 @@ Instead of running your implementations with test scenarios, you will be running
 3. Start your agents:
 
    ```text
-    middlebox# ./switchyard/swyard.py middlebox.py
-    blastee# ./switchyard/swyard.py blastee.py
-    blaster# ./switchyard/swyard.py blaster.py
+    middlebox# swyard middlebox.py -g 'dropRate=0.19'
+    blastee# swyard blastee.py -g 'blasterIp=192.168.100.1 num=100'
+    blaster# swyard blaster.py -g 'blasteeIp=192.168.200.1 num=100 length=100 senderWindow=5 timeout=300 recvTimeout=100'
    ```
-
-You will need to specify some parameters for each agent when running them. To my knowledge, it is not possible to pass custom parameters to Switchyard \(probably why you assumed there was a forwarding\_table.txt file in your working directory in last project as well\). However, this is not going to keep us from passing parameters to our agents. Just like in the previous project you will assume that there will be 3 files in your working directory: **blaster\_params.txt**, **blastee\_params.txt** and **middlebox\_params.txt**.
 
 Your task is: run your code in Mininet as described above. Using different parameters to get different results and analyze them. Using Wireshark on different agent to prove that your blaster, blastee and middlebox function is correct.
 

@@ -8,11 +8,10 @@ Your project will look like:
 .
 ├── README.md
 ├── blastee.py
-├── blastee_params.txt
 ├── blaster.py
-├── blaster_params.txt
 ├── middlebox.py
-├── middlebox_params.txt
-└── start_mininet.py
+├── start_mininet.py
+└── testcases
+    └── test_submit.py
 ```
 

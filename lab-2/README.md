@@ -72,7 +72,7 @@ We will provide a template of your lab assignment report [here](https://box.nju.
 
 ### Capture file
 
-The capture file's name should start with "lab_2", e.g. `lab_2_lru.pcapng` or `lab_2_lru.pcap`.
+The capture file's name should start with "lab\_2", e.g. `lab_2_lru.pcapng` or `lab_2_lru.pcap`.
 
 ### Submit to GitHub Classroom
 
@@ -87,12 +87,14 @@ Finally, the directory should be in this structure:
 ├── myswitch_traffic.py
 ├── report
 │   ├── 123456789拾佰仟_lab_2.pdf
-│   └── lab_2.pcap
+│   ├── lab_2.pcap
+│   └── ...
 ├── start_mininet.py
 └── testcases
     ├── myswitch_lru_testscenario.srpy
     ├── myswitch_to_testscenario.srpy
-    └── myswitch_traffic_testscenario.srpy
+    ├── myswitch_traffic_testscenario.srpy
+    └── test_submit.py
 ```
 
 Commit the change.

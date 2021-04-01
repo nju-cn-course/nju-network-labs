@@ -64,11 +64,12 @@ Finally, the directory should be in this structure:
 ├── myrouter.py
 ├── report
 │   ├── 123456789拾佰仟_lab_3.pdf
-│   └── lab_3.pcap
+│   ├── lab_3.pcap
+│   └── ...
 ├── start_mininet.py
 └── testcases
     ├── myrouter1_testscenario.srpy
-    └── myrouter1full_testscenario.srpy
+    └── test_submit.py
 ```
 
 Commit the change.

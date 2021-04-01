@@ -6,16 +6,12 @@ Blastee will receive data packets from the blaster and immediately ACK them. Bla
 
 ### Parameters
 
-The blastee should read a text file to get parameters. Parse this file to setup your device.
+The blastee should be passed two parameters to setup the device:
 
-**blastee\_params.txt** will contain the following line:
-
-```text
--b <blaster_IP> -n <num> 
-```
-
-* _blaster\_IP_: IP address of the blaster. This value has to match the IP address value in the `start_mininet.py` file
+* _blasterIp_: IP address of the blaster. This value has to match the IP address value in the `start_mininet.py` file
 * _num_: Number of packets to be sent by the blaster
+
+The way to get the parameters is the same as [Task 2](middlebox.md).
 
 ### Packet format
 

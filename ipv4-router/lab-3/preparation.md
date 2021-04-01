@@ -12,7 +12,7 @@ The project structure is as follows:
 ├── myrouter.py
 ├── start_mininet.py
 └── testcases
-    ├── myrouter1_testscenario.srpy
-    └── myrouter1full_testscenario.srpy
+    ├── myrouter1_testsenario.srpy
+    └── test_submit.py
 ```
 

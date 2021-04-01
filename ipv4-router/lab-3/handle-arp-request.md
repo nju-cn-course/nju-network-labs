@@ -34,7 +34,7 @@ If a packet that you receive in the router is not an ARP request, you should ign
 
 Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
-The Switchyard documentation contains a section introducing how Packet parsing and construction works. This is strongly recommended background reading. You will also probably find the API reference to be helpful for packet parsing You may also make use of two helper functions \(defined in `switchyard.lib.packet`, which is already imported in the template file\).
+The Switchyard documentation contains a section introducing how Packet parsing and construction works. This is strongly recommended background reading. You will also probably find the API reference to be helpful for packet parsing. You may also make use of two helper functions \(defined in `switchyard.lib.packet`, which is already imported in the template file\).
 
 * `create_ip_arp_reply(senderhwaddr, targethwaddr, senderprotoaddr, targetprotoaddr)`
 * `create_ip_arp_request(senderhwaddr, senderprotoaddr, targetprotoaddr)`
@@ -52,8 +52,6 @@ $ swyard -t testcases/myrouter1_testscenario.srpy myrouter.py
 ```
 
 Read each individual test case output carefully \(yes, it can be a lot to read!\) since each test case has an explanation for what your code should be doing.
-
-Note that the test scenario file is not included in this repository, but is available on the NJU Box.
 
 ✅ In the report, show the test result of your router.  
 \(Optional\) If you have written the test files yourself, show how you test your ARP responding logic.

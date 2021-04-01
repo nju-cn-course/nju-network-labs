@@ -72,15 +72,15 @@ Finally, the directory should be in this structure:
 .
 ├── README.md
 ├── blastee.py
-├── blastee_params.txt
 ├── blaster.py
-├── blaster_params.txt
 ├── middlebox.py
-├── middlebox_params.txt
 ├── report
 │   ├── 123456789拾佰仟_lab_6.pdf
-│   └── lab_6.pcap
-└── start_mininet.py
+│   ├── lab_6.pcap
+│   └── ...
+├── start_mininet.py
+└── testcases
+    └── test_submit.py
 ```
 
 Commit the change.

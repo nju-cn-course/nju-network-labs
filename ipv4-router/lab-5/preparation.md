@@ -11,11 +11,11 @@ Finally, your project will look like:
 ```text
 .
 ├── README.md
-├── forwarding_table.txt
 ├── myrouter.py
 ├── start_mininet.py
 └── testcases
     ├── myrouter3_testscenario.srpy
-    └── myrouter3_testscenario_template.py
+    ├── myrouter3_testscenario_template.py
+    └── test_submit.py
 ```
 
