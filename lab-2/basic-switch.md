@@ -53,7 +53,7 @@ mininet> xterm switch
 
 In the window that opens \(`xterm` on the node "switch"\), activate venv and run your switch in "real" \(non-test\) mode:
 
-```bash
+```text
 (syenv) # swyard myswitch.py
 ```
 

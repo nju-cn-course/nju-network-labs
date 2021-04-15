@@ -97,7 +97,41 @@ $ git push
 
 After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
 
-## Check with GitHub Action
+## Check your submission
 
-We set a GitHub Action in your repository to check if your directory structure and file names are correct. When you push your directory to the GitHub, it will automatically run the Action. If your directory structure is correct, you will see a green tick, else a red cross. Make sure it is correct in you final assignment.
+We provide a test script `testcases/test_submit.py` for you to check your submission files' format.
+
+### Check locally
+
+Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
+
+```text
+$ python3 testcases/test_submit.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK
+```
+
+For example, if your report file has a wrong name format, you will get a test failure as below.
+
+```text
+$ python3 testcases/test_submit.py
+F.
+======================================================================
+FAIL: test_check_report (__main__.TestDir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "testcases/test_submit.py", line 22, in test_check_report
+    self.assertTrue(
+AssertionError: False is not true : Wrong name of report PDF
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+FAILED (failures=1)
+```
+
+The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
 

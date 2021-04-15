@@ -138,7 +138,7 @@ You may wonder why this command is more complicated. The answer lies in the that
 
 ## Debug Switchyard with VSC
 
-[Switchyard document about debug](https://jsommers.github.io/switchyard/test_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pbd with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration.
+[Switchyard document about debug](https://jsommers.github.io/switchyard/test_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pdb with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration.
 
 For example, if you want to debug `examples/myhub.py` with `examples/myhub_testscenario.py`, you need to create a `launch.json` for configuration.
 
