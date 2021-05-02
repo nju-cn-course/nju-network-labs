@@ -58,7 +58,11 @@ To address this issue, we developed a branch of Switchyard named `dev` which sup
    (swmtenv) $ python3 -m pip intall -e .
    ```
 
-Now you have a new environment for this new Switchyard that supports multithread.
+Now you have a new environment for this new Switchyard that supports multithread. You should see the first "INFO" ending with "for multithread":
+
+```text
+01:23:45 2021/01/01     INFO Starting test scenario testscenario.srpy for multithread
+```
 
 ### Contribution
 
