@@ -92,8 +92,9 @@ Note in the code above that you simply need to concatenate an IP address with '/
 
   ```python
   prefix = IPv4Address('172.16.0.0')
+  mask = IPv4Address('255.255.0.0')
   destaddr = IPv4Address('172.16.23.55')
-  matches = (int(prefix) & int(destaddr)) == int(prefix)
+  matches = (int(mask) & int(destaddr)) == int(prefix)
   # matches -> True
   ```
 
@@ -111,4 +112,3 @@ matches = destaddr in prefixnet
 ## Testing
 
 As the function has not been fully implemented, there is no test cases can check the output of your router.
-
