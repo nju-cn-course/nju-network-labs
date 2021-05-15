@@ -43,7 +43,7 @@ For keeping track of how long it has been since an ARP request has been sent, yo
 To test your router, you can use the same formula you've used in the past:
 
 ```bash
-$ swyard -t myrouter2_testscenario.srpy myrouter.py
+$ swyard -t testcases/myrouter2_testscenario.srpy myrouter.py
 ```
 
 This project includes quite a bit of complexity, so inspecting variables and stepping through your program in the debugger can be extremely helpful!

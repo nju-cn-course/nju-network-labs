@@ -67,10 +67,8 @@ print(pkt)
 To test your router, you can use the same formula you've used in the past:
 
 ```text
-$ swyard -t myrouter3_testscenario.srpy myrouter.py
+$ swyard -t testcases/myrouter3_testscenario.srpy myrouter.py
 ```
-
-Note that the test scenario file is not included in this repository, but is available on the NJU Box.
 
 ✅ In the report, show the test result of your router.  
 \(Optional\) If you have written the test files yourself, show how you test the forwarding packets.
@@ -116,7 +114,7 @@ Next, open a terminal on the client node \(`xterm client`\). Now, you should be 
 * Probably the most complicated test you can run is to do a "traceroute" across the toy network in Mininet. From the client, type:
 
   ```text
-  client# traceroute -N 1 -n 192.168.100.1
+  client# traceroute 192.168.100.1
   ```
 
   The output you see should be similar to the following:

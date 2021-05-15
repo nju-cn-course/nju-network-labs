@@ -45,7 +45,7 @@ In the first line, the network address is `172.16.0.0` and the subnet mask is `2
 
 > Now let's give you an example to create your routing table:
 >
-> If you have a router with 2 interfaces. Their IP addresses are `192.168.1.1` and `172.16.1.1`  both with netmask `255.255.255.0` . Then you should first have two items in your routing table:
+> If you have a router with 2 interfaces. Their IP addresses are `192.168.1.1` and `172.16.1.1` both with netmask `255.255.255.0` . Then you should first have two items in your routing table:
 >
 > | network address | subnet address | next hop address | interface |
 > | :--- | :--- | :--- | :--- |
@@ -54,7 +54,7 @@ In the first line, the network address is `172.16.0.0` and the subnet mask is `2
 >
 > The IP address `0.0.0.0` means that if a packet's destination IP matches this network address, just throw the packet out of this interface, expecting that the next hop is the destination.
 >
-> At last, append the items read from `forwarding_table.txt`  to the routing table.
+> At last, append the items read from `forwarding_table.txt` to the routing table.
 
 ### Match Destination IP Addresses against Forwarding Table
 
@@ -112,3 +112,4 @@ matches = destaddr in prefixnet
 ## Testing
 
 As the function has not been fully implemented, there is no test cases can check the output of your router.
+
