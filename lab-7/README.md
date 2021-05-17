@@ -1,40 +1,31 @@
-# Lab 7: Firewall
+# Lab 7: Content Delivery Network
 
-## To be replaced
+## Overview
 
-{% hint style="danger" %}
-Lab-7 is going to be replaced by a new lab.
-{% endhint %}
+In this lab, you are going to build a demo of **Content Delivery Network \(CDN\)**. A CDN is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability and performance by distributing the service spatially relative to end users.
 
-## ~~Overview~~
+To minimize the distance between the visitors and your website’s server, a CDN stores a cached version of its content in multiple geographical locations \(a.k.a., points of presence, or PoPs\). Each PoP contains a number of caching servers responsible for content delivery to visitors within its proximity.
 
-~~The goal for this project is to create firewall that inspects and possibly changes packet contents for packet traffic entering and exiting a network. The firewall rules we will use will be simple static rules \(i.e., no "stateful" or dynamic rules\), with one twist: we'll add the option to rate-limit certain packet flows using the token bucket algorithm.~~
+As a feature of this lab, you will use [OpenNetLab](https://opennetlab.org/) for deployment. OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of [Associate Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assginment in real WAN now!
 
-~~The firewall can either be created as an extension of the IPv4 router project, or as a separate device that _silently_ inspects and possibly blocks traffic. The silent version of the firewall is described below. To integrate the firewall with the router, you would need to apply firewall rules \(described below\) after receiving a packet and before any forwarding decision is made. Again, the description below assumes a standalone device, but the differences between this and integrating with the router are quite minor.~~
-
-~~Below is a picture of the example network topology that is implied by the tests, and that is created by the Mininet script supplied with this project. The firewall for which you will be writing the logic is positioned at the exterior of a network to be protected \("internal network"\), inside what is often referred to as the network DMZ. The firewall has just two interfaces, and is connected such that it will "see" all traffic sent from the internal network out to the rest of the internet, and it will also see any traffic coming from the rest of the internet back to the internal network.~~
-
-![image](../.gitbook/assets/firewall_topology.png)
-
-~~Notice that there are only two interfaces assigned to the firewall device. The basic behavior of your device is to simply forward packets from one interface to the other. You do not need to any routing logic or anything like that. The firewall logic \(described below\) should be applied after receiving a packet on one interface and before sending it out the other interface. It is ok in this project to assume that you will only ever have 2 network interfaces on the firewall device.~~
+Lab-7 assignment in Github Classroom: [https://classroom.github.com/](https://classroom.github.com/)
 
 ## Your Tasks
 
-There are three things to accomplish for this project:
+There are two keys in CDN:
 
-1. Implement firewalling logic based on a simple set of rules that are
+1. The caching server that stores the content.
+2. The DNS server that finds the closest caching server for you.
 
-   stored in a text file.
+Your tasks in this lab is to implement the both.
 
-2. Implement a rate-limiting capability so that certain packet flows
+{% hint style="warning" %}
+One thing you should be aware is that you are **NOT** going to use Switchyard in this lab, because here we are at the application layer which is not the place for Switchyard. Instead, we simply use the modules of Python and some third-party packages to finish the lab.
+{% endhint %}
 
-   are given limited network bandwidth.
-
-3. Implement a network impairment of your choice, designed to disrupt
-
-   certain packet flows.
-
-Details for each of these items are given below.
+{% hint style="danger" %}
+You shoud **NOT** write anything to disks in this lab since this may cause damage to the platform servers.
+{% endhint %}
 
 {% hint style="info" %}
 The sentences marked with ✅ are related to the content of your report. Please pay attention.
@@ -46,63 +37,125 @@ Initiate your project with our template.
 
 [Start the task here](preparation.md)
 
-### Task 2: Implement firewall rules
+### Task 2: DNS server
 
-Implement firewall rules.
+Implement the DNS server.
 
-[Start the task here](firewall-rules.md)
+[Start the task here](dns-server.md)
 
-### Task 3: Implement the token bucket algorithm
+### Task 3: Caching server
 
-Implement the token bucket algorithm.
+Implement the caching server.
 
-[Start the task here](token-bucket.md)
+[Start the task here](caching-server.md)
 
-### Task 4: Implement some other type of network impairment
+### Task 4: Deployment
 
-Implement some other type of network impairment.
+Deploy the code to OpenNetLab.
 
-[Start the task here](impairment.md)
+[Start the task here](deployment.md)
 
-### Task 5: Testing
+## Handing in
 
-Make sure that your firewall function correctly.
+Create a directory named `report/` in your repository and place your report, log files and other materials in it.
 
-[Start the task here](testing.md)
+### Report‌
 
-## Handing it in
+We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_7.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_7.pdf`.
 
-### Report
+### Log file
 
-We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/123a70ac8ff34595b18f/). You need to submit the report in your repository named `<学号><姓名>_lab_7`. The format of your report can be Microsoft Doc or PDF. An example is `123456789拾佰仟_lab_7.pdf`.
+Hand in the log of DNS server, caching server and client.
 
-### Submit to NJU GitLab
+### Submit to GitHub Classroom
 
-To submit your work, you need to do the following things.
+The directory structure should be as follows:
 
-1. Modify your code and complete your report.
-2. When you have done your work, put your report and code in the folder `lab_7` then commit them. Tag the commit named `<学号/lab_7>` which you want to submit. An example is `123456789/lab_7`. Finally your project will look like
+```text
+.
+├── README.md
+├── cachingServer
+│   ├── cacheTable.py
+│   └── cachingServer.py
+├── dnsServer
+│   ├── dns_server.py
+│   └── dns_table.txt
+├── mainServer
+│   ├── doc
+│   │   ├── index.html
+│   │   └── success.jpg
+│   └── mainServer.py
+├── report
+│   ├── 123456789拾佰仟_lab_7.pdf
+│   ├── 123456789_cache.log
+│   ├── 123456789_client.log
+│   └── 123456789_dns.log
+├── requirements.txt
+├── runCachingServer.py
+├── runDNSServer.py
+├── test_entry.py
+├── testcases
+│   ├── baseTestcase.py
+│   ├── test_all.py
+│   ├── test_cache.py
+│   └── test_dns.py
+└── utils
+  ├── dns_utils.py
+  ├── ip_utils.py
+  ├── manageservice.py
+  ├── network.py
+  ├── rpcServer.py
+  └── tracer.py
+```
 
-   ```text
-   switchyard
-     ├─docs/
-     ├─.../
-   + ├─lab_7/
-   + │ ├─123456789拾佰仟_lab_7.pdf
-   + │ ├─firewall.py
-   + │ ├─firewall_rules.txt
-   + │ ├─firewalltests.py
-   + │ ├─www
-   + │ │ ├─start_webserver.sh
-     │ ├─...
-   + │ └─start_mininet.py
-     ├─.gitignore
-     └─...
-   ```
+Commit the change.
 
-   The file names in your submission have to **exactly** match the file names above. Otherwise, you will lose points!
+{% hint style="warning" %}
+Only commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+{% endhint %}
 
-3. Submit your work by pushing your local repository to your remote repository **with your tags** by running the command `git push origin --tags`.
+After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-   **Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+```text
+$ git push
+```
+
+After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
+
+### Check locally
+
+Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
+
+```text
+$ python3 testcases/test_submit.py
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+​
+​
+OK
+```
+
+For example, if your report file has a wrong name format, you will get a test failure as below.
+
+```text
+$ python3 testcases/test_submit.py
+F.
+======================================================================
+FAIL: test_check_report (__main__.TestDir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+File "testcases/test_submit.py", line 22, in test_check_report
+  self.assertTrue(
+AssertionError: False is not true : Wrong name of report PDF
+​
+​
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+​
+​
+FAILED (failures=1)
+```
+
+The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
 
