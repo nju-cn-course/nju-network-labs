@@ -25,7 +25,7 @@
    **A:** You should be sending a single packet per each recv\_timeout loop. As I mentioned in the specification, recv\_timeout will work as a pseudo-rate controller. Recall that you pass recv\_timeout to the recv\_packet function in Switchyard and this determines how long this function will block before timing out. I use the word pseudo on purpose because your blaster can receive ACKs fast enough \(and without many losses\) that the recv\_packet call would never time out and your blaster can send packets at a faster rate. You should follow the same logic in retransmissions.
 
 7. **Q:** I'm recieving this warning upon starting a device in mininet:  
-   WARNING \*\*: Couldn't connect to accessibility bus: Failed to connect to socket /tmp/dbus-wYnBIGP0fz: Connection refused
+   WARNING: Couldn't connect to accessibility bus: Failed to connect to socket /tmp/dbus-wYnBIGP0fz: Connection refused
 
    **A:** You can ignore that warning, it should not disrupt the execution of your program.
 

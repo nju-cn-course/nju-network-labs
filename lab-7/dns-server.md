@@ -108,7 +108,7 @@ DNS server serving on 0.0.0.0:9999
 
 This will start the DNS server at `localhost:9999`. If you want a customized port number or so, you can input `-h` parameter for more usage:
 
-```text
+```python
 $ python3 runDNSServer.py -h                                                     146 ↵
 usage: runDNSServer.py [-h] [port] [file]
 
@@ -124,7 +124,7 @@ optional arguments:
 
 Now you can use the function we provide to test if your DNS server runs correctly:
 
-```text
+```python
 from utils.network import resolve_domain_name
 ​
 dnsIP, dnsPort = "localhost", 9999
