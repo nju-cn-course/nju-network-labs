@@ -45,7 +45,7 @@ Each row represents a table record and is divided into three parts:
 You will need to parse the dns\_table.txt file line by line and convert the records into a suitable data structure for subsequent lookups.
 
 ```text
-def load_dns_table(self, file_name):
+def parse_dns_file(self, dns_file):
  # ---------------------------------------------------
  # TODO: your codes here. Parse the records file 
  #       and load the data into self._dns_table.
@@ -60,12 +60,13 @@ With the DNS Table loaded, you will need to give the client response. For this e
 
 ```text
 def get_response(self, request_domain_name):
- client_ip, _ = self.client_address
- response_type = None
- response_val = None
+ response_type, response_val = (None, None)
  # ------------------------------------------------
- # TODO: your codes here.
+ # Task2 TODO: your codes here.
  # Determine an IP to response according to the client's IP address.
+ #       set "response_ip" to "the best IP address".
+ client_ip, _ = self.client_address
+​
 ​
  # ------------------------------------------------
  return (response_type, response_val)
@@ -83,10 +84,10 @@ def get_response(self, request_domain_name):
 
 **You need to consider the following scenarios：**
 
-* The domain name requested by the user can not find the corresponding record in the table, in which case you need to return None \(`return None`\) directly.
+* The domain name requested by the user can not find the corresponding record in the table, in which case you need to return `(response_type, response_val)` with the value `(None, None)`.
 * The domain name requested by the user is found in the table as a CNAME type record, in which case you need to return \("CNAME", "xxx.xxx.xxx"\) directly.
 * The domain name requested by the user is found in the table with a list of records of type A.
-  * If there is only one record in the list, return that IP address directly.
+  * If there is only one record in the list, return \("A", that IP address \)  directly.
   * If there are multiple records in the list. You need to consider the geographical relative location of the client IP and the server IP. You can use `IP_Utils.getIpLocation(ip_str)` to get the latitude and longitude information for an IP address.
     * If it cannot find the location information for the client's IP address in our database \(i.e., `IP_Utils.getIpLocation(ip_str)` returns None\), you will need to adopt a random load balance policy for multiple servers.
     * If you find the location of the client's IP address, you will need to select the nearest Cache Node \(CDN Node\) from the list of records as the response\_val.
