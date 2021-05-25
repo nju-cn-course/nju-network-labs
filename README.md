@@ -64,9 +64,9 @@ Out: 2021-5-19, due 2021-6-2.
 
 [Start the lab here](lab-6/)
 
-### Lab 7: ~~Firewall~~
+### Lab 7: Content Delivery Network~~Cont~~
 
-Out: 2021-6-2, due 2021-6-23.
+Out: 2021-6-2, due 2021-6-16.
 
 [Start the lab here](lab-7/)
 

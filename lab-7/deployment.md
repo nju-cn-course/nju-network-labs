@@ -51,3 +51,9 @@ The client’s log file has “\[Request time\]” logged, which indicates how m
 
 ✅ In the report, show how much the CDN cache shortens the request time. Write the procedure and analysis in your report with screenshots.
 
+## Just for fun
+
+If you are in the campus network, your computer will be assigend an IP address that can be visited in the campus network. So that when you start one of the servers, say main server, others can visit your main server as long as they know your IP address.
+
+So you can actually deploy your own CDN. For example, you can find 3 friends that run their servers at their computers in campus network. Get their IP addresses and you can be the client that visits the DNS server and caching server. You four make up a real CDN!
+

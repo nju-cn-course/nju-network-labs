@@ -8,7 +8,7 @@ To minimize the distance between the visitors and your website’s server, a CDN
 
 As a feature of this lab, you will use [OpenNetLab](https://opennetlab.org/) for deployment. OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of [Associate Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assginment in real WAN now!
 
-Lab-7 assignment in Github Classroom: [https://classroom.github.com/](https://classroom.github.com/)
+Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/V4BRX15v](https://classroom.github.com/a/V4BRX15v)
 
 ## Your Tasks
 

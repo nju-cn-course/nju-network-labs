@@ -23,14 +23,14 @@ This syntax is [Python keyword argument](https://realpython.com/python-kwargs-an
 When we run the program with `swyard` pass the parameter using the `-g` parameter:
 
 ```bash
-$ swyard middlebox.py -g "droprate=0.19"
+$ swyard middlebox.py -g "dropRate=0.19"
 ```
 
 Then the `kwargs` in the main function will be a dictionary with one pair:
 
 ```python
 print(kwargs)
-# {'droprate': '0.19'}
+# {'dropRate': '0.19'}
 ```
 
 So that we can use it in our program. Notice that the key and value of the dictionary are both `str` .

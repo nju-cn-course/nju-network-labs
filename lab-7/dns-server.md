@@ -107,7 +107,7 @@ $ python3 runDNSServer.py
 DNS server serving on 0.0.0.0:9999
 ```
 
-This will start the DNS server at `localhost:9999`. If you want a customized port number or so, you can input `-h` parameter for more usage:
+This will start the DNS server at every IP of the interfaces of your computer with port `9999`. You can access it with`localhost:9999`.  If you want a customized port number or so, you can input `-h` parameter for more usage:
 
 ```python
 $ python3 runDNSServer.py -h                                                     146 ↵
@@ -140,7 +140,11 @@ result = resolve("home.nasa.org")
 print(result)
 ```
 
-This will send an DNS request to our DNS server at `localhost:9999` to resolve the domain name `home.nasa.org` and print out the result `10.0.0.1`.
+Run the Python code in another terminal window. This will send an DNS request to our DNS server at `localhost:9999` to resolve the domain name `home.nasa.org` and print out the result `10.0.0.1`.
+
+{% hint style="info" %}
+ `localhost` is just an alias name of IP `127.0.0.1` , which is a special IP address called "loopback". It means that when you visit this IP, you are actually visit your computer itself. This is especially useful when you are testing a web application locally, just like our DNS server that runs locally. 
+{% endhint %}
 
 ### Testcases
 

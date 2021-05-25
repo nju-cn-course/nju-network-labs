@@ -2,7 +2,7 @@
 
 ## Clone the repo
 
-Clone the Lab-7 assignment template codes.
+Clone the [Lab-7](https://classroom.github.com/a/V4BRX15v) assignment template codes.
 
 Your project will look like:
 

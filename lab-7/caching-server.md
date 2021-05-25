@@ -196,7 +196,7 @@ You can design your own logic to finish this step.
 
 ### Manually
 
-Open three terminal windows. One for main server, one for caching server and last one for you.
+Open three terminal windows. One for main server, one for caching server and last one for you. We are going to start the three processes locally for testing. Remeber the loopback address `localhost` is an alias of `127.0.0.1` which is a special address to visit the local web application.
 
 1. Start main server:
 
@@ -205,7 +205,7 @@ Open three terminal windows. One for main server, one for caching server and las
    Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
    ```
 
-   This will start a HTTP main server at [http://localhost:8000](http://localhost:8000). Also you can use the `-h` paramenter to see more options.
+   This will start a HTTP main server at each interfaces of your computer and you can visit it at [http://localhost:8000](http://localhost:8000). Also you can use the `-h` paramenter to see more options.
 
 2. Start caching server:
 
@@ -217,15 +217,16 @@ Open three terminal windows. One for main server, one for caching server and las
 
 3. Download a file to test
 
-   In any directory on your computer, input command:
+   On Linux/macOS, you can use `curl` command to download a file.In any directory on your computer, input command:
 
    ```text
    $ curl -O http://localhost:1222/doc/success.jpg
    ```
 
-   will download the file `success.jpg` in your directory. Notice that this is the file that locates at `mainServer/doc/success.jpg`.
+   will download the file `success.jpg` in your directory. Notice that this is the file that locates at `mainServer/doc/success.jpg`.   
+   Besides, you can simply use a browser to visit the file. Type the URL in your browser and you shall see the image.
 
-   The first time you download, the caching server will fetch it from main server. But the second request \(before expires\) will return the local cache directly.
+   At the first time you download, the caching server will fetch it from main server. But the second request \(before expires\) will return the local cache directly.
 
    If you input a path that doesn’t exists:
 
@@ -240,6 +241,8 @@ Open three terminal windows. One for main server, one for caching server and las
    ```text
    $ curl -I http://localhost:1222/doc/test.pdf
    ```
+
+4. The first time you download, the caching server will fetch it 
 
 ### Testcases
 
