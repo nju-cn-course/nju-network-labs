@@ -175,3 +175,7 @@ Ran 5 tests in 0.009s
 FAILED (failures=1)
 ```
 
+{% hint style="info" %}
+The testcases are run by Python unittest module. This will suppress the standard output of your program \(which means your print will take no effect\). If you must see the stdout, test manually or write the messages to a file instead.
+{% endhint %}
+

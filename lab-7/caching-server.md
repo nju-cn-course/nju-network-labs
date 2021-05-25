@@ -205,7 +205,7 @@ Open three terminal windows. One for main server, one for caching server and las
    Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
    ```
 
-   This will start a HTTP main server at each interfaces of your computer and you can visit it at [http://localhost:8000](http://localhost:8000). Also you can use the `-h` paramenter to see more options.
+   This will start a HTTP main server at every interfaces of your computer and you can visit it at [http://localhost:8000](http://localhost:8000). Also you can use the `-h` paramenter to see more options.
 
 2. Start caching server:
 
@@ -213,11 +213,11 @@ Open three terminal windows. One for main server, one for caching server and las
    $ python3 runCachingServer.py localhost:8000
    ```
 
-   The argument indicate the "remote" main server’s address, which is serving at`http://localhost:8000` as shown above. Notice that you should omit `http://` in argument. This will start the caching server at `http://localhost:1222`.
+   The argument indicate the "remote" main server’s address, which can be visited at`http://localhost:8000` as shown above. Notice that you should omit `http://` in argument. This will start the caching server at every interfaces of your computer and you can visit it at [http://localhost:1222](http://localhost:1222).
 
 3. Download a file to test
 
-   On Linux/macOS, you can use `curl` command to download a file.In any directory on your computer, input command:
+   On Linux/macOS, you can use `curl` command to download a file. In any directory on your computer, input command:
 
    ```text
    $ curl -O http://localhost:1222/doc/success.jpg
@@ -242,7 +242,7 @@ Open three terminal windows. One for main server, one for caching server and las
    $ curl -I http://localhost:1222/doc/test.pdf
    ```
 
-4. The first time you download, the caching server will fetch it 
+4. The first time you download, the caching server should fetch it from main server. Pay attention to the logs.
 
 ### Testcases
 
@@ -280,4 +280,8 @@ OK
 2021/05/17-20:46:37| [INFO] PRC server terminated
 2021/05/17-20:46:37| [INFO] Main server terminated
 ```
+
+{% hint style="info" %}
+The testcases are run by Python unittest module. This will suppress the standard output of your program \(which means your print will take no effect\). If you must see the stdout, test manually or write the messages to a file instead.
+{% endhint %}
 
