@@ -123,6 +123,7 @@ You need to:
 
   Methods and fields you need to know:
 
+  * [self.send\_response\(_code_, _message=None_\)](https://docs.python.org/3.6/library/http.server.html#http.server.BaseHTTPRequestHandler.send_response): create a response header and set status code. Status code can be found in [here](https://docs.python.org/3/library/http.html#http.HTTPStatus).
   * [self.send\_header\(_keyword, value_\)](https://docs.python.org/3.6/library/http.server.html#http.server.BaseHTTPRequestHandler.send_header): prepare one header to be sent.
   * [self.end\_headers\(\)](https://docs.python.org/3.6/library/http.server.html#http.server.BaseHTTPRequestHandler.send_header): indicating the end of the HTTP headers in the response.
   * [self.send\_error\(_code_, _message=None_, _explain=None_\)](https://docs.python.org/3.6/library/http.server.html#http.server.BaseHTTPRequestHandler.send_error): send an error to client, e.g.
