@@ -240,7 +240,7 @@ Open three terminal windows. One for main server, one for caching server and las
    To test method `do_HEAD()`, use the `-I` parameter of `curl` :
 
    ```text
-   $ curl -I http://localhost:1222/doc/test.pdf
+   $ curl -I http://localhost:1222/doc/success.jpg
    ```
 
 4. The first time you download, the caching server should fetch it from main server. Pay attention to the logs.
