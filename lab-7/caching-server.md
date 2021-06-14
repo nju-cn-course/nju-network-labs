@@ -69,7 +69,7 @@ When a client wants to communicate with a server, it performs the following step
 The logic of a caching server lies in directory `cachingServer/`. There are two files:
 
 1. `cachingServer.py`: logic of a caching server. This is the file you should work on.
-2. `cacheTable.py`: a data structure of a cacheTable. You don’t need to modify it. But if you find it's not to your taste, you can modify or even rewrite as you like.
+2. `cacheTable.py`: a data structure of a cacheTable. You shouldn't modify it. 
 
 The file you need to focus is `cachingServer.py`. There are two classes: `CachingServer` and `CachingServerHttpHandler`.
 
