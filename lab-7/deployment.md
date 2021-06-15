@@ -40,7 +40,7 @@ The OpenNetLab has several servers in multiple locations around the continent. T
 
 To submit your code on OpenNetLab, do as follows:
 
-1. Open the [OpenNetLab for NJU](http://114.212.81.3:5001/) \(Notice that you need the NJU campus network to visit it\). Log in with your student ID and the password we sent to you by email.
+1. Open the [OpenNetLab for NJU](http://114.212.82.205:5001) \(Notice that you need the NJU campus network to visit it\). Log in with your student ID and the password we sent to you by email.
 2. Click “Create New” to create a deployment.
 3. Upload your`dnsServer/dns_server.py` and `cachingServer.cachingServer.py`.
 4. Check the result and download log files.
