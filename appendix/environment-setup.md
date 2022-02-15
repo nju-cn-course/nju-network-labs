@@ -6,22 +6,22 @@ If you see here then you must be a high-end player, the instructions here will b
 
 You can find instructions [here](https://pavinberg.gitee.io/switchyard), the repository of switchyard on GitHub. A quick note here for Ubuntu.
 
-```text
+```
 git clone https://gitee.com/pavinberg/switchyard.git
 sudo apt-get install libffi-dev libpcap-dev python3-dev python3-pip
 ```
 
-You can install Switchyard and the necessary related packages in an isolated Python virtual environment \("venv"\), which is the recommended path, or in the system directories, which is often less desirable. The venv route is highly suggested, since it makes all installation "local" and can easily destroyed, cleaned up, and recreated.
+You can install Switchyard and the necessary related packages in an isolated Python virtual environment ("venv"), which is the recommended path, or in the system directories, which is often less desirable. The venv route is highly suggested, since it makes all installation "local" and can easily destroyed, cleaned up, and recreated.
 
 To create a new virtual environment, you could do something like the following under your workspace folder
 
-```text
+```
 python3 -m venv syenv
 ```
 
 You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
-```text
+```
 source ./syenv/bin/activate
 ```
 
@@ -29,19 +29,19 @@ You'll need to replace `syenv` with whatever you named the virtual environment. 
 
 Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
 
-```text
+```
 python3 -m pip install .
 ```
 
 Then I suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore`
 
-```text
+```
 syenv/
 ```
 
 ## Install Mininet
 
-```text
+```
 sudo apt-get install mininet
 ```
 
@@ -49,7 +49,7 @@ Or you want to build mininet yourself. The installation guide is [here](http://m
 
 ## Install Wireshark
 
-```text
+```
 sudo add-apt-repository ppa:wireshark-dev/stable
 sudo apt-get update
 sudo apt-get install wireshark
@@ -57,11 +57,11 @@ sudo apt-get install wireshark
 
 You need to configure wireshark during installation. For non-superusers capturing packets, choose _Yes_ here.
 
-![configure-wireshark](../.gitbook/assets/configure-wireshark%20%281%29.png)
+![configure-wireshark](../.gitbook/assets/configure-wireshark.png)
 
 Then add your user to `wireshark` user group to allow you capturing packets.
 
-```text
+```
 sudo usermod -a -G wireshark $USER
 ```
 
@@ -70,4 +70,3 @@ sudo usermod -a -G wireshark $USER
 You also want to install some editors like Vim, Emacs, Visual Studio Code, Sublime and so on. But we do not install any one of them to avoiding a quarrel about the best editor. Choose your favorite one and install it yourself.
 
 Another helpful module VBoxGuestAdditions is not installed because various virtual machine hypervisors you will use.
-

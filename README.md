@@ -12,14 +12,14 @@ Website: [https://cs.nju.edu.cn/lwz/networks/](https://cs.nju.edu.cn/lwz/network
 
 Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)
 
-Discussions: [http://114.212.81.3:8899/](http://114.212.81.3:8899/) \(NJU campus network only\)
+Discussions: [http://114.212.82.205:8899/](http://114.212.82.205:8899) (NJU campus network only)
 
 ## Contact
 
-Course QQ group: 685928389
+Contact through QQ group.
 
 {% hint style="info" %}
-You may have many questions about our labs. There are some questions can be answered in our manual, some can be answered by searching the Internet, and some we have not mentioned which need to be added to our manual. We welcome the third one because the answers to the first two questions are readily available. To give you faster access to the answers, you need to take a look at this article [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md).
+You may have many questions about our labs. There are some questions can be answered in our manual, some can be answered by searching the Internet, and some we have not mentioned which need to be added to our manual. We welcome the third one because the answers to the first two questions are readily available. To give you faster access to the answers, you need to take a look at this article [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh\_CN.md).
 {% endhint %}
 
 ## Lab Assignments
@@ -85,13 +85,13 @@ You can use **pull requests** of each lab to ask questions or give us feedback.
 
 For example, if you want to feedback about lab-1, go to GitHub lab-1 repository page:
 
-1. Click “Pull requests”
+1.  Click “Pull requests”
+
 
 2. Click “Feedback” and enter you question in the conversation box.
 
-![pull\_request](.gitbook/assets/pull_request.png)
+![pull\_request](.gitbook/assets/pull\_request.png)
 
 ## Contribution
 
 The Switchyard testing framework for multithread is still in experimental stage where we need your contribution. For details, please refer to [multithread programming](appendix/multithread-programming.md) when you are doing [Lab-4](ipv4-router/lab-4/).
-
