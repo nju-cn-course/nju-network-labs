@@ -10,9 +10,7 @@ Lecturer: [Chen Tian](https://cs.nju.edu.cn/tianchen/) & [Wenzhong Li](https://c
 
 Website: [https://cs.nju.edu.cn/lwz/networks/](https://cs.nju.edu.cn/lwz/networks/)
 
-Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)
-
-Discussions: [http://114.212.82.205:8899/](http://114.212.82.205:8899) (NJU campus network only)
+Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)~~~~
 
 ## Contact
 
