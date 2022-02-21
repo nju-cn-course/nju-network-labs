@@ -131,7 +131,7 @@ So the `tasks.json` is configured to run a command:
 
 ```bash
 $ /home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard -t \ 
-examples/myhub_testscenario.py example/myhub.py
+examples/myhub_testscenario.py examples/myhub.py
 ```
 
 You may wonder why this command is more complicated. The answer lies in the that: when we have activated the `syenv` environment and run `swyard` command, it is actually short for `/home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard` . The activation solves the full path for you so that you can run the command simply. But in VS Code you should configured the full path.
