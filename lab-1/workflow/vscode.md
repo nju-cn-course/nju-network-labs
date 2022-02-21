@@ -101,7 +101,7 @@ You can simply open the terminal either in VS Code or in you Linux and input the
 Now let's see what is configured in the `tasks.json` . Recall that we normally run a Switchyard test in terminal with command below:
 
 ```bash
-$ swyard -t examples/myhub_testscenario.py example/myhub.py
+$ swyard -t examples/myhub_testscenario.py examples/myhub.py
 ```
 
 Line 9 of `tasks.json` indicates that we want to run the exact Python we configured in `settings.json` as `python.pythonPath` . module `switchyard.swyard` \(short for `python -m switchyard.swyard` \), which is the exactly `swyard` command we run when we want to start Switchyard.
