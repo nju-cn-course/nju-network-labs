@@ -99,7 +99,7 @@ You can simply open the terminal either in VS Code or in you Linux and input the
 Now let's see what is configured in the `tasks.json` . Recall that we normally run a Switchyard test in terminal with command below:
 
 ```bash
-$ swyard -t examples/myhub_testscenario.py example/myhub.py
+$ swyard -t examples/myhub_testscenario.py examples/myhub.py
 ```
 
 Line 9 of `tasks.json` indicates that we want to run the exact Python we configured in `settings.json` as `python.pythonPath` . module `switchyard.swyard` (short for `python -m switchyard.swyard` ), which is the exactly `swyard` command we run when we want to start Switchyard.
@@ -128,7 +128,7 @@ So the `tasks.json` is configured to run a command:
 
 ```bash
 $ /home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard -t \ 
-examples/myhub_testscenario.py example/myhub.py
+examples/myhub_testscenario.py examples/myhub.py
 ```
 
 You may wonder why this command is more complicated. The answer lies in the that: when we have activated the `syenv` environment and run `swyard` command, it is actually short for `/home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard` . The activation solves the full path for you so that you can run the command simply. But in VS Code you should configured the full path.
