@@ -30,7 +30,7 @@ Next open any Python files and you will see a pop-up message ask you whether you
 
 ![VSC-pylint](../../.gitbook/assets/vscode-pylint.png)
 
-You have got almost every thing you need here. But you may what to format your document by right click on your editor and choose "Format Document". VSC will tell you that you need to install a formatter. Yapf is better for me but you are free to use others.
+You have got almost every thing you need here. But you may want to format your document by right click on your editor and choose "Format Document". VSC will tell you that you need to install a formatter. Yapf is better for me but you are free to use others.
 
 ![VSC-format](<../../.gitbook/assets/vscode-format (1).gif>)
 
@@ -46,7 +46,7 @@ Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command
 
 ![Choose virtual environment](../../.gitbook/assets/vsc-python-venv.png)
 
-You can also set this in your workspace settings for running taks below.
+You can also set this in your workspace settings for running tasks below.
 
 Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command Pallette_ and type "Preferences: Open Workspace Settings". This will create a `.vscode/settings.json` file in your workspace.
 
