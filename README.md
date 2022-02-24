@@ -24,13 +24,13 @@ You may have many questions about our labs. There are some questions can be answ
 
 ### Lab 1: Switchyard & Mininet
 
-Out: 2021-3-10, due 2021-3-24.
+Out: 2022-3-3, due 2022-3-17.
 
 [Start the lab here](lab-1/)
 
 ### Lab 2: Learning Switch
 
-Out: 2021-3-24, due 2021-4-7.
+Out: 2022-3-17, due 2022-3-31.
 
 [Start the lab here](lab-2/)
 
@@ -40,31 +40,31 @@ Out: 2021-3-24, due 2021-4-7.
 
 #### Lab 3: Respond to ARP
 
-Out: 2021-4-7, due 2021-4-21.
+Out: 2022-3-31, due 2022-4-14.
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2021-4-21, due 2021-5-8.
+Out: 2022-4-14, due 2022-4-28.
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2021-5-8, due 2021-5-19.
+Out: 2022-4-28, due 2022-5-12.
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2021-5-19, due 2021-6-2.
+Out: 2022-5-12, due 2022-5-26.
 
 [Start the lab here](lab-6/)
 
 ### Lab 7: Content Delivery Network~~Cont~~
 
-Out: 2021-6-2, due 2021-6-16.
+Out: 2022-5-26, due 2022-6-9.
 
 [Start the lab here](lab-7/)
 
