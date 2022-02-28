@@ -4,40 +4,37 @@
 
 This is the third stage in a series of exercises that have the ultimate goal of creating an IPv4 router. The basic functions of an Internet router are to:
 
-1. Respond to ARP \(address resolution protocol\) requests for addresses
+1.  Respond to ARP (address resolution protocol) requests for addresses
 
-   that are assigned to interfaces on the router. \(Remember that the
+    that are assigned to interfaces on the router. (Remember that the
 
-   purpose of ARP is to obtain the Ethernet MAC address associated with
+    purpose of ARP is to obtain the Ethernet MAC address associated with
 
-   an IP address so that an Ethernet frame can be sent to another host
+    an IP address so that an Ethernet frame can be sent to another host
 
-   over the link layer.\)
+    over the link layer.)
+2.  Receive and forward packets that arrive on links and are destined to
 
-2. Receive and forward packets that arrive on links and are destined to
+    other hosts. Part of the forwarding process is to perform address
 
-   other hosts. Part of the forwarding process is to perform address
+    lookups ("longest prefix match" lookups) in the forwarding table. We
 
-   lookups \("longest prefix match" lookups\) in the forwarding table. We
+    will just use "static" routing in our router rather than implement a
 
-   will just use "static" routing in our router rather than implement a
+    dynamic routing protocol like RIP or OSPF.
+3.  Make ARP requests for IP addresses that have no known Ethernet MAC
 
-   dynamic routing protocol like RIP or OSPF.
+    address. A router will often have to send packets to other hosts,
 
-3. Make ARP requests for IP addresses that have no known Ethernet MAC
+    and needs Ethernet MAC addresses to do so.
+4. Respond to ICMP messages like echo requests ("pings").
+5.  Generate ICMP error messages when necessary, such as when an IP
 
-   address. A router will often have to send packets to other hosts,
+    packet's TTL (time to live) value has been decremented to zero.
 
-   and needs Ethernet MAC addresses to do so.
+The goal of this stage of the project is to accomplish items **#4** and **#5** above. When you're done with this project, you will have a fully functioning Internet router.
 
-4. Respond to ICMP messages like echo requests \("pings"\).
-5. Generate ICMP error messages when necessary, such as when an IP
-
-   packet's TTL \(time to live\) value has been decremented to zero.
-
-The goal of this stage of the project is to accomplish items **\#4** and **\#5** above. When you're done with this project, you will have a fully functioning Internet router.
-
-Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/VlkKYsUN](https://classroom.github.com/a/VlkKYsUN)
+Lab-5 assignment in Github Classroom: (unopened)
 
 ## Your Tasks
 
@@ -57,7 +54,7 @@ Initiate your project with our template.
 
 ### Task 2: Responding to ICMP echo requests
 
-Respond to ICMP messages like echo requests \("pings"\).
+Respond to ICMP messages like echo requests ("pings").
 
 [Start the task here](respond-icmp.md)
 
@@ -83,7 +80,7 @@ The capture file's name should start with "lab\_5", e.g. `lab_5.pcapng` or `lab_
 
 Finally, the directory should be in this structure:
 
-```text
+```
 .
 ├── README.md
 ├── myrouter.py
@@ -106,7 +103,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -120,7 +117,7 @@ We provide a test script `testcases/test_submit.py` for you to check your submis
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -131,7 +128,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -149,4 +146,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-

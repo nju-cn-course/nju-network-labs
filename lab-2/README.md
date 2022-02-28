@@ -2,9 +2,9 @@
 
 ## Overview
 
-In this assignment, you are going to implement the core functionalities of an Ethernet learning switch using the [Switchyard framework](https://gitee.com/pavinberg/switchyard). An Ethernet switch is a layer 2 device that uses packet switching to receive, process and forward frames to other devices \(end hosts, other switches\) in the network. A switch has a set of interfaces \(ports\) through which it sends/receives Ethernet frames. When Ethernet frames arrive on any port, the switch process the header of the frame to obtain information about the destination host. If the switch knows that the host is reachable through one of its ports, it sends out the frame from the appropriate output port. If it does not know where the host is, it floods the frame out of all ports except the input port.
+In this assignment, you are going to implement the core functionalities of an Ethernet learning switch using the [Switchyard framework](https://gitee.com/pavinberg/switchyard). An Ethernet switch is a layer 2 device that uses packet switching to receive, process and forward frames to other devices (end hosts, other switches) in the network. A switch has a set of interfaces (ports) through which it sends/receives Ethernet frames. When Ethernet frames arrive on any port, the switch process the header of the frame to obtain information about the destination host. If the switch knows that the host is reachable through one of its ports, it sends out the frame from the appropriate output port. If it does not know where the host is, it floods the frame out of all ports except the input port.
 
-Lab-2 assignment in Github Classroom: [https://classroom.github.com/a/HimykJzS](https://classroom.github.com/a/HimykJzS)
+Lab-2 assignment in Github Classroom: (unopened)
 
 ## Details
 
@@ -15,7 +15,7 @@ In addition to these, you will also implement three different mechanisms to purg
 These mechanisms are:
 
 * Remove an entry from the forwarding table after 10 seconds have elapsed.
-* Remove the least recently used \(LRU\) entry from the forwarding table. For this functionality assume that your table can only hold 5 entries at a time. If a new entry comes and your table is full, you will remove the entry that has not been matched with a Ethernet frame destination address for the longest time.
+* Remove the least recently used (LRU) entry from the forwarding table. For this functionality assume that your table can only hold 5 entries at a time. If a new entry comes and your table is full, you will remove the entry that has not been matched with a Ethernet frame destination address for the longest time.
 * Remove the entry that has the least traffic volume. For this functionality assume that your table can only hold 5 entries at a time. Traffic volume for an entry is the number of frames that the switch received where `Destination MAC address == MAC address of entry`.
 
 You will implement these mechanisms in three separate Python files. The core functionalities that are explained above will be the same for these implementations.
@@ -26,7 +26,7 @@ Please carefully read the [FAQ](faq.md) section, for more specific details regar
 
 ## Your Tasks
 
-In these tasks, you will write the code to implement the core logic in an Ethernet learning switch using the Switchyard framework. Besides using Switchyard for developing and testing your switch, you can deploy it in Mininet to test it in a "live" setting. The code you'll need to add for the simplest version of this exercise should be less than 20 lines \(and possibly quite a bit less depending on exactly how you write the code\). There are extensions to the basic learning switch that could add quite a bit more code.
+In these tasks, you will write the code to implement the core logic in an Ethernet learning switch using the Switchyard framework. Besides using Switchyard for developing and testing your switch, you can deploy it in Mininet to test it in a "live" setting. The code you'll need to add for the simplest version of this exercise should be less than 20 lines (and possibly quite a bit less depending on exactly how you write the code). There are extensions to the basic learning switch that could add quite a bit more code.
 
 {% hint style="warning" %}
 The sentences marked with ✅ are related to the content of your report. Please pay attention.
@@ -78,7 +78,7 @@ The capture file's name should start with "lab\_2", e.g. `lab_2_lru.pcapng` or `
 
 Finally, the directory should be in this structure:
 
-```text
+```
 .
 ├── README.md
 ├── myswitch.py
@@ -105,7 +105,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -119,7 +119,7 @@ We provide a test script `testcases/test_submit.py` for you to check your submis
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -130,7 +130,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -151,9 +151,8 @@ The message "Wrong name of report PDF" indicates that your report PDF isn't name
 
 ### Check with Github Action
 
-We may set up a GitHub Action \(we may not in the future\) in your repository to check if your directory structure and file names are correct. When you push your directory to the GitHub, it will automatically run the Action. If your directory structure is correct, you will see a green tick, else a red cross. Make sure it is correct in you final assignment.
+We may set up a GitHub Action (we may not in the future) in your repository to check if your directory structure and file names are correct. When you push your directory to the GitHub, it will automatically run the Action. If your directory structure is correct, you will see a green tick, else a red cross. Make sure it is correct in you final assignment.
 
 ![Action Success](../.gitbook/assets/github-action-correct.png)
 
 ![Action Fault](../.gitbook/assets/github-action-fault.png)
-

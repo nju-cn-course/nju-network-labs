@@ -4,7 +4,7 @@
 
 In the assignment you are going to build a reliable communication library in Switchyard that will consist of 3 agents. At a high level, a **blaster** will send data packets to a **blastee** through a **middlebox**. As you should all know by now, IP only offers a best-effort service of delivering packets between hosts. This means all sorts of bad things can happen to your packets once they are in the network: they can get lost, arbitrarily delayed or duplicated. Your communication library will provide additional delivery guarantees by implementing some basic mechanisms at the blaster and blastee. Let's move on to the details.
 
-Lab-6 assignment in Github Classroom: [https://classroom.github.com/a/0zPMNWtr](https://classroom.github.com/a/0zPMNWtr)
+Lab-6 assignment in Github Classroom: (unopened)
 
 ## Your Tasks
 
@@ -68,7 +68,7 @@ The capture file's name should start with "lab\_6", e.g. `lab_6.pcapng` or `lab_
 
 Finally, the directory should be in this structure:
 
-```text
+```
 .
 ├── README.md
 ├── blastee.py
@@ -91,7 +91,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -105,7 +105,7 @@ We provide a test script `testcases/test_submit.py` for you to check your submis
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -116,7 +116,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -134,4 +134,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-

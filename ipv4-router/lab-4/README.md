@@ -4,15 +4,15 @@
 
 This is the second in a set of exercises that have the ultimate goal of creating the "brains" for an IPv4 router. The basic functions of an Internet router are to:
 
-1. Respond to ARP \(address resolution protocol\) requests for addresses that are assigned to interfaces on the router. \(Remember that the purpose of ARP is to obtain the Ethernet MAC address associated with an IP address so that an Ethernet frame can be sent to another host over the link layer.\)
-2. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups \("longest prefix match" lookups\) in the forwarding table. We will just use "static" routing in our router rather than implement a dynamic routing protocol like RIP or OSPF.
+1. Respond to ARP (address resolution protocol) requests for addresses that are assigned to interfaces on the router. (Remember that the purpose of ARP is to obtain the Ethernet MAC address associated with an IP address so that an Ethernet frame can be sent to another host over the link layer.)
+2. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups ("longest prefix match" lookups) in the forwarding table. We will just use "static" routing in our router rather than implement a dynamic routing protocol like RIP or OSPF.
 3. Make ARP requests for IP addresses that have no known Ethernet MAC address. A router will often have to send packets to other hosts, and needs Ethernet MAC addresses to do so.
-4. Respond to ICMP messages like echo requests \("pings"\).
-5. Generate ICMP error messages when necessary, such as when an IP packet's TTL \(time to live\) value has been decremented to zero.
+4. Respond to ICMP messages like echo requests ("pings").
+5. Generate ICMP error messages when necessary, such as when an IP packet's TTL (time to live) value has been decremented to zero.
 
-The goal of this stage is to accomplish **\#2** and **\#3** above.
+The goal of this stage is to accomplish **#2** and **#3** above.
 
-Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/pFaSMI1U](https://classroom.github.com/a/pFaSMI1U)
+Lab-4 assignment in Github Classroom: (unopened)
 
 ## Your Tasks
 
@@ -56,7 +56,7 @@ The capture file's name should start with "lab\_4", e.g. `lab_4.pcapng` or `lab_
 
 Finally, the directory should be in this structure:
 
-```text
+```
 .
 ├── README.md
 ├── myrouter.py
@@ -78,7 +78,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -92,7 +92,7 @@ We provide a test script `testcases/test_submit.py` for you to check your submis
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -103,7 +103,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -121,4 +121,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-

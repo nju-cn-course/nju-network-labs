@@ -4,19 +4,19 @@
 
 This is the first in a series of exercises that have the ultimate goal of creating an IPv4 router. The basic functions of an Internet router are to:
 
-1. Respond to ARP \(Address Resolution Protocol\) requests for addresses that are assigned to interfaces on the router.
+1. Respond to ARP (Address Resolution Protocol) requests for addresses that are assigned to interfaces on the router.
 2. Make ARP requests for IP addresses that have no known Ethernet MAC address. A router will often have to send packets to other hosts, and needs Ethernet MAC addresses to do so.
-3. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups \("longest prefix match" lookups\) in the forwarding information base. You will eventually just use "static" routing in your router, rather than implement a dynamic routing protocol like RIP or OSPF.
-4. Respond to Internet Control Message Protocol \(ICMP\) messages like echo requests \("pings"\).
-5. Generate ICMP error messages when necessary, such as when an IP packet's TTL \(time to live\) value has been decremented to zero.
+3. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups ("longest prefix match" lookups) in the forwarding information base. You will eventually just use "static" routing in your router, rather than implement a dynamic routing protocol like RIP or OSPF.
+4. Respond to Internet Control Message Protocol (ICMP) messages like echo requests ("pings").
+5. Generate ICMP error messages when necessary, such as when an IP packet's TTL (time to live) value has been decremented to zero.
 
-The goal of this first stage of building the router is to accomplish item **\#1** above: respond to ARP requests.
+The goal of this first stage of building the router is to accomplish item **#1** above: respond to ARP requests.
 
-Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/9QvgOqHw](https://classroom.github.com/a/9QvgOqHw)
+Lab-3 assignment in Github Classroom: (unopened)
 
 ## Your Tasks
 
-In the source directory for this exercise, there is a Python file to use as a starter template: `myrouter.py`. This file contains the outline of a Router class, and currently contains a constructor \(`__init__`\) method, a `start` method and a `handle_packet` method. This is just a starter template: you can refactor and redesign the code in any way you like.
+In the source directory for this exercise, there is a Python file to use as a starter template: `myrouter.py`. This file contains the outline of a Router class, and currently contains a constructor (`__init__`) method, a `start` method and a `handle_packet` method. This is just a starter template: you can refactor and redesign the code in any way you like.
 
 The main task for this exercise is to modify the Router class to do the following:
 
@@ -58,7 +58,7 @@ The capture file's name should start with "lab\_3", e.g. `lab_3.pcapng` or `lab_
 
 Finally, the directory should be in this structure:
 
-```text
+```
 .
 ├── README.md
 ├── myrouter.py
@@ -80,7 +80,7 @@ Commit the change.
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -92,7 +92,7 @@ We provide a test script `testcases/test_submit.py` for you to check your submis
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -103,7 +103,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -121,4 +121,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-

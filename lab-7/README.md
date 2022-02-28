@@ -2,13 +2,13 @@
 
 ## Overview
 
-In this lab, you are going to build a demo of **Content Delivery Network \(CDN\)**. A CDN is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability and performance by distributing the service spatially relative to end users.
+In this lab, you are going to build a demo of **Content Delivery Network (CDN)**. A CDN is a geographically distributed network of proxy servers and their data centers. The goal is to provide high availability and performance by distributing the service spatially relative to end users.
 
-To minimize the distance between the visitors and your website’s server, a CDN stores a cached version of its content in multiple geographical locations \(a.k.a., points of presence, or PoPs\). Each PoP contains a number of caching servers responsible for content delivery to visitors within its proximity.
+To minimize the distance between the visitors and your website’s server, a CDN stores a cached version of its content in multiple geographical locations (a.k.a., points of presence, or PoPs). Each PoP contains a number of caching servers responsible for content delivery to visitors within its proximity.
 
-As a feature of this lab, you will use [OpenNetLab](https://opennetlab.org/) for deployment. OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of [Associate Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assginment in real WAN now!
+As a feature of this lab, you will use [OpenNetLab](https://opennetlab.org) for deployment. OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of [Associate Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assginment in real WAN now!
 
-Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/V4BRX15v](https://classroom.github.com/a/V4BRX15v)
+Lab-7 assignment in Github Classroom: (unopened)
 
 ## Your Tasks
 
@@ -71,7 +71,7 @@ Hand in the log of DNS server, caching server and client.
 
 The directory structure should be as follows:
 
-```text
+```
 .
 ├── README.md
 ├── cachingServer
@@ -116,7 +116,7 @@ Only commit your **source code** to your local repository. If there are some gen
 
 After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
 
-```text
+```
 $ git push
 ```
 
@@ -126,7 +126,7 @@ After a few seconds, you can see the changes on your repository web page, which 
 
 Run the `testcases/test_submit.py` file. "OK" means you've passed all the test.
 
-```text
+```
 $ python3 testcases/test_submit.py
 ..
 ----------------------------------------------------------------------
@@ -138,7 +138,7 @@ OK
 
 For example, if your report file has a wrong name format, you will get a test failure as below.
 
-```text
+```
 $ python3 testcases/test_submit.py
 F.
 ======================================================================
@@ -158,4 +158,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-
