@@ -1,10 +1,10 @@
 # Task 1: Preparation
 
-Clone the [Lab-6](https://classroom.github.com/a/0zPMNWtr) assignment template codes. 
+Clone the Lab-6 assignment template codes.&#x20;
 
 Your project will look like:
 
-```text
+```
 .
 ├── README.md
 ├── blastee.py
@@ -14,4 +14,3 @@ Your project will look like:
 └── testcases
     └── test_submit.py
 ```
-

@@ -4,21 +4,20 @@
 
 Get the Lab-1 assignment template codes:
 
-1. Click [Lab-1](https://classroom.github.com/a/Re9pXmXp) and accept this assignment. Wait for a few seconds and refresh the page.
+1. Click [Lab-1 assignment URL](https://classroom.github.com/a/XHb80MIt) and accept this assignment. Wait for a few seconds and refresh the page.
 2. Click the URL to the repository on the page which is similar to [https://github.com/nju-cn-course/lab-1-YourName](https://github.com/nju-cn-course/lab-1-YourName).
 3. Clone the repository to your local machine.
    * Click the green “Code” button and click the icon. You will get the URL in your clipboard similar to [https://github.com/nju-cn-course/lab-1-YourName.git](https://github.com/nju-cn-course/lab-1-YourName.git).
-   * Go to a proper directory \(e.g. `~/networkLab`\) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
+   *   Go to a proper directory (e.g. `~/networkLab`) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
 
-     ```bash
-      $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
-     ```
+       ```bash
+        $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
+       ```
 
-     After a few seconds, there will be a new directory in you current directory named `Lab-1-YourName`.
-
+       After a few seconds, there will be a new directory in you current directory named `Lab-1-YourName`.
    * Edit the source codes in `Lab-1-YourName` directory following steps below.
 
-![github\_clone](../.gitbook/assets/github_clone.png)
+![github\_clone](../.gitbook/assets/github\_clone.png)
 
 ## Play the Tutorial Again
 
@@ -33,7 +32,7 @@ We suggest that you can commit in Git when you complete one step.
 In the section [Mininet](workflow/mininet.md), we introduced how to construct a topology. So here we have two options for you, choose **one** to implement. ✅ Then show the details of how you build the topology in your report.
 
 * Delete `server2` in the topology,
-* Or create a different topology containing 6 nodes using hosts and hubs \(don't use other kinds of devices\).
+* Or create a different topology containing 6 nodes using hosts and hubs (don't use other kinds of devices).
 
 The file you need to modify is `start_mininet.py`.
 
@@ -58,5 +57,4 @@ In the section [Switchyard](workflow/switchyard.md), we introduced how to run Sw
 
 ### Step 5: Capture using Wireshark
 
-Both in section [Wireshark](workflow/wireshark.md) and [Switchyard](workflow/switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host \(no hub\) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.
-
+Both in section [Wireshark](workflow/wireshark.md) and [Switchyard](workflow/switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host (no hub) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.

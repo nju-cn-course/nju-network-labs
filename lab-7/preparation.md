@@ -2,11 +2,11 @@
 
 ## Clone the repo
 
-Clone the [Lab-7](https://classroom.github.com/a/V4BRX15v) assignment template codes.
+Clone the Lab-7 assignment template codes.
 
 Your project will look like:
 
-```text
+```
 .
 ├── README.md
 ├── cachingServer
@@ -42,7 +42,6 @@ Your project will look like:
 
 Install packages we need:
 
-```text
+```
 $ python3 -m pip install -r requirements.txt
 ```
-
