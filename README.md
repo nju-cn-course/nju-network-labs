@@ -1,6 +1,6 @@
 # Computer Network Lab Manual
 
-Computer Network, Nanjing University, Spring 2021
+Computer Network, Nanjing University, Spring 2022
 
 ## Course Info
 
