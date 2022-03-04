@@ -16,11 +16,11 @@ Besides, we will use GitHub Classroom for assignment submission. You can learn h
 
 * [GitHub Classroom: How students complete assignments](https://www.youtube.com/watch?v=ObaFRGp\_Eko)
 
-You may need to use ssh or token to connect to GitHub, please read the following two pages for more details:
+Currently, Github no longer supports passwords to access private repositories. You may need to use ssh or token to connect to GitHub, please read the following two pages for more details:
 
-* [Connecting to GitHub with SSH](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-* [Creating a personal access token](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh)
+* [Creating a personal access token](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+* [Connecting to GitHub with SSH](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh)
 
-In addition, you may be unable to access github because of network fluctuations and other reasons. You can ask your classmates for advice to solve this problem, or follow the solutions that have already posted by some students in QQ group.
+You can use either of the two methods above to access your repository. Note: if you choose to use the token-based method, remember to enable the writing authority when generating the token.
 
-We expect that you will cost 2 days on this.
+&#x20;We expect that you will cost 2 days on this.
