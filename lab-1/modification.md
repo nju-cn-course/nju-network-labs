@@ -57,4 +57,4 @@ In the section [Switchyard](workflow/switchyard.md), we introduced how to run Sw
 
 ### Step 5: Capture using Wireshark
 
-Both in section [Wireshark](workflow/wireshark.md) and [Switchyard](workflow/switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host (no hub) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.
+Both in section [Wireshark](workflow/wireshark.md) and [Switchyard](workflow/switchyard.md), we introduced how to capture packets. In your own topology, capture packets on one host (or the hub) while creating some traffic. **Save your capture file** and submit it with your report and code. ✅ Also you need to describe the details of your capture file.
