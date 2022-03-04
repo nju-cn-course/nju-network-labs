@@ -1,4 +1,4 @@
-# Git
+# Git & GitHub
 
 You can use Git to manage your projects with a clear editing history and we recommend using it.  You should at least know some basic usage of Git. The tutorial of Git is listed below.
 
@@ -16,7 +16,7 @@ Besides, we will use GitHub Classroom for assignment submission. You can learn h
 
 * [GitHub Classroom: How students complete assignments](https://www.youtube.com/watch?v=ObaFRGp\_Eko)
 
-You may need to use ssh or token to connect to github, please read the following two pages for more details:
+You may need to use ssh or token to connect to GitHub, please read the following two pages for more details:
 
 * [Connecting to GitHub with SSH](https://docs.github.com/cn/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 * [Creating a personal access token](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh)
