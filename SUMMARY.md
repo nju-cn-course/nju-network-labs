@@ -5,7 +5,7 @@
   * [Task 1: Prerequisites](lab-1/prerequisites/README.md)
     * [Linux](lab-1/prerequisites/linux.md)
     * [Python](lab-1/prerequisites/python.md)
-    * [Git](lab-1/prerequisites/git.md)
+    * [Git & GitHub](lab-1/prerequisites/git.md)
   * [Task 2: Workflow](lab-1/workflow/README.md)
     * [VS Code](lab-1/workflow/vscode.md)
     * [Mininet](lab-1/workflow/mininet.md)
@@ -52,4 +52,3 @@
   * [Environment Setup](appendix/environment-setup.md)
   * [Multithread programming](appendix/multithread-programming.md)
   * [About This Repository](appendix/about-this-repository.md)
-
