@@ -4,7 +4,7 @@
 
 In this assignment, you are going to implement the core functionalities of an Ethernet learning switch using the [Switchyard framework](https://gitee.com/pavinberg/switchyard). An Ethernet switch is a layer 2 device that uses packet switching to receive, process and forward frames to other devices (end hosts, other switches) in the network. A switch has a set of interfaces (ports) through which it sends/receives Ethernet frames. When Ethernet frames arrive on any port, the switch process the header of the frame to obtain information about the destination host. If the switch knows that the host is reachable through one of its ports, it sends out the frame from the appropriate output port. If it does not know where the host is, it floods the frame out of all ports except the input port.
 
-Lab-2 assignment in Github Classroom: (unopened)
+Lab-2 assignment in Github Classroom: [https://classroom.github.com/a/Ne3heelA](https://classroom.github.com/a/Ne3heelA)
 
 ## Details
 
