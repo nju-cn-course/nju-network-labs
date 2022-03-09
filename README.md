@@ -62,7 +62,7 @@ Out: 2022-5-5, due 2022-5-19.
 
 [Start the lab here](lab-6/)
 
-### Lab 7: Content Delivery Network~~Cont~~
+### Lab 7: Content Delivery Network
 
 Out: 2022-5-19, due 2022-6-2.
 
