@@ -148,11 +148,3 @@ FAILED (failures=1)
 ```
 
 The message "Wrong name of report PDF" indicates that your report PDF isn't named correctly.
-
-### Check with Github Action
-
-We may set up a GitHub Action (we may not in the future) in your repository to check if your directory structure and file names are correct. When you push your directory to the GitHub, it will automatically run the Action. If your directory structure is correct, you will see a green tick, else a red cross. Make sure it is correct in you final assignment.
-
-![Action Success](../.gitbook/assets/github-action-correct.png)
-
-![Action Fault](../.gitbook/assets/github-action-fault.png)
