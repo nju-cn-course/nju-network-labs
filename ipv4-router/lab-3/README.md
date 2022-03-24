@@ -12,7 +12,7 @@ This is the first in a series of exercises that have the ultimate goal of creati
 
 The goal of this first stage of building the router is to accomplish item **#1** above: respond to ARP requests.
 
-Lab-3 assignment in Github Classroom: (unopened)
+Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/bRSvxgn1](https://classroom.github.com/a/bRSvxgn1)
 
 ## Your Tasks
 
