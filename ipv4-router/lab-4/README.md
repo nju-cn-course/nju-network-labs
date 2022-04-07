@@ -12,7 +12,7 @@ This is the second in a set of exercises that have the ultimate goal of creating
 
 The goal of this stage is to accomplish **#2** and **#3** above.
 
-Lab-4 assignment in Github Classroom: (unopened)
+Lab-4 assignment in Github Classroom: ([https://classroom.github.com/a/JN3KMV8U](https://classroom.github.com/a/JN3KMV8U))
 
 ## Your Tasks
 
