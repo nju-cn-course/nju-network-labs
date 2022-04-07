@@ -8,22 +8,20 @@ One of the key tasks to accomplish for this project is to perform the fundamenta
 
 You will need to implement some kind of forwarding table, with each entry containing the following:
 
-1. A network prefix \(e.g., `149.43.0.0`\),
-2. A network "mask" \(e.g., `255.255.0.0`\),
-3. The "next hop" IP address, if the destination network prefix is not
+1. A network prefix (e.g., `149.43.0.0`),
+2. A network "mask" (e.g., `255.255.0.0`),
+3.  The "next hop" IP address, if the destination network prefix is not
 
-   for a directly attached network, and,
+    for a directly attached network.
+4.  The network interface name through which packets destined to the
 
-4. The network interface name through which packets destined to the
-
-   given network should be forwarded.
+    given network should be forwarded.
 
 You will need to build the forwarding table from two sources:
 
-* the list of router interfaces you get through a call to the `net.interfaces()`
+*   the list of router interfaces you get through a call to the `net.interfaces()`
 
-  \(or `net.ports()`\) method
-
+    (or `net.ports()`) method
 * and by reading in the contents of a file named `forwarding_table.txt`.
 
 An example forwarding table file is found in the project directory, and is also recreated each time you either run the test scripts or run your router in Mininet. Your code can simply assume that a file named `forwarding_table.txt` exists in the current working directory.
@@ -32,11 +30,11 @@ An example forwarding table file is found in the project directory, and is also 
 Your forwarding table _may_ be different for the test scenario and for Mininet to help ensure that your router behaves in a _general_ way and isn't written just to handle a specific set of forwarding table entries
 {% endhint %}
 
-Note that for each interface object in the list obtained from `net.interfaces()` \(or, equivalently, `net.ports()`\), the IP address assigned to the interface and the network mask are available \(see the Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)\).
+Note that for each interface object in the list obtained from `net.interfaces()` (or, equivalently, `net.ports()`), the IP address assigned to the interface and the network mask are available (see the Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)).
 
-The file `forwarding_table.txt` can be assumed to exist in the same directory where your router is starting up \(again, this file is produced by the Switchyard test scenario or by the Mininet startup script\), and is structured such that each line contains 4 space-separated items: the **network address**, the **subnet mask**, the **next hop address**, and the **interface** through which packets should be forwarded. Here are some example lines:
+The file `forwarding_table.txt` can be assumed to exist in the same directory where your router is starting up (again, this file is produced by the Switchyard test scenario or by the Mininet startup script), and is structured such that each line contains 4 space-separated items: the **network address**, the **subnet mask**, the **next hop address**, and the **interface** through which packets should be forwarded. Here are some example lines:
 
-```text
+```
 172.16.0.0 255.255.255.0 192.168.1.2 router-eth0
 192.168.200.0 255.255.255.0 192.168.200.1 router-eth1
 ```
@@ -46,57 +44,56 @@ In the first line, the network address is `172.16.0.0` and the subnet mask is `2
 > Now let's give you an example to create your routing table:
 >
 > If you have a router with 2 interfaces. Their IP addresses are `192.168.1.1` and `172.16.1.1` both with netmask `255.255.255.0` . Then you should first have two items in your routing table:
->
-> | network address | subnet address | next hop address | interface |
-> | :--- | :--- | :--- | :--- |
-> | 192.168.1.0 | 255.255.255.0 | 0.0.0.0 | router-eth0 |
-> | 172.16.1.0 | 255.255.255.0 | 0.0.0.0 | router-eth1 |
->
+
+| network address | subnet address | next hop address | interface   |
+| --------------- | -------------- | ---------------- | ----------- |
+| 192.168.1.0     | 255.255.255.0  | 0.0.0.0          | router-eth0 |
+| 172.16.1.0      | 255.255.255.0  | 0.0.0.0          | router-eth1 |
+
 > The IP address `0.0.0.0` means that if a packet's destination IP matches this network address, just throw the packet out of this interface, expecting that the next hop is the destination.
 >
 > At last, append the items read from `forwarding_table.txt` to the routing table.
 
 ### Match Destination IP Addresses against Forwarding Table
 
-After you build the forwarding table \(which should be done once, upon startup\), destination addresses in IP packets received by the router should be matched against the forwarding table. Remember that in case of two items in the table matching, the longest prefix match should be used.
+After you build the forwarding table (which should be done once, upon startup), destination addresses in IP packets received by the router should be matched against the forwarding table. Remember that in case of two items in the table matching, the longest prefix match should be used.
 
 Two special cases to consider:
 
-1. If there is no match in the table, just drop the packet. \(We'll
+1.  If there is no match in the table, just drop the packet. (We'll
 
-   handle this better in a later stage of creating the router.\)
+    handle this better in a later stage of creating the router.)
+2.  If packet is for the router itself (i.e., destination address is an
 
-2. If packet is for the router itself \(i.e., destination address is an
+    address of one of the router's interfaces), also drop/ignore the
 
-   address of one of the router's interfaces\), also drop/ignore the
-
-   packet. \(We'll also handle this better at a later stage.\)
+    packet. (We'll also handle this better at a later stage.)
 
 ## Coding
 
 Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
-There are a couple functions and methods in the [Python 3's `ipaddress` library](https://docs.python.org/3/library/ipaddress.html) \(also available through Switchyard's IP address library\) that are helpful for building forwarding table entries and/or for matching destination IP addresses against forwarding table entries:
+There are a couple functions and methods in the [Python 3's `ipaddress` library](https://docs.python.org/3/library/ipaddress.html) (also available through Switchyard's IP address library) that are helpful for building forwarding table entries and/or for matching destination IP addresses against forwarding table entries:
 
-* To find out the length of a subnet prefix, you can use the following code pattern:
+*   To find out the length of a subnet prefix, you can use the following code pattern:
 
-  ```python
-  from switchyard.lib.address import *
-  netaddr = IPv4Network('172.16.0.0/255.255.255.0')
-  netaddr.prefixlen # -> 24
-  ```
+    ```python
+    from switchyard.lib.address import *
+    netaddr = IPv4Network('172.16.0.0/255.255.255.0')
+    netaddr.prefixlen # -> 24
+    ```
 
 Note in the code above that you simply need to concatenate an IP address with '/' and the netmask when constructing a `IPv4Network` object. The resulting object can tell you the length of the prefix in bits, which will be quite helpful.
 
-* The `IPv4Address` class can be converted to an integer using the standard `int()` type conversion function. This function will return the 32-bit unsigned integer representation of an IP address. Remember that you can use bit-wise operations on Python integers \(`&` is bitwise AND, `|` is bitwise OR, `~` is bitwise NOT, `^` is bitwise XOR\). For example, if we wanted to check whether a given address matches a prefix, we might do something like this:
+*   The `IPv4Address` class can be converted to an integer using the standard `int()` type conversion function. This function will return the 32-bit unsigned integer representation of an IP address. Remember that you can use bit-wise operations on Python integers (`&` is bitwise AND, `|` is bitwise OR, `~` is bitwise NOT, `^` is bitwise XOR). For example, if we wanted to check whether a given address matches a prefix, we might do something like this:
 
-  ```python
-  prefix = IPv4Address('172.16.0.0')
-  mask = IPv4Address('255.255.0.0')
-  destaddr = IPv4Address('172.16.23.55')
-  matches = (int(mask) & int(destaddr)) == int(prefix)
-  # matches -> True
-  ```
+    ```python
+    prefix = IPv4Address('172.16.0.0')
+    mask = IPv4Address('255.255.0.0')
+    destaddr = IPv4Address('172.16.23.55')
+    matches = (int(mask) & int(destaddr)) == int(prefix)
+    # matches -> True
+    ```
 
 You can also use capabilities in the `IPv4Network` class to do the same thing:
 
@@ -112,4 +109,3 @@ matches = destaddr in prefixnet
 ## Testing
 
 As the function has not been fully implemented, there is no test cases can check the output of your router.
-
