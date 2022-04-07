@@ -8,8 +8,8 @@ One of the key tasks to accomplish for this project is to perform the fundamenta
 
 You will need to implement some kind of forwarding table, with each entry containing the following:
 
-1. A network prefix (e.g., `149.43.0.0`),
-2. A network "mask" (e.g., `255.255.0.0`),
+1. A network prefix (e.g., `149.43.0.0`).
+2. A network "mask" (e.g., `255.255.0.0`).
 3.  The "next hop" IP address, if the destination network prefix is not
 
     for a directly attached network.
