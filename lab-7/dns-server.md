@@ -74,7 +74,7 @@ def get_response(self, request_domain_name):
 
 **This function provides :**
 
-* request\_domain\_name：the ip address of the domain requested by the user.
+* request\_domain\_name：the domain requested by the user.
 * client\_ip : the IP address of the user.
 
 **You need to return :**
