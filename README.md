@@ -10,7 +10,7 @@ Lecturer: [Chen Tian](https://cs.nju.edu.cn/tianchen/) & [Wenzhong Li](https://c
 
 Website: [https://cs.nju.edu.cn/lwz/networks/](https://cs.nju.edu.cn/lwz/networks/)
 
-Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)\~\~\~\~
+Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)~~~~
 
 ## Contact
 
@@ -24,13 +24,13 @@ You may have many questions about our labs. There are some questions can be answ
 
 ### Lab 1: Switchyard & Mininet
 
-Out: 2023-3-10, due 2023-3-24 11:59PM.
+Out: 2023-3-10, due 2023-3-24 23:59.
 
 [Start the lab here](lab-1/)
 
 ### Lab 2: Learning Switch
 
-Out: 2023-3-24, due 2023-4-7 11:59PM.
+Out: 2023-3-24, due 2023-4-7 23:59.
 
 [Start the lab here](lab-2/)
 
@@ -40,31 +40,31 @@ Out: 2023-3-24, due 2023-4-7 11:59PM.
 
 #### Lab 3: Respond to ARP
 
-Out: 2023-4-7, due 2023-4-21 11:59PM.
+Out: 2023-4-7, due 2023-4-21 23:59.
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2023-4-21, due 2023-5-5 11:59PM.
+Out: 2023-4-21, due 2023-5-5 23:59.
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2023-5-5, due 2023-5-19 11:59PM.
+Out: 2023-5-5, due 2023-5-19 23:59.
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2023-5-19, due 2023-6-2 11:59PM.
+Out: 2023-5-19, due 2023-6-2 23:59.
 
 [Start the lab here](lab-6/)
 
 ### Lab 7: Content Delivery Network
 
-Out: 2023-6-2, due 2023-6-16 11:59PM.
+Out: 2023-6-2, due 2023-6-16 23:59.
 
 [Start the lab here](lab-7/)
 
@@ -83,7 +83,9 @@ You can use **pull requests** of each lab to ask questions or give us feedback.
 
 For example, if you want to feedback about lab-1, go to GitHub lab-1 repository page:
 
-1. Click “Pull requests”
+1.  Click “Pull requests”
+
+
 2. Click “Feedback” and enter you question in the conversation box.
 
 ![pull\_request](.gitbook/assets/pull\_request.png)
