@@ -77,6 +77,34 @@ We encourage discussions with others to clarify questions about homework problem
 2. Do **NOT** make your remote assignment repository public.
 {% endhint %}
 
+## Grading
+
+Each lab grade will be based on:
+
+* 60% class check
+* 40% lab report
+
+### Class Check
+
+You need to give an oral report with your code to a TA in lab class. Your class check score will basically detertermined by your understanding of the lab and your code quality. The scoring criteria are as follows:
+
+* _**100-110**_ Complete all lab tasks **with additional requirements or some innovation**. Code check passes.
+* _**90-100**_ Complete all lab tasks. Lab is clearly and thoroughly understood. Code check passes.&#x20;
+* _**80-90**_ Lab results are fine, but some concepts are confused, and the lab content is misunderstood. Code check passes.
+* _**60-80**_ Lab results have some problems or part of the tasks are not completed. Code check passes.
+* _**50-60**_ Lab only half completed or less.
+* _**below 50**_ Code check fails and plagiarism is present.
+
+### Lab Report
+
+You need to summit files including your lab report to Github Classroom as each lab page required. The scoring criteria are as follows:
+
+* _**90-100**_ The report is complete, with logical and rigorous experimental procedures and descriptions, comprehensive and in-depth analysis, and neat format.
+* _**80-90**_ The report is complete, with all the required experimental procedures and screenshots.
+* _**60-80**_ The content of the report is missing in some parts.
+* _**50-60**_ The report is only half complete or less, but the parts that have been completed are clearly stated and described.
+* _**below 50**_ The main content of the report is seriously missing and not explained, the format is confusing, plagiarism is present, etc.
+
 ## Feedback
 
 You can use **pull requests** of each lab to ask questions or give us feedback.
