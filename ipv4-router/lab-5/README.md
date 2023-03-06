@@ -34,7 +34,7 @@ This is the third stage in a series of exercises that have the ultimate goal of 
 
 The goal of this stage of the project is to accomplish items **#4** and **#5** above. When you're done with this project, you will have a fully functioning Internet router.
 
-Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/rB5\_omWs](https://classroom.github.com/a/rB5\_omWs)
+Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/5PGv3Pag](https://classroom.github.com/a/5PGv3Pag)
 
 ## Your Tasks
 
