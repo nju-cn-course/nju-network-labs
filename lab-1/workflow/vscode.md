@@ -12,7 +12,7 @@ You can choose the VM image with VSC preinstalled. But someone like to install i
 $ sudo apt install ./<file>.deb
 ```
 
-## Develope Switchyard with VSC
+## Develop with VSC
 
 {% hint style="success" %}
 Here we will get in touch with Switchyard in advance. You can just skim the content of Switchyard now. After reading the section [Switchyard](switchyard.md), come back again.
@@ -133,7 +133,7 @@ examples/myhub_testscenario.py examples/myhub.py
 
 You may wonder why this command is more complicated. The answer lies in the that: when we have activated the `syenv` environment and run `swyard` command, it is actually short for `/home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard` . The activation solves the full path for you so that you can run the command simply. But in VS Code you should configured the full path.
 
-## Debug Switchyard with VSC
+## Debug with VSC
 
 [Switchyard document about debug](https://jsommers.github.io/switchyard/test\_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pdb with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration.
 
@@ -186,7 +186,7 @@ Then modify the `tasks.json` and `launch.json` to run the test correctly.
 
 ## Other editor/IDE
 
-You of course can use other editors or IDEs if you prefer. Some other powerful tools you can choose are:
+Of course you can use other editors or IDEs if you prefer. Some other powerful tools you can choose are:
 
 * IDE: PyCharm, Visual Studio
 * Editor: Vim, Emacs
