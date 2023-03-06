@@ -17,7 +17,7 @@ Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.
 Contact through QQ group.
 
 {% hint style="info" %}
-You may have many questions about our labs. There are some questions can be answered in our manual, some can be answered by searching the Internet, and some we have not mentioned which need to be added to our manual. We welcome the third one because the answers to the first two questions are readily available. To give you faster access to the answers, you need to take a look at this article [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh\_CN.md).
+You may come up with questions about lab assignments. While some can be answered in this manual or by searching the Internet, we welcome those yet to be answered. To get a precise answer, you need to take a look at this article [提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh\_CN.md).
 {% endhint %}
 
 ## Lab Assignments
@@ -73,37 +73,36 @@ Out: 2023-6-2, due 2023-6-16 23:59.
 We encourage discussions with others to clarify questions about homework problems and programming assignment problem statements. However
 
 {% hint style="danger" %}
-1. Programming solutions must be your own. If we find you plagiarize, either from your classmates or Internet, you will get **0 score** of this lab.
-2. Do **NOT** make your remote assignment repository public.
+1. Solutions must be your own. If we find any form of plagiarism, either from your classmates or Internet, you will receive **0 point** from this lab.
+2. **DO NOT** make your remote repository public.
 {% endhint %}
 
 ## Grading
 
-Each lab grade will be based on:
+Your submissions are graded by:
 
-* 60% class check
-* 40% lab report
+* 60% code
+* 40% report
 
-### Class Check
+### Code
 
-You need to give an oral report with your code to a TA in lab class. Your class check score will basically detertermined by your understanding of the lab and your code quality. The scoring criteria are as follows:
+You are required to present your code to a TA in the class. We will grade your code based on your understanding of the lab and your code quality. The criteria are as follows:
 
-* _**100-110**_ Complete all lab tasks **with additional requirements or some innovation**. Code check passes.
-* _**90-100**_ Complete all lab tasks. Lab is clearly and thoroughly understood. Code check passes.&#x20;
-* _**80-90**_ Lab results are fine, but some concepts are confused, and the lab content is misunderstood. Code check passes.
-* _**60-80**_ Lab results have some problems or part of the tasks are not completed. Code check passes.
-* _**50-60**_ Lab only half completed or less.
-* _**below 50**_ Code check fails and plagiarism is present.
+* _**90-100**_ Completed all tasks with clear and thorough understanding.&#x20;
+* _**80-90**_ Passed all tests but misunderstood some concepts.
+* _**60-80**_ Failed in some tests.
+* _**below 60**_ Left some tasks undone.
 
-### Lab Report
+Additionally, we welcome innovation. If your realization are creative, we may grant bonus points.
 
-You need to summit files including your lab report to Github Classroom as each lab page required. The scoring criteria are as follows:
+### Report
 
-* _**90-100**_ The report is complete, with logical and rigorous experimental procedures and descriptions, comprehensive and in-depth analysis, and neat format.
-* _**80-90**_ The report is complete, with all the required experimental procedures and screenshots.
-* _**60-80**_ The content of the report is missing in some parts.
-* _**50-60**_ The report is only half complete or less, but the parts that have been completed are clearly stated and described.
-* _**below 50**_ The main content of the report is seriously missing and not explained, the format is confusing, plagiarism is present, etc.
+You are required to submit a report for each lab to Github Classroom. The criteria are as follows:
+
+* _**90-100**_ The report is neat, clear and complete, with comprehensive and in-depth analysis describing how you fulfill the tasks.
+* _**80-90**_ The report is complete, with required experimental procedures and screenshots.
+* _**60-80**_ Some parts of the report are missing.
+* _**below 60**_ The report is incomplete, or the format is confusing.
 
 ## Feedback
 
