@@ -93,7 +93,7 @@ You are required to present your code to a TA in the class. We will grade your c
 * _**60-80**_ Failed in some tests.
 * _**below 60**_ Left some tasks undone.
 
-Additionally, we welcome innovation. If your realization are creative, we may grant bonus points.
+Additionally, we welcome innovation. If your realization is creative, we may grant bonus points.
 
 ### Report
 
