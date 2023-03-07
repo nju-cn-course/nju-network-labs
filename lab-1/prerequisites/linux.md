@@ -38,6 +38,8 @@ Start your VM and check if your Linux runs well. You will find the display size 
 
 You can learn about installing the extension at [here](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/intro-installing.html).
 
+Or you can change your VM resolution simply in `Settings->Devices->Displays->Resolution` inside your VM without installing the extension pack.
+
 ## Use Linux
 
 Most of our operations will be completed inside the terminal. You need to know
