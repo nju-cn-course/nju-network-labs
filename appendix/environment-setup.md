@@ -2,6 +2,14 @@
 
 If you see here then you must be a high-end player, the instructions here will be very simple.
 
+{% hint style="warning" %}
+Since the Open vSwitch module is currently missing from the kernel in WSL/WSL2, we strongly advise you to use a VM.
+{% endhint %}
+
+{% hint style="info" %}
+Some essential packages may be absent when you follow these steps. Please refer to the error message for specific information and install them accordingly.
+{% endhint %}
+
 ## Install Switchyard
 
 You can find instructions [here](https://pavinberg.gitee.io/switchyard), the repository of switchyard on GitHub. A quick note here for Ubuntu.
@@ -27,13 +35,13 @@ source ./syenv/bin/activate
 
 You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the venv module.
 
-Finally, install Switchyard. All the required additional libraries should be automatically installed, too.
+Finally, go to the Switchyard directory and perform installation. All the required additional libraries should be automatically installed, too.
 
 ```
 python3 -m pip install .
 ```
 
-Then I suggest to exclude your virtual environment out of git tracking. Add this line in `.gitignore`
+We also suggest you to exclude the virtual environment out of git tracking. Add this line in `.gitignore`
 
 ```
 syenv/
