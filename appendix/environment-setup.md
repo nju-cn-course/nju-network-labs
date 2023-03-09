@@ -53,7 +53,15 @@ syenv/
 sudo apt-get install mininet
 ```
 
-Or you want to build mininet yourself. The installation guide is [here](http://mininet.org/download/).
+If you want to build Mininet yourself. The official guide is [here](http://mininet.org/download/).
+
+## Install Xterm
+
+Xterm provides CLI to control your network components in Mininet.
+
+```
+$ sudo apt-get install xterm
+```
 
 ## Install Wireshark
 

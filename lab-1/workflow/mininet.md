@@ -5,32 +5,18 @@ Mininet enables you to quickly create, interact with, customize and share a soft
 The most useful material is their website. Here is the [Mininet Walkthrough](http://mininet.org/walkthrough/). At this stage you will encounter some concepts you are not familiar with such as switches and hosts, but remember to come back after you have learned them. In this section, we will have a small practice of Mininet.
 
 {% hint style="info" %}
-Ignore the content about switches like Open vSwitch \(OVS\) setting up.
+Ignore the content about switches like Open vSwitch (OVS) setting up.
 {% endhint %}
 
 We expect that you will spend 2 days on this.
 
-## Install Mininet
+## Install Mininet and Xterm
 
-If you find that Mininet is not installed on your system, run this command to install it.
-
-```text
-$ sudo apt-get install mininet
-```
-
-Or you want to build mininet yourself. The installation guide is [here](http://mininet.org/download/).
-
-## Install Xterm
-
-If you find that Xterm is not installed on your system, run this command to install it.
-
-```text
-$ sudo apt-get install xterm
-```
+Mininet and Xterm have already been installed on the VM we provided. However, for those who use a custom environment, the installation guide is [here](../../appendix/environment-setup.md#install-mininet).
 
 ## Everyday Mininet Usage
 
-First, a \(perhaps obvious\) note on command syntax for this walkthrough:
+First, a (perhaps obvious) note on command syntax for this walkthrough:
 
 * `$` proceeds Linux commands that should be typed at the shell prompt
 * `mininet>` proceeds Mininet commands that should be typed at Mininet’s CLI,
@@ -40,25 +26,25 @@ First, a \(perhaps obvious\) note on command syntax for this walkthrough:
 
 So let's start with Mininet startup options. Type the following command to display a help message. Read the output for more usages of Mininet.
 
-```text
+```
 $ sudo mn -h
 ```
 
 {% hint style="warning" %}
-Commands start with `sudo` or run as a superuser \(prompt like `#`\) are dangerous. Avoid doing things like that. But you need run Mininet as a superuser so be careful.
+Commands start with `sudo` or run as a superuser (prompt like `#`) are dangerous. Avoid doing things like that. Here Mininet requires superuser privilege so be careful.
 {% endhint %}
 
 Then let's build a Mininet default topology.
 
-```text
+```
 $ sudo mn
 ```
 
 ![shell](../../.gitbook/assets/shell.png)
 
-You will see the same output as the picture above. See what Mininet tells us. The default topology contains two hosts and one switch. They link like this
+You should get the same output as the picture above. See what Mininet tells us. The default topology contains two hosts and one switch. They link like this:
 
-```text
+```
 h1 --- s1 --- h2
 ```
 
@@ -68,25 +54,25 @@ And you now are in Mininet CLI starts with `mininet>`. The next thing is to inte
 
 First let's see what we can do in Mininet CLI.
 
-```text
+```
 mininet> help
 ```
 
 Display nodes.
 
-```text
+```
 mininet > nodes
 ```
 
 Display links.
 
-```text
+```
 mininet> net
 ```
 
 Dump information about all nodes. This command is useful.
 
-```text
+```
 mininet> dump
 ```
 
@@ -94,13 +80,13 @@ You should see the switch and two hosts listed.
 
 If the first string typed into the Mininet CLI is a host, switch or controller name, the command is executed on that node. Run a command on a host process.
 
-```text
+```
 mininet> h1 ifconfig -a
 ```
 
 And you can start a pop-up terminal emulator in one host.
 
-```text
+```
 mininet> h1 xterm
 ```
 
@@ -108,27 +94,31 @@ The new window pops up here is the terminal emulator of `h1`. If you type `ifcon
 
 ![xterm](../../.gitbook/assets/xterm.png)
 
+{% hint style="info" %}
+If the letters in Xterm are illegible, you can press Ctrl and right click on the window, in which you get a menu to change font settings.
+{% endhint %}
+
 ### Test Connectivity Between Hosts
 
 Now, verify that you can ping from host 0 to host 1. You can also do it in pop-up xterm at `h1`. You will learn what `ping` is in the later lessons. Now `ping` just tells you whether two hosts is well-connected.
 
-```text
+```
 mininet> h1 ping -c 1 h2
 ```
 
 An easier way to run this test is to use the Mininet CLI built-in `pingall` command, which does an all-pairs `ping`.
 
-```text
+```
 mininet> pingall
 ```
 
 ### Run A Simple Web Server and Client
 
-Remember that `ping` isn’t the only command you can run on a host! Mininet hosts can run any command or application that is available to the underlying Linux system \(or VM\) and its file system. You can also enter any `bash` command, including job control \(`&`, `jobs`, `kill`, etc..\)
+Remember that `ping` isn’t the only command you can run on a host! Mininet hosts can run any command or application that is available to the underlying Linux system (or VM) and its file system. You can also enter any `bash` command, including job control (`&`, `jobs`, `kill`, etc..)
 
 Next, try starting a simple HTTP server on h1, making a request from h2, then shutting down the web server.
 
-```text
+```
 mininet> h1 python -m SimpleHTTPServer 80 &
 mininet> h2 wget -O - h1
 ...
@@ -137,7 +127,7 @@ mininet> h1 kill %python
 
 Exit the CLI.
 
-```text
+```
 mininet> exit
 ```
 
@@ -145,13 +135,13 @@ mininet> exit
 
 If Mininet crashes for some reason, clean it up.
 
-```text
+```
 $ sudo mn -c
 ```
 
 ## Custom Topologies
 
-Custom topologies can be easily defined as well, using a simple Python API. The example here connects 4 devices as a star topology shows below. This file is in the Switchyard repository [`examples/start_mininet.py`](https://gitee.com/pavinberg/switchyard/blob/master/examples/start_mininet.py).
+Custom topologies can be easily defined as well, using a simple Python API. The example here connects 4 devices as a star topology shows below. This file is in the Switchyard repository [`examples/start_mininet.py`](https://gitee.com/pavinberg/switchyard/blob/master/examples/start\_mininet.py).
 
 ```python
 #!/usr/bin/python
@@ -278,7 +268,7 @@ In general, you don't need to modify the topology file we provide. But if you do
 
 Please read it carefully. Then let's start this topology.
 
-```text
+```
 $ sudo python examples/start_mininet.py
 ```
 
@@ -287,7 +277,7 @@ In this topology, hosts can not `ping` each other because the device named `hub`
 {% hint style="info" %}
 Our VM provides Python mininet module for Python 2. If you want to use Python 3 instead, you should install `mininet` module of Python 3, i.e. run command:
 
-```text
+```
 $ pip3 install mininet
 ```
 
@@ -297,4 +287,3 @@ Then run the script with`python3:`
 $ sudo python3 examples/start_mininet.py
 ```
 {% endhint %}
-
