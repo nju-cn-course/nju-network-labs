@@ -10,7 +10,7 @@ We expect that this will cost you an afternoon.
 
 ## Install Wireshark
 
-Wireshark has also been bundled in the VM we provided. For custom environment, the installation guide is [here](../../appendix/environment-setup.md#install-wireshark).
+Wireshark has also been bundled in the VM we provided. For custom environments, the installation guide is [here](../../appendix/environment-setup.md#install-wireshark).
 
 ## Capturing Packets
 
