@@ -34,9 +34,9 @@ We advise you to clone the repositories to your workspace folder. Otherwise, you
 
 <pre><code>.
 ├── workspace
-│   ├── lab-1-YourName
+│   ├── Lab-1-YourName
 │   │   └── ...
-│   ├── lab-2-YourName
+│   ├── Lab-2-YourName
 │   │   └── ...
 <strong>│   └── syenv
 </strong>└── switchyard

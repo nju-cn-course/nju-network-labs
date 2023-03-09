@@ -10,7 +10,7 @@ Get the Lab-1 assignment template codes:
 3. Clone the repository to your local machine.
    * Click the green “Code” button and click the icon. You will get the URL in your clipboard similar to :\
      &#x20;`https://github.com/nju-cn-course-YYYY/lab-1-YourName.git`
-   *   Go to a proper directory (e.g. `~/networkLab`) on you Ubuntu, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
+   *   Go to a proper directory (e.g. `~/workspace`) on Linux, and clone this repository by inputing the command below. Notice that the URL should be pasted from your clipboard.
 
        ```bash
         $ git clone https://github.com/nju-cn-course/lab-1-YourName.git
@@ -21,17 +21,17 @@ Get the Lab-1 assignment template codes:
 
 ![github\_clone](../.gitbook/assets/github\_clone.png)
 
-## Play the Tutorial Again
+## Go through the Tutorial Again
 
 You have done the tutorial. However it is necessary to work by yourself. So modify our examples files.
 
 {% hint style="success" %}
-We suggest that you can commit in Git when you complete one step.
+We suggest that you commit in Git whenever you complete one step.
 {% endhint %}
 
 ### Step 1: Modify the Mininet topology
 
-In the section [Mininet](workflow/mininet.md), we introduced how to construct a topology. So here we have two options for you, choose **one** to implement. ✅ Then show the details of how you build the topology in your report.
+In the section [Mininet](workflow/mininet.md), we introduced how to construct a topology. So here we have two options for you, choose **one** to implement. ✅ Then show the details of how you built the topology in your report.
 
 * Delete `server2` in the topology,
 * Or create a different topology containing 6 nodes using hosts and hubs (don't use other kinds of devices).
@@ -40,7 +40,7 @@ The file you need to modify is `start_mininet.py`.
 
 ### Step 2: Modify the logic of a device
 
-In the section [Switchyard](workflow/switchyard.md), we introduced how to program a device. Your task is to count how many packets pass through a hub in and out. You need to log the statistical result every time you receive one packet with the format of each line `in:<ingress packet count> out:<egress packet count>`. For example, if there is a packet that is not addressed to the hub itself, then the hub may log `in:1 out:2`. ✅ Then show the log of your hub when running it in Mininet and how you implement it in your report.
+In the section [Switchyard](workflow/switchyard.md), we introduced how to program a device. Your task is to count how many packets have passed through a hub in and out. You need to record the statistical result every time you receive one packet with the format of each line `in:<ingress packet count> out:<egress packet count>`. For example, if there is a packet that is not addressed to the hub itself, then the hub may log `in:1 out:2`. ✅ Then show the log of your hub when running it in Mininet and how you implemented it in your report.
 
 The file you need to modify is `myhub.py`.
 
