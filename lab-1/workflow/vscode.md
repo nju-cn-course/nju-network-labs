@@ -1,36 +1,28 @@
 # VS Code
 
-You can use Visual Studio Code (VSC) to develope your projects. Visual Studio Code is currently one of the most welcomed editor. It is open-source and has a large number of extensions. I will show how to install it and introduce some plugins may help you. This tutorial is prepared for those who want to take full control of Switchyard in one editor. We use Ubuntu 18.04 here. As we have provided the VM image with VSC preinstalled, you can skip the installation.
+Visual Studio Code (VSC) is a convenient tool to develop your projects. As one of the most popular editor, it is open source with a large number of extensions. We will briefly introduce it as well as some helpful plugins. This tutorial is prepared for those who want to take full control of Switchyard in one editor. We assume Ubuntu 18.04 here.
 
 We expect that you will spend several hours on this.
 
 ## Install VSC
 
-You can choose the VM image with VSC preinstalled. But someone like to install it themselves. The easiest way to install Visual Studio Code for Debian/Ubuntu based distributions is to download and install the [.deb package (64-bit)](https://go.microsoft.com/fwlink/?LinkID=760868), either through the graphical software center if it's available, or through the command line with:
-
-```
-$ sudo apt install ./<file>.deb
-```
+The VM we provided comes with VS Code. In case you have a custom environment, you can either try the graphical software center if available, or download the installation package. Detailed instructions can be found [here](https://code.visualstudio.com/docs/setup/linux).
 
 ## Develop with VSC
 
-{% hint style="success" %}
-Here we will get in touch with Switchyard in advance. You can just skim the content of Switchyard now. After reading the section [Switchyard](switchyard.md), come back again.
-{% endhint %}
-
-Open the folder of Switchyard in VSC. You can open files in the explorer and edit them.
+Open the folder of Switchyard in VSC. You can open files in the explorer column and edit them.
 
 ![VSC](../../.gitbook/assets/vscode.png)
 
-Then there are some plugins you may want to install. For Python, check this extension and install it.
+There are some plugins you may want to install. For Python, search for this extension and install it.
 
 ![VSC-python](<../../.gitbook/assets/vscode-python (1).png>)
 
-Next open any Python files and you will see a pop-up message ask you whether you want to install a linter. Pylint is enough to use so install it.
+Next, open any Python files and you will see a pop-up message asking you whether you want to install a linter. Pylint is enough so install it.
 
 ![VSC-pylint](../../.gitbook/assets/vscode-pylint.png)
 
-You have got almost every thing you need here. But you may want to format your document by right click on your editor and choose "Format Document". VSC will tell you that you need to install a formatter. Yapf is better for me but you are free to use others.
+You have got almost everything you need here. But you may want to format your document by right click on your editor and choose "Format Document". VSC will tell you that you need to install a formatter. Yapf is one option but you are free to use others.
 
 ![VSC-format](<../../.gitbook/assets/vscode-format (1).gif>)
 
@@ -54,7 +46,7 @@ Edit `.vscode/settings.json` like this:
 
 ```bash
 {
-    "python.pythonPath": "/home/njucs/switchyard/syenv/bin/python3"
+    "python.pythonPath": "/home/njucs/workspace/syenv/bin/python3"
 }
 ```
 
@@ -62,7 +54,7 @@ Notice that you should change the path to the one on your machine.
 
 ## Run Switchyard
 
-You can simply open the terminal either in VS Code or in you Linux and input the command to run switchyard. But VS Code provides an easy way to run a command with a only shortcut. You can use this feature to run Switchyard test. However, if you are tired to configure as below, just skip to next section.
+You can simply open the terminal either in VS Code or in Linux to run switchyard. But VS Code provides an easy way to run a command with shortcuts. You can use this feature to run Switchyard test. However, if you find the configurations too complicated, just skip to the next section.
 
 *   First you need to create a `tasks.json` in your workspace:
 
@@ -131,11 +123,11 @@ $ /home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard -t \
 examples/myhub_testscenario.py examples/myhub.py
 ```
 
-You may wonder why this command is more complicated. The answer lies in the that: when we have activated the `syenv` environment and run `swyard` command, it is actually short for `/home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard` . The activation solves the full path for you so that you can run the command simply. But in VS Code you should configured the full path.
+You may wonder why this command is more complicated. In this case, when we have activated the `syenv` environment and run `swyard` command, it is actually short for `/home/njucs/switchyard/syenv/bin/python3 -m switchyard.swyard` . The activation resolves the full path for you, so you can run the command simply. But in VS Code you should configure the full path.
 
 ## Debug with VSC
 
-[Switchyard document about debug](https://jsommers.github.io/switchyard/test\_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pdb with VSC debugger. This will works when running in Switchyard test environment. For VSC, you need to create debugging configuration.
+[Switchyard document about debug](https://jsommers.github.io/switchyard/test\_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers. Let's replace pdb with VSC debugger. This will work in the test environment. For VSC, you need to create debugging configuration.
 
 For example, if you want to debug `examples/myhub.py` with `examples/myhub_testscenario.py`, you need to create a `launch.json` for configuration.
 
@@ -169,26 +161,16 @@ For example, if you want to debug `examples/myhub.py` with `examples/myhub_tests
     }
     ```
 
-    The configuration is similar to `tasks.json` described above. The `--nohandle` is a flag for Switchyard not to trap exaception which is described in its [documentation](https://pavinberg.gitee.io/switchyard/test\_execution.html#if-you-don-t-like-pdb).
+    The configuration is similar to `tasks.json` described above. The `--nohandle` is a flag for Switchyard not to trap exception which is described in its [documentation](https://pavinberg.gitee.io/switchyard/test\_execution.html#if-you-don-t-like-pdb).
 2. Open `examples/myhub.py` file. Set a breakpoint in your code and click the configuration to debug. Or just simply click "Run -- Start Debugging" or press "F5" to start debugging `examples/myhub.py` .
 
-You can use this way in your configuration to easily debug your Switchyard program for later experiments.
-
-## For Assignment
-
-In the later section we introduced GitHub Classroom for assignment. For each assignment, you will have an independent directory. To use the VS Code configuration above, simply copy the whole directory `.vscode` to your new directory. For example:
-
-```bash
-$ cp -r ~/switchyard/.vscode /path/to/your/Lab-1-YourName
-```
-
-Then modify the `tasks.json` and `launch.json` to run the test correctly.
+You can try this in your configuration to easily debug your Switchyard program for later experiments.
 
 ## Other editor/IDE
 
-Of course you can use other editors or IDEs if you prefer. Some other powerful tools you can choose are:
+You are free to choose other editors or IDEs you prefer. Some powerful tools are:
 
 * IDE: PyCharm, Visual Studio
 * Editor: Vim, Emacs
 
-However, if you have always been using an IDE, we recommend you try out an editor.
+However, if you have always been using an IDE, we recommend you to try out an editor.

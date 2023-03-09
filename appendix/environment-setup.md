@@ -83,6 +83,4 @@ sudo usermod -a -G wireshark $USER
 
 ## Other Softwares
 
-You also want to install some editors like Vim, Emacs, Visual Studio Code, Sublime and so on. But we do not install any one of them to avoiding a quarrel about the best editor. Choose your favorite one and install it yourself.
-
-Another helpful module VBoxGuestAdditions is not installed because various virtual machine hypervisors you will use.
+You need to install editors like Vim, Emacs, Visual Studio Code, Sublime, etc. for better experience. We do not make specific recommendations here, so just choose your favorite one.
