@@ -1,10 +1,10 @@
 # Git & GitHub
 
-You can use Git to manage your projects with a clear editing history and we recommend using it.  You should at least know some basic usage of Git. The tutorial of Git is listed below.
+You can use Git to manage your projects with a clear editing history and we recommend using it.  You should at least know some basics of Git. The tutorial of Git is listed below.
 
 * [廖雪峰的 Git 教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
-At least, the commands you should know are:
+To begin with, the commands you should know are:
 
 * git clone
 * git add
@@ -12,7 +12,7 @@ At least, the commands you should know are:
 * git push
 * git pull
 
-Besides, we will use GitHub Classroom for assignment submission. You can learn how to submit your assignment with GitHub classroom at the following websites:
+Besides, we will use GitHub Classroom for assignment submission. You can learn how to submit your assignment with GitHub classroom at the following website:
 
 * [GitHub Classroom: How students complete assignments](https://www.youtube.com/watch?v=ObaFRGp\_Eko)
 
