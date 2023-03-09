@@ -1,12 +1,12 @@
 # Linux
 
-The operating system of our experimental environment is Ubuntu 18.04 which is a free and open-source Linux distribution. In order to run Linux, you need to install a virtual machine hypervisor on your computer. There are two reasons.
+The operating system of our experimental environment is Ubuntu 18.04, a free and open-source Linux distribution. In order to run Linux, you need a virtual machine hypervisor on your computer. There are two reasons.
 
 1. Our experiments involve changes to the network. Using a virtual machine (VM) can avoid impact on your computer.
 2. We will introduce Mininet and Switchyard later. It is much more easier to install and run them on Linux.
 
 {% hint style="info" %}
-You are also free to use your favorite virtualization software for the lab assignment but you will most probably have to deal with the possible issues on yourself.
+You are free to use your favorite virtualization software for the lab assignment but you need to deal with possible issues yourself.
 {% endhint %}
 
 ## Install VirtualBox
@@ -19,7 +19,7 @@ First download the VirtualBox installer, you can find it [here](https://www.virt
 
 If you have network issue when visiting the official website, we provide the installers in [NJU box](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/).
 
-After completing download, install VirtualBox first then the extension pack.
+After download, install VirtualBox first then the extension pack.
 
 ## Import the VM Image
 
@@ -34,9 +34,9 @@ You can learn about importing a VM image in VirtualBox [here](https://docs.oracl
 
 ## Install the Extension in VM
 
-Start your VM and check if your Linux runs well. You will find the display size is fixed to 800×600. To resize it you need to install the VirtualBox extension pack into your VM.
+Start your VM and check if your Linux runs well. You will find the display size is fixed to 800×600. To have it automatically resized, you need to install the VirtualBox extension pack.
 
-You can learn about installing the extension at [here](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/intro-installing.html).
+You can learn about installing the extension [here](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/intro-installing.html).
 
 Or you can change your VM resolution simply in `Settings->Devices->Displays->Resolution` inside your VM without installing the extension pack.
 
@@ -60,4 +60,4 @@ Instead of VirtualBox, you can also choose other VM hypervisors. Here we list so
 
 ## Customize Your own VM
 
-If you are a free soul and want to setup Mininet and Switchyard in a different environment you are welcome to do that as well. You can find some useful information [here](../../appendix/environment-setup.md). This might or might not be useful for you depending on your environment. FYI, Switchyard is cross-platform but Mininet supports only Linux.
+If you feel explorative and want to setup Mininet and Switchyard in a different environment, we provide some useful information [here](../../appendix/environment-setup.md). However, this may or may not be instructive depending on your environment. FYI, Switchyard is cross-platform but Mininet supports only Linux.
