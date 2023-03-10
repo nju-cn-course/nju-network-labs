@@ -1,6 +1,6 @@
 # Environment Setup
 
-If you see here then you must be a high-end player, the instructions here will be sketchy.
+If you see here then you must be a high-end player, so the instructions here will be sketchy.
 
 {% hint style="warning" %}
 Since the Open vSwitch module is currently missing from the kernel in WSL/WSL2, we strongly advise you to use a VM.
