@@ -50,5 +50,6 @@
   * [Task 4: Deployment](lab-7/deployment.md)
 * [Appendix](appendix/README.md)
   * [Environment Setup](appendix/environment-setup.md)
+  * [VS Code Configuration](appendix/vs-code-configuration.md)
   * [Multithread programming](appendix/multithread-programming.md)
   * [About This Repository](appendix/about-this-repository.md)
