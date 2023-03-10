@@ -32,15 +32,16 @@ $ python3 -m venv syenv
 {% hint style="info" %}
 We advise you to clone the repositories to your workspace folder. Otherwise, you may need to exclude `syenv/` from git tracking. A recommended structure is as follows:
 
-<pre><code>.
+```
+~
 ├── workspace
 │   ├── Lab-1-YourName
 │   │   └── ...
 │   ├── Lab-2-YourName
 │   │   └── ...
-<strong>│   └── syenv
-</strong>└── switchyard
-</code></pre>
+│   └── syenv
+└── switchyard
+```
 {% endhint %}
 
 After this command, you will find a folder `syenv` in `workspace`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to **activate** the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
@@ -57,7 +58,7 @@ If you want to deactivate the virtual environment, just use the command `deactiv
 
 ### Install Switchyard
 
-Finally, go to the Switchyard directory and perform installation. All the required additional libraries should be automatically installed, too.
+Finally, go to the Switchyard directory and perform installation. All the additional libraries required should be automatically installed as well.
 
 ```bash
 $ python3 -m pip install .
@@ -255,22 +256,22 @@ In Switchyard, the device you want to be the hub will run this script and act li
 ## Running in the Test Environment
 
 {% hint style="info" %}
-You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. In the root dictionary of Switchyard, run
+You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. Change directory to your workspace and run
 
 ```
 $ source ./syenv/bin/activate
 ```
 {% endhint %}
 
-You can test your hub code with your test file in Switchyard test mode. At minimum you would invoke `swyard` as follows.
+You can test your hub code with your test file in Switchyard test mode. To do so you need to invoke `swyard` as follows:
 
 ```bash
 $ swyard -t examples/myhub_testscenario.py examples/myhub.py
 ```
 
-Note that the `-t` option puts swyard in test mode. The argument to the `-t` option should be the name of the test scenario to be executed, and the final argument is the name of your code.
+Note that the `-t` option puts switchyard in test mode. The argument to the `-t` option should be the name of the test scenario to be executed, and the final argument is the name of your code.
 
-After that, you will get some output shows if your tests pass or fail.
+After that, you will get some output showing if your tests pass or fail.
 
 More about test environment and some debug methods are introduced [here](https://pavinberg.gitee.io/switchyard/test\_execution.html).
 
@@ -284,20 +285,20 @@ First let's start the topology we provided at `examples/start_mininet.py`.
 $ sudo python examples/start_mininet.py
 ```
 
-Then run your hub code to the device named `hub`, which is the root of our star shape topology. It is better to use Xterm in order to get its output.
+Then run your hub code on the device named `hub`, which is the root of our star-shaped topology. It is better to use Xterm in order to get its output.
 
 ```
 mininet> xterm hub
 ```
 
-To run your code, remember to activate your virtual environment first. Then go to the switchyard directory and run
+To run your code, remember to activate your virtual environment first. Then go to the switchyard directory and execute
 
-```bash
+```
 # swyard examples/myhub.py
-... here is your hub logs ...
+... here is your hub log ...
 ```
 
-Now you have your topology ready and your hub running, let's see if it works. In Mininet CLI, type `pingall` and return.
+Now that you have your topology ready and your hub running, let's see if it works. In Mininet CLI, type `pingall` and return.
 
 ```
 mininet> pingall
