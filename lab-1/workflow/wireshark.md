@@ -4,7 +4,7 @@ Wireshark is the world’s foremost and widely-used network protocol analyzer. I
 
 You will use it to inspect your network setting up by Mininet, and test the function of your device written in Switchyard. We also have a small practice of Wireshark in our manual.
 
-[Wireshark User’s Guide](https://www.wireshark.org/docs/wsug\_html/) is a verbose document about Wireshark so that we **do NOT** recommend it. Sometimes the official document is hard for user to get started. You can find many blogs writing about how to use Wireshark. Read them instead or the first search result in Google [here](https://www.howtogeek.com/104278/how-to-use-wireshark-to-capture-filter-and-inspect-packets/).
+[Wireshark User’s Guide](https://www.wireshark.org/docs/wsug\_html/) is a verbose document about Wireshark so we **DO NOT** recommend it. Sometimes the official document is hard for newcomers to get started. You can find many blogs with Google about how to use Wireshark like [this one](https://www.howtogeek.com/104278/how-to-use-wireshark-to-capture-filter-and-inspect-packets/). Read them instead.
 
 We expect that this will cost you an afternoon.
 
@@ -14,7 +14,7 @@ Wireshark has also been bundled in the VM we provided. For custom environments, 
 
 ## Capturing Packets
 
-First start the default Mininet topology.
+First start the default Mininet topology:
 
 ```
 $ sudo mn
@@ -30,7 +30,7 @@ mininet> h1 wireshark &
 
 You need to choose which traffic you want to capture. Packets will send and receive on `h1-eth0` so you double click it.
 
-It will be empty or some ICMPv6 packets be captured. Let's make some traffic ourselves.
+It will be empty or with some ICMPv6 packets. Let's create some traffic ourselves.
 
 ```
 mininet> h1 ping -c 1 h2
@@ -38,7 +38,7 @@ mininet> h1 ping -c 1 h2
 
 ![wireshark-window](../../.gitbook/assets/wireshark\_1.png)
 
-So here we have more packets captured. You may not know why these packets show up, but you will learned in the next few lessons. Now let's filter some packets by typing protocol name on the filter text box.
+So here we have more packets. You may not know why these packets show up, but you will learn in the next few lessons. Now let's filter some packets by typing protocol name on the filter text box.
 
 ![wireshark-window](../../.gitbook/assets/wireshark\_2.png)
 

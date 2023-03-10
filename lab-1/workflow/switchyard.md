@@ -22,7 +22,8 @@ We have downloaded the source code of Switchyard in the provided VM. For custom 
 
 ### Create Virtual Environment
 
-Install Switchyard and the necessary related packages in an isolated Python virtual environment ("venv"), which is the recommended path, or in the system directories, which is often less desirable. The venv route is highly suggested, since it makes all installation "local" and can easily destroyed, cleaned up, and recreated.\
+You can install Switchyard and related packages in an isolated Python virtual environment ("venv"), which is strongly recommended; or system-wide, which is often less desirable. The venv route is highly suggested since it makes all installation "local" and can easily be destroyed, cleaned up, and recreated.
+
 To **create** a new virtual environment, you could do something like the following under your workspace folder.
 
 ```bash
