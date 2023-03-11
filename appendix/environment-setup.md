@@ -28,13 +28,13 @@ You can install Switchyard and related packages in an isolated Python virtual en
 To create a new virtual environment, you could do something like the following under your workspace folder
 
 ```
-python3 -m venv syenv
+$ python3 -m venv syenv
 ```
 
 You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to activate the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
 ```
-source ./syenv/bin/activate
+$ source ./syenv/bin/activate
 ```
 
 You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the `venv` module.
@@ -42,7 +42,7 @@ You'll need to replace `syenv` with whatever you named the virtual environment. 
 Finally, go to the Switchyard directory and perform installation. All the required additional libraries should be automatically installed, too.
 
 ```
-python3 -m pip install .
+$ python3 -m pip install .
 ```
 
 If you choose to create `syenv` in your repository, you should exclude the folder out of git tracking. Add this line in `.gitignore`
@@ -56,31 +56,30 @@ syenv/
 Depending on your needs, you may want to install Mininet for Python 2 or Python 3. If you want both, execute
 
 ```
-sudo apt-get install mininet
+$ sudo apt install mininet
 ```
 
 Otherwise, you can install Mininet for Python 3 only, with
 
 ```sh
-$ pip3 install mininet
+$ git clone https://github.com/mininet/mininet
+$ sudo PYTHON=python3 mininet/util/install.sh -n   # install Python 3 Mininet
 ```
 
-If you want to build Mininet yourself, the official guide is [here](http://mininet.org/download/).
+For more details on building Mininet yourself, the official guide is [here](http://mininet.org/download/).
 
 ## Install Xterm
 
 Xterm provides CLI to control your network components in Mininet.
 
 ```
-$ sudo apt-get install xterm
+$ sudo apt install xterm
 ```
 
 ## Install Wireshark
 
 ```
-sudo add-apt-repository ppa:wireshark-dev/stable
-sudo apt-get update
-sudo apt-get install wireshark
+$ sudo apt install wireshark
 ```
 
 You need to configure wireshark during installation. For non-superusers capturing packets, choose _Yes_ here.
@@ -90,7 +89,7 @@ You need to configure wireshark during installation. For non-superusers capturin
 Then add your user to `wireshark` user group to allow you to capture packets.
 
 ```
-sudo usermod -a -G wireshark $USER
+$ sudo usermod -a -G wireshark $USER
 ```
 
 ## Other Software
