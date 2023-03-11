@@ -45,11 +45,13 @@ Finally, go to the Switchyard directory and perform installation. All the requir
 $ python3 -m pip install .
 ```
 
-If you choose to create `syenv` in your repository, you should exclude the folder out of git tracking. Add this line in `.gitignore`
+If you choose to create `syenv` in your repository, you should exclude the folder out of git tracking. Append this line to `.gitignore`
 
+{% code lineNumbers="true" %}
 ```
 syenv/
 ```
+{% endcode %}
 
 ## Install Mininet
 
