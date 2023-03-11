@@ -47,11 +47,9 @@ $ python3 -m pip install .
 
 If you choose to create `syenv` in your repository, you should exclude the folder out of git tracking. Append this line to `.gitignore`
 
-{% code lineNumbers="true" %}
 ```
 syenv/
 ```
-{% endcode %}
 
 ## Install Mininet
 
