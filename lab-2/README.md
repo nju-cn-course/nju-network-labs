@@ -26,7 +26,7 @@ Please carefully read the [FAQ](faq.md) section, for more specific details regar
 
 ## Your Tasks
 
-In these tasks, you will write the code to implement the core logic in an Ethernet learning switch using the Switchyard framework. Besides using Switchyard for developing and testing your switch, you can deploy it in Mininet to test it in a "live" setting. The code you'll need to add for the simplest version of this exercise should be less than 20 lines (and possibly quite a bit less depending on exactly how you write the code). There are extensions to the basic learning switch that could add quite a bit more code.
+In these tasks, you will implement the core logic in an Ethernet learning switch using the Switchyard framework, and then deploy it in Mininet to test it in a "live" setting. Don't feel stressed out though, since you should be able to finnish the basic exercise with less than 20 lines, and extensions to the basic learning switch may add a few more lines.
 
 {% hint style="warning" %}
 The sentences marked with ✅ are related to the content of your report. Please pay attention.
