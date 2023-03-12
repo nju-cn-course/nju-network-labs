@@ -64,7 +64,7 @@ Conda is specialized at managing environments with easy-to-use commands. For tho
 Since conda environment needs to be activated both under _user privilege_ as well as _superuser privilege_, we need to change the default installation location. To begin with, we create a directory for installation and grant system-wide permission:
 
 ```sh
-$ sudo mkdir /opt miniconda3 && sudo chmod a+w /opt/miniconda3
+$ sudo mkdir /opt/miniconda3 && sudo chmod a+w /opt/miniconda3
 ```
 
 Then we initiate the script:
