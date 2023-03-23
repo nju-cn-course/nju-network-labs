@@ -2,18 +2,18 @@
 
 ## Timeout Mechanism
 
-Real learning switches remove forwarding table entries after some number of seconds have elapsed so that a learning switch can adapt to changes in network topology. Implement a timeout feature in your learning switch. Choose some reasonable value for a timeout \(e.g., 10 seconds\).
+Real learning switches remove forwarding table entries after some time in order to adapt to changes in network topology. Here you need to implement the timeout mechanism in your learning switch. Choose a reasonable value for timeout (e.g., 10 seconds).
 
 The following flowchart summarizes the algorithm described above.
 
-![flowchart](../.gitbook/assets/to_flow%20%281%29.jpg)
+![flowchart](<../.gitbook/assets/to\_flow (1).jpg>)
 
 Your switch may have a table like:
 
-| MAC Address | Interface | Timestamp |
-| :--- | :--- | :--- |
+| MAC Address       | Interface   | Timestamp     |
+| ----------------- | ----------- | ------------- |
 | ab:cd:ef:fe:cd:ba | interface-0 | 123456.123456 |
-| ... | ... | ... |
+| ...               | ...         | ...           |
 
 ## Coding
 
@@ -29,7 +29,7 @@ You should first develop your switch code using the Switchyard test framework. A
 
 The above command it will execute a series of test cases against your program and display whether the tests pass or fail. The file `testcases/myswitch_to_testscenario.srpy` is the test file we provide.
 
-✅ In the report, show the test result of your switch. \(Optional\) If you have written the test files yourself, show how you test the timeout mechanism.
+✅ In the report, show the test result of your switch. (Optional) If you have written the test files yourself, show how you test the timeout mechanism.
 
 Once you get the tests to pass, you can try running your code in Mininet.
 
@@ -37,5 +37,4 @@ Once you get the tests to pass, you can try running your code in Mininet.
 
 Run your switch in Mininet.
 
-✅ In Mininet, test your timeout mechanism. Prove that the timeout mechanism works with your testing procedure in the report.
-
+✅ In Mininet, test your timeout mechanism. Prove that timeout works with your testing procedure in the report.

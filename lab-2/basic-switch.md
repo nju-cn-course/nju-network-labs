@@ -2,9 +2,9 @@
 
 ## Ethernet Learning Switch Operation
 
-An Ethernet learning switch is a device that has a set of interfaces ("ports") with links connected to other switches, and to end hosts. When Ethernet frames arrive on any port/interface, the switch sends the frame on an appropriate output port if the switch knows that the host is reachable through that port, or floods the frame out all ports if it does not know where the host is.
+An Ethernet learning switch is a device with a set of interfaces ("ports") where links connect to other switches and end hosts. When Ethernet frames arrive on any port/interface, the switch forwards the frame to an appropriate output port if the switch knows that the host is reachable through that port; or floods the frame out all ports except the incoming one if it does not know where the host is.
 
-Consider the picture below. Say that Switch 1 doesn't know the locations of any host on the network, and that H1 wants to send an Ethernet frame to H3. When that frame arrives at Switch 1, it sees Ethernet source address `00:00:00:00:00:01` and destination address `00:00:00:00:00:03`. From this packet arrival, it knows that it can now reach H1 by send a frame out the same interface on which this frame has arrived. However, it does not know where to send to frame to reach H3, so it floods the packet out all ports except the one on which the frame arrived. Eventually, H3 will receive the frame. If it replies to H1, Switch 1 will receive a frame with the source address as H3's address, and the frame will arrive on the interface connected to Switch 2. At this point, Switch 1 now knows exactly which ports it needs to use to send frames to either H1 or H3.
+Consider the picture below. Say that Switch 1 doesn't know the locations of any host on the network, and that H1 wants to send an Ethernet frame to H3. When that frame arrives at Switch 1, it sees Ethernet source address `00:00:00:00:00:01` and destination address `00:00:00:00:00:03`. From this packet arrival, it knows that it can now reach H1 by send a frame out the same interface on which this frame has arrived. However, it does not know where to send to frame to reach H3, so it floods the packet out all ports except the one where the frame arrived. Eventually, H3 will receive the frame. If it replies to H1, Switch 1 will receive a frame with the source address as H3's address, and the frame will arrive on the interface connected to Switch 2. At this point, Switch 1 now knows exactly which ports it needs to use to send frames to either H1 or H3.
 
 ![learning-switch](../.gitbook/assets/ls\_diagram.png)
 
@@ -39,7 +39,7 @@ You can test your basic learning switch yourself. No test results need to show i
 
 To run your switch in Mininet, run the `start_mininet.py` custom topology script. It will create a small network consisting of a single switch with three hosts (client, server1, and server2) in the following configuration.
 
-To start up Mininet using this script, just type:
+To start up Mininet, just type:
 
 ```bash
 $ sudo python start_mininet.py
@@ -68,4 +68,4 @@ To examine whether your switch is behaving correctly, you can do the following:
 3. In the terminal on the client node, type `ping -c 2 192.168.100.1`. This command will send two "echo" requests to the server1 node. The server1 node should respond to each of them if your switch is working correctly. You should see at the two echo request and echo replies in Wireshark running on server1, and you will probably see a couple other packets (e.g., ARP, or Address Resolution Protocol, packets).
 4. If you run Wireshark on server2, you should **not** see the echo request and reply packets (but you will see the ARP packets, since they are sent with broadcast destination addresses).
 
-✅ Analyze and state the results of the above process in your report with screenshots. Do not explain how you do step by step but focus on the switch's forwarding logic.
+✅ Analyze and present the results of the above process in your report with screenshots. Please focus on the switch's forwarding logic rather than explaining what you did step by step.
