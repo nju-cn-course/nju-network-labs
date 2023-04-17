@@ -4,7 +4,7 @@
 
 After you lookup an IP destination address, the next steps are to:
 
-1. Decrement the TTL field in the IP header by 1 (you could do this prior to forwarding table lookup, too). You can assume for this project that the TTL value is greater than 0 after decrementing. We'll handle "expired" TTLs in Lab 5.
+1. Decrement the TTL field in the IP header by 1. You can assume for this project that the TTL value is greater than 0 after decrementing. We'll handle "expired" TTLs in Lab 5.
 2. Create a new Ethernet header for the IP packet to be forwarded. To construct the Ethernet header, you need to know the destination Ethernet MAC address corresponding to the host to which the packet should be forwarded. The next hop host is either:
    1. the destination host, if the destination address is directly reachable through one of the router interfaces (i.e., the subnet that the destination address belongs to is directly connected to a router interface), or
    2. it is an IP address on a router through which the destination is reachable.
@@ -30,28 +30,28 @@ Your task is to implement the logic described above. The start file is named `my
 
 You will need to carefully structure your code to be able to receive and process incoming packets while you are waiting for replies to ARP requests. A suggested method is to create a queue that contains information about IP packets awaiting ARP resolution. Each time through the main loop in your code, you can process the items in the queue to see whether an ARP request retransmission needs to be sent. If you receive an ARP reply packet, you could remove an item from the queue, update the ARP table, construct the Ethernet header, and send the packet. You might create a separate class to represent packets in the queue waiting for ARP responses, with the class containing variables to hold the most recent time an ARP request was sent, and the number of retries, along with other information.
 
-{% hint style="success" %}
-You _can_ create a separate Python thread to handle ARP requests. Programming in multithread is common in network applications and we encourage you to give it a try. Yet Switchyard testing framework for multithread is still in experimental stage which means you may find some issues when testing your code using the TestScenario. However, if you complete the lab in multithread pattern or find out the problem and solve the issue, you will get a **bonus** in the lab. For details please refer to [Multithread Programming](../../appendix/multithread-programming.md).
+{% hint style="info" %}
+A separate Python thread to handle ARP requests is acceptable. However, you may have issues using the TestScenario. Since you still need to pass the provided TestScenario, as a compensation, we will grant a bonus if you solve the issues with multithread programming. For details please refer to [Multithread Programming](../../appendix/multithread-programming.md).
 {% endhint %}
 
 To keep track of how long it has been since an ARP request has been sent, you can use the built-in `time` module. It has a `time` function that returns the current time in seconds (as a floating point value) (e.g., `time.time()` # → current time in seconds as a float).
 
-✅ In the report, show how you implement the logic of forwarding the packet and ARP.
+✅ In the report, show how you handle packet forwarding and ARP request generation.
 
 ## Testing
 
 To test your router, you can use the same formula you've used in the past:
 
 ```bash
-$ swyard -t testcases/myrouter2_testscenario.srpy myrouter.py
+$ swyard -t testcases/testscenario2.srpy myrouter.py
+$ swyard -t testcases/testscenario2_advanced.srpy myrouter.py
 ```
 
 This experiment introduces quite a bit of complexity, so inspecting variables and stepping through your program in the debugger can be extremely helpful!
 
 If you need to step through code to see what's going on, you can add calls to `debugger()` at any point in your code. When execution reaches that line, you'll get a Python debugger (pdb) command line at which you can inspect variables, call methods, etc., in order to understand what's happening. This kind of debugging will, in general, be much more effective than "printf" debugging.
 
-✅ In the report, show the test result of your router.\
-(Optional) If you have written the test files yourself, show how you test the forwarding packets.
+✅ In the report, show the result of `testscenario2_advanced.srpy`. For this experiment, the very last bonus test is optional.
 
 ## Deploying
 
@@ -80,7 +80,7 @@ Again, you may need to activate your Python virtual environment in order for the
 {% endhint %}
 
 {% hint style="success" %}
-When you run your router in Mininet, you'll almost certainly receive packets that you didn't ask for! In particular, you'll likely receive non-IPv4 and non-ARP packets (you'll likely receive some IPv6 packets and some other fun stuff). You should just ignore these non-IPv4 and non-ARP packets (and your router should not crash when it receives them!)
+When you run your router in Mininet, you'll almost certainly receive packets that you didn't ask for! In particular, you'll likely receive non-IPv4 and non-ARP packets (you'll likely receive some IPv6 packets and some other funny stuff). You should just ignore these non-IPv4 and non-ARP packets (and your router should not crash when it receives them!)
 {% endhint %}
 
 At this point, you should be able to open another xterm on any one of the other nodes and send a ping (ICMP echo request) to any of the IP addresses configured on any node in the network. For example, if you open an xterm on client, you should be able to send a ping to `192.168.200.1` (on server2) and `192.168.100.1` (on server1). You should also be able to send a ping to any address in the subnets `192.168.100.0/24` and `192.168.200.0/24` from the client node, and the router should successfully forward them to either server1 or server2. (But note that you will only get ping responses from `192.168.100.1` and `192.168.200.1` --- pings to any other IP address will not get a response.) To test whether the router is correctly forwarding the packets, you can run Wireshark on any of the nodes in the network. Below is an example of starting Wireshark on the router using interface `router-eth2`, then running ping on the client to send 2 ICMP echo requests to `192.168.100.1`:
@@ -103,4 +103,4 @@ You will see the Wireshark on the `router-eth2` capture these packets.
 
 Testing your router in the "live" network (i.e., in Mininet) is a major step: if it passes all the tests then works in Mininet when trying various examples of pinging hosts, you might have done things correctly!
 
-Your task is: `ping` another host (client or server2) from server1. Using Wireshark to prove that your router is correctly forwarding the packets. ✅ Write the procedure and analysis in your report with screenshots.
+Your task is: `ping` another host (client or server2) from server1. Using Wireshark to prove that your router is correctly forwarding the packets. ✅ Briefly write the procedure and analysis in your report with screenshots.

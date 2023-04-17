@@ -99,7 +99,7 @@ matches = destaddr in prefixnet
 # matches -> True
 ```
 
-✅ In the report, show how you implement the logic of building IP forwarding table and matching the destination IP addresses.
+✅ In the report, show how you match the destination IP addresses.
 
 ## Testing
 
