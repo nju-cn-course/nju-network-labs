@@ -25,6 +25,7 @@
     * [Task 1: Preparation](ipv4-router/lab-3/preparation.md)
     * [Task 2: Handle ARP Request](ipv4-router/lab-3/handle-arp-request.md)
     * [Task 3: Cached ARP Table](ipv4-router/lab-3/arp-table.md)
+    * [FAQ](ipv4-router/lab-3/faq.md)
   * [Lab 4: Forwarding Packets](ipv4-router/lab-4/README.md)
     * [Task 1: Preparation](ipv4-router/lab-4/preparation.md)
     * [Task 2: IP Forwarding Table Lookup](ipv4-router/lab-4/forwarding-table-lookup.md)

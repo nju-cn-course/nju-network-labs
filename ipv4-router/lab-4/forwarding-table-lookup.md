@@ -1,8 +1,8 @@
 # Task 2: IP Forwarding Table Lookup
 
-## IP Forwarding Table Build and Lookup
+## Forwarding Table
 
-One of the key tasks to accomplish for this project is to perform the fundamental thing that routers do: receive packets, match their destination addresses against a forwarding table, and forward them out the correct interface.
+One of the key tasks in this project is to perform the fundamental of routers: receive packets, match their destination addresses against a forwarding table, and forward them out the correct interface.
 
 ### Build Forwarding Table
 
@@ -30,7 +30,7 @@ An example forwarding table file is found in the project directory, and is also 
 Your forwarding table _may_ be different for the test scenario and for Mininet to help ensure that your router behaves in a _general_ way and isn't written just to handle a specific set of forwarding table entries
 {% endhint %}
 
-Note that for each interface object in the list obtained from `net.interfaces()` (or, equivalently, `net.ports()`), the IP address assigned to the interface and the network mask are available (see the Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)).
+Note that for each interface object in the list obtained from `net.interfaces()`, or equivalently, `net.ports()`, the IP address assigned to the interface and the network mask are available (see the Switchyard documentation on getting information about [interfaces/ports](https://pavinberg.gitee.io/switchyard/reference.html#interface-and-interfacetype-reference)).
 
 The file `forwarding_table.txt` can be assumed to exist in the same directory where your router is starting up (again, this file is produced by the Switchyard test scenario or by the Mininet startup script), and is structured such that each line contains 4 space-separated items: the **network address**, the **subnet mask**, the **next hop address**, and the **interface** through which packets should be forwarded. Here are some example lines:
 
@@ -58,22 +58,17 @@ In the first line, the network address is `172.16.0.0` and the subnet mask is `2
 
 After you build the forwarding table (which should be done once, upon startup), destination addresses in IP packets received by the router should be matched against the forwarding table. Remember that in case of two items in the table matching, the longest prefix match should be used.
 
-Two special cases to consider:
+Three special cases to consider:
 
-1.  If there is no match in the table, just drop the packet. (We'll
-
-    handle this better in a later stage of creating the router.)
-2.  If packet is for the router itself (i.e., destination address is an
-
-    address of one of the router's interfaces), also drop/ignore the
-
-    packet. (We'll also handle this better at a later stage.)
+1. If the Ethernet destination is neither a broadcast address nor the MAC of the incoming port, the router should always drop it instead of going through the looking up process.
+2. If there is no match in the table, drop the packet for now. We'll handle this in Lab 5.
+3. If a packet is for the router itself (i.e., destination address is among the router's interfaces), just drop/ignore the packet. We'll handle this in Lab 5 as well.
 
 ## Coding
 
 Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
-There are a couple functions and methods in the [Python 3's `ipaddress` library](https://docs.python.org/3/library/ipaddress.html) (also available through Switchyard's IP address library) that are helpful for building forwarding table entries and/or for matching destination IP addresses against forwarding table entries:
+There are a couple of functions and methods in the [Python 3's `ipaddress` library](https://docs.python.org/3/library/ipaddress.html) (also available through Switchyard's IP address library) that are helpful for building forwarding table entries and/or for matching destination IP addresses against forwarding table entries:
 
 *   To find out the length of a subnet prefix, you can use the following code pattern:
 
@@ -83,7 +78,7 @@ There are a couple functions and methods in the [Python 3's `ipaddress` library]
     netaddr.prefixlen # -> 24
     ```
 
-Note in the code above that you simply need to concatenate an IP address with '/' and the netmask when constructing a `IPv4Network` object. The resulting object can tell you the length of the prefix in bits, which will be quite helpful.
+Note that you simply need to concatenate an IP address with '/' and the netmask when constructing a `IPv4Network` object. The resulting object can tell you the length of the prefix in bits, which will be quite helpful.
 
 *   The `IPv4Address` class can be converted to an integer using the standard `int()` type conversion function. This function will return the 32-bit unsigned integer representation of an IP address. Remember that you can use bit-wise operations on Python integers (`&` is bitwise AND, `|` is bitwise OR, `~` is bitwise NOT, `^` is bitwise XOR). For example, if we wanted to check whether a given address matches a prefix, we might do something like this:
 

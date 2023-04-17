@@ -2,21 +2,21 @@
 
 ## Send ARP Request and Forward Packet
 
-Once you do the forwarding table lookup for an IP destination address, the next steps are to:
+After you lookup an IP destination address, the next steps are to:
 
-1. Decrement the TTL field in the IP header by 1 (you could do this prior to forwarding table lookup, too). You can assume for this project that the TTL value is greater than 0 after decrementing. We'll handle "expired" TTLs in the next project.
+1. Decrement the TTL field in the IP header by 1 (you could do this prior to forwarding table lookup, too). You can assume for this project that the TTL value is greater than 0 after decrementing. We'll handle "expired" TTLs in Lab 5.
 2. Create a new Ethernet header for the IP packet to be forwarded. To construct the Ethernet header, you need to know the destination Ethernet MAC address corresponding to the host to which the packet should be forwarded. The next hop host is either:
    1. the destination host, if the destination address is directly reachable through one of the router interfaces (i.e., the subnet that the destination address belongs to is directly connected to a router interface), or
    2. it is an IP address on a router through which the destination is reachable.
 
-In either case, you will need to send an ARP query in order to obtain the Ethernet address corresponding to the next hop IP address. For handling ARP queries you should do the following:
+In either case, you will need to send an ARP query in order to obtain the Ethernet address corresponding to the next hop IP address. To handle ARP queries, you should:
 
-* Send an ARP request for the IP address needing to be "resolved" (i.e., the IP address for which you need the corresponding Ethernet address).
+* Send an ARP request for the IP address to be "resolved" (i.e., the IP address for which you need the corresponding Ethernet address).
   * The Switchyard reference documentation for the [ARP header](https://pavinberg.gitee.io/switchyard/reference.html#arp-address-resolution-protocol-header) has an example of constructing an ARP request packet.
-* When an ARP reply is received, complete the Ethernet header for the IP packet to be forwarded, and send it along. You should also create a cache of IP addresses and the Ethernet MAC addresses that they correspond to (you have done in Lab 3 Task 3). When you receive a response to an ARP query, add the IP address → Ethernet address mapping to the cache so that you can avoid doing an identical ARP query.
-* If no ARP reply is received within 1 second in response to an ARP request, send another ARP request. Send up to (exactly) 5 ARP requests for a given IP address. If no ARP reply is received after 5 requests, give up and drop the packet (and do nothing else).
+* When the ARP reply is received, complete the Ethernet header for the IP packet to be forwarded, and send it along. You should also have a cached ARP table (the one from Lab 3). Update this table to avoid another identical query.
+* If no ARP reply is received **within 1 second** in response to an ARP request, send another ARP request. Send up to **exactly** 5 requests for a given IP address. If no ARP reply is received after 5 requests, give up and drop the packet(s).
 
-Lastly, refer to the Switchyard documentation details and examples for parsing and constructing packets containing Ethernet, ARP, and IP packet headers.
+Lastly, refer to the Switchyard documentation for parsing and constructing packets containing Ethernet, ARP, and IP packet headers.
 
 * [Packet parsing/construction introduction](https://pavinberg.gitee.io/switchyard/writing\_a\_program.html#introduction-to-packet-parsing-and-construction)
 * [Packet parsing/construction reference](https://pavinberg.gitee.io/switchyard/reference.html#packet-parsing-and-construction-reference)
@@ -28,13 +28,13 @@ Lastly, refer to the Switchyard documentation details and examples for parsing a
 
 Your task is to implement the logic described above. The start file is named `myrouter.py`.
 
-You will need to carefully structure your code to be able to receive and process incoming packets while you are waiting for replies to ARP requests. A suggested method is to create a queue that contains information about IP packets awaiting ARP resolution. Each time through the main while loop in your code, you can process the items in the queue to see whether an ARP request retransmission needs to be sent. If you receive an ARP reply packet, you could remove an item from the queue, update the ARP table, construct the Ethernet header, and send the packet. You might create a separate class to represent packets in the queue waiting for ARP responses, with the class containing variables to hold the most recent time an ARP request was sent, and the number of retries, among other things.
+You will need to carefully structure your code to be able to receive and process incoming packets while you are waiting for replies to ARP requests. A suggested method is to create a queue that contains information about IP packets awaiting ARP resolution. Each time through the main loop in your code, you can process the items in the queue to see whether an ARP request retransmission needs to be sent. If you receive an ARP reply packet, you could remove an item from the queue, update the ARP table, construct the Ethernet header, and send the packet. You might create a separate class to represent packets in the queue waiting for ARP responses, with the class containing variables to hold the most recent time an ARP request was sent, and the number of retries, along with other information.
 
 {% hint style="success" %}
 You _can_ create a separate Python thread to handle ARP requests. Programming in multithread is common in network applications and we encourage you to give it a try. Yet Switchyard testing framework for multithread is still in experimental stage which means you may find some issues when testing your code using the TestScenario. However, if you complete the lab in multithread pattern or find out the problem and solve the issue, you will get a **bonus** in the lab. For details please refer to [Multithread Programming](../../appendix/multithread-programming.md).
 {% endhint %}
 
-For keeping track of how long it has been since an ARP request has been sent, you can use the built-in `time` module. It has a `time` function that returns the current time in seconds (as a floating point value) (e.g., `time.time()` # → current time in seconds as a float).
+To keep track of how long it has been since an ARP request has been sent, you can use the built-in `time` module. It has a `time` function that returns the current time in seconds (as a floating point value) (e.g., `time.time()` # → current time in seconds as a float).
 
 ✅ In the report, show how you implement the logic of forwarding the packet and ARP.
 
@@ -46,13 +46,9 @@ To test your router, you can use the same formula you've used in the past:
 $ swyard -t testcases/myrouter2_testscenario.srpy myrouter.py
 ```
 
-This project includes quite a bit of complexity, so inspecting variables and stepping through your program in the debugger can be extremely helpful!
+This experiment introduces quite a bit of complexity, so inspecting variables and stepping through your program in the debugger can be extremely helpful!
 
 If you need to step through code to see what's going on, you can add calls to `debugger()` at any point in your code. When execution reaches that line, you'll get a Python debugger (pdb) command line at which you can inspect variables, call methods, etc., in order to understand what's happening. This kind of debugging will, in general, be much more effective than "printf" debugging.
-
-Another way is using VS Code to debug, which is more convenient than using pdb. But you need to be familiar with debugging in VS Code. An example we show is in Lab 1 Task 2.
-
-Note that the test scenario file is not included in this repository, but is available on the NJU Box.
 
 ✅ In the report, show the test result of your router.\
 (Optional) If you have written the test files yourself, show how you test the forwarding packets.
@@ -69,13 +65,13 @@ The above topology is not the same as the one implied by the Switchyard tests.
 
 To test your router in Mininet, open up a terminal on the virtual machine, and cd (if necessary) to the folder where your project files are located (or transfer them into the virtual machine). Then type:
 
-```
+```bash
 $ sudo python start_mininet.py
 ```
 
 Once Mininet starts up, you should open an xterm on the router node (`xterm router`), and type the command below to start your router.
 
-```
+```clike
 router# swyard myrouter.py
 ```
 
@@ -91,13 +87,13 @@ At this point, you should be able to open another xterm on any one of the other 
 
 On the router run
 
-```bash
+```clike
 router# wireshark -i router-eth2
 ```
 
 On the client run
 
-```bash
+```clike
 client# ping -c2 192.168.100.1
 ```
 

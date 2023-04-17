@@ -2,10 +2,10 @@
 
 ## Overview
 
-This is the second in a set of exercises that have the ultimate goal of creating the "brains" for an IPv4 router. The basic functions of an Internet router are to:
+This is the second exercise for creating the "brains" of an IPv4 router. The basic functions of an Internet router are to:
 
 1. Respond to ARP (address resolution protocol) requests for addresses that are assigned to interfaces on the router. (Remember that the purpose of ARP is to obtain the Ethernet MAC address associated with an IP address so that an Ethernet frame can be sent to another host over the link layer.)
-2. Receive and forward packets that arrive on links and are destined to other hosts. Part of the forwarding process is to perform address lookups ("longest prefix match" lookups) in the forwarding table. We will just use "static" routing in our router rather than implement a dynamic routing protocol like RIP or OSPF.
+2. Receive and forward packets that arrive on links and are destined for other hosts. Part of the forwarding process is to perform address lookups ("longest prefix match" lookups) in the forwarding table. We will just use "static" routing in our router rather than a dynamic routing protocol like RIP or OSPF.
 3. Make ARP requests for IP addresses that have no known Ethernet MAC address. A router will often have to send packets to other hosts, and needs Ethernet MAC addresses to do so.
 4. Respond to ICMP messages like echo requests ("pings").
 5. Generate ICMP error messages when necessary, such as when an IP packet's TTL (time to live) value has been decremented to zero.
@@ -16,7 +16,7 @@ Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/F1xp7sFO](
 
 ## Your Tasks
 
-After Lab 3, you have implemented the response to ARP on the starter template: `myrouter.py`. Now, on the basis of Lab 3, we continue to improve the router to implement the function of packets forwarding.
+After Lab 3, you have implemented ARP response in the starter template: `myrouter.py`. Now, on the basis of Lab 3, we continue to refine the router with packet forwarding.
 
 {% hint style="info" %}
 The sentences marked with ✅ are related to the content of your report. Please pay attention.
@@ -42,15 +42,11 @@ Send an ARP query to create a new Ethernet header and forward the packet.
 
 ## Handing it in
 
-Create a directory named `report/` in your repository and place your report, capture files and other materials in it.
+Create a directory named `report/` in your repository and place your report in it. Capture files are optional for this experiment.
 
 ### Report
 
 We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_4.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_4.pdf`.
-
-### Capture file
-
-The capture file's name should start with "lab\_4", e.g. `lab_4.pcapng` or `lab_4.pcap`.
 
 ### Submit to GitHub Classroom
 
@@ -60,29 +56,29 @@ Finally, the directory should be in this structure:
 .
 ├── README.md
 ├── myrouter.py
+├── forwarding_table.txt
 ├── report
-│   ├── 123456789拾佰仟_lab_4.pdf
-│   ├── lab_4.pcap
-│   └── ...
+│   └── 123456789拾佰仟_lab_4.pdf
 ├── start_mininet.py
 └── testcases
-    ├── myrouter2_testscenario.srpy
+    ├── testscenario2.srpy
+    ├── testscenario2_advanced.srpy
     └── test_submit.py
 ```
 
 Commit the change.
 
 {% hint style="warning" %}
-**Only** commit your **source code** to your local repository. If there are some generated files that are not source code, ignore them by adding them in the file `.gitignore`.
+**Only** commit your **source code** to your local repository. If there are some generated files that are not source code (except for forwarding table), ignore them by adding them in the file `.gitignore`.
 {% endhint %}
 
-After you’ve committed you final codes and report, push the repository to GitHub by inputing command:
+After you’ve committed you final codes and report, push the repository to GitHub:
 
 ```
 $ git push
 ```
 
-After a few seconds, you can see the changes on your repository web page, which means you have handed in successfully.
+Check your repository web page to find out if you have handed in successfully.
 
 ## Check your submission
 
