@@ -51,7 +51,7 @@ This experiment introduces quite a bit of complexity, so inspecting variables an
 
 If you need to step through code to see what's going on, you can add calls to `debugger()` at any point in your code. When execution reaches that line, you'll get a Python debugger (pdb) command line at which you can inspect variables, call methods, etc., in order to understand what's happening. This kind of debugging will, in general, be much more effective than "printf" debugging.
 
-✅ In the report, show the result of `testscenario2_advanced.srpy`. For this experiment, the very last bonus test is optional.
+✅ In the report, show the result of `testscenario2_advanced.srpy`. For this experiment, the very last Bonus tests are **optional**.
 
 ## Deploying
 

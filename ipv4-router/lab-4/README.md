@@ -63,7 +63,6 @@ Finally, the directory should be in this structure:
 └── testcases
     ├── testscenario2.srpy
     ├── testscenario2_advanced.srpy
-    ├── test_swyard.py
     └── test_submit.py
 ```
 
