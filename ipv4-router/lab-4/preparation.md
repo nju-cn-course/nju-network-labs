@@ -16,5 +16,6 @@ Your project will look like this:
 └── testcases
     ├── testscenario2.srpy
     ├── testscenario2_advanced.srpy
+    ├── test_swyard.py
     └── test_submit.py
 ```
