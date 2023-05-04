@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the third stage in a series of exercises that have the ultimate goal of creating an IPv4 router. The basic functions of an Internet router are to:
+This is the last stage in a series of exercises that have the ultimate goal of creating an IPv4 router. The basic functions of an Internet router are to:
 
 1.  Respond to ARP (address resolution protocol) requests for addresses
 
@@ -32,13 +32,13 @@ This is the third stage in a series of exercises that have the ultimate goal of 
 
     packet's TTL (time to live) value has been decremented to zero.
 
-The goal of this stage of the project is to accomplish items **#4** and **#5** above. When you're done with this project, you will have a fully functioning Internet router.
+The goal of this stage of the project is to accomplish **#4** and **#5** above. When you're done with this project, you will have a functioning Internet router.
 
 Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/5PGv3Pag](https://classroom.github.com/a/5PGv3Pag)
 
 ## Your Tasks
 
-After the efforts of Lab 3 and Lab 4, you have implemented part of the functions of the router, including the response to ARP and the forwarding of packets. Next, you need to continue to improve your router in the `myrouter.py` so that it can respond to ICMP messages.
+After Lab 3 and Lab 4, you have implemented part of the functions of the router, including ARP and forwarding. Next, you should continue to improve your router in the `myrouter.py` so that it can respond to ICMP messages.
 
 The main task for this exercise is to modify the Router class to do the following:
 
@@ -66,15 +66,11 @@ Generate ICMP error messages when necessary.
 
 ## Handing it in
 
-Create a directory named `report/` in your repository and place your report, capture files and other materials in it.
+Create a directory named `report/` in your repository and place your report in it. Capture files are optional for this experiment.
 
 ### Report
 
 We will provide a template of your lab assignment report [here](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/). You need to submit the report in your repository named `<student ID><name>_lab_5.pdf`. The format of your report should be PDF. An example is `123456789拾佰仟_lab_5.pdf`.
-
-### Capture file
-
-The capture file's name should start with "lab\_5", e.g. `lab_5.pcapng` or `lab_5.pcap`.
 
 ### Submit to GitHub Classroom
 
@@ -85,13 +81,11 @@ Finally, the directory should be in this structure:
 ├── README.md
 ├── myrouter.py
 ├── report
-│   ├── 123456789拾佰仟_lab_5.pdf
-│   ├── lab_5.pcap
-│   └── ...
+│   └── 123456789拾佰仟_lab_5.pdf
 ├── start_mininet.py
 └── testcases
     ├── myrouter3_testscenario.srpy
-    ├── myrouter3__testscenario_template.py
+    ├── myrouter3_testscenario_template.py
     └── test_submit.py
 ```
 
