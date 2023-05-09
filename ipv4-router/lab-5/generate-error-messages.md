@@ -65,7 +65,6 @@ To test your router, you can use the same formula you've used in the past:
 
 ```bash
 $ swyard -t testcases/testscenario3.srpy myrouter.py
-$ swyard -t testcases/testscenario3_advanced.srpy myrouter.py
 ```
 
 ✅ In the report, show the test result of your router.\
