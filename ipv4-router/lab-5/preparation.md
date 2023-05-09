@@ -15,7 +15,6 @@ Finally, your project will look like:
 ├── start_mininet.py
 └── testcases
     ├── testscenario3.srpy
-    ├── testscenario3_advanced.srpy
-    ├── testscenario_template.py
+    ├── myrouter3_testscenario_template.py
     └── test_submit.py
 ```

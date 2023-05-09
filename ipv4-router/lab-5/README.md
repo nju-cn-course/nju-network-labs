@@ -84,7 +84,7 @@ Finally, the directory should be in this structure:
 │   └── 123456789拾佰仟_lab_5.pdf
 ├── start_mininet.py
 └── testcases
-    ├── myrouter3_testscenario.srpy
+    ├── testscenario3.srpy
     ├── myrouter3_testscenario_template.py
     └── test_submit.py
 ```
