@@ -27,16 +27,16 @@ However, most functions of the two DNS servers are similar. **To avoid experimen
 You will need to load the DNS table from a text file, converting the table records into the python data structure you are familiar with. In general, the table structure we provided is as follows:
 
 ```
-*.netlab.nju.edu.cn. CNAME nju.storage1.opennetlab.com.
-test.nasa.nju.edu.cn. CNAME nju.storage2.opennetlab.com.
-*.storage1.opennetlab.com. A 10.0.0.1 10.0.0.2 10.0.0.3
-*.storage2.opennetlab.com. A 10.0.0.4 10.0.0.5
-*.storage3.opennetlab.com. A 10.0.0.7
+cn-lab.nasa.nju.edu.cn. CNAME bsy.nasa.nju.edu.cn.
+*.108.nasa.nju.edu.cn. CNAME nasa.nju.edu.cn.
+*.609.nasa.nju.edu.cn. CNAME nasa.nju.edu.cn.
+bsy.nasa.nju.edu.cn. A 114.212.81.125
+nasa.nju.edu.cn. A 210.28.132.191 114.212.80.252
 ```
 
 Each row represents a table record and is divided into three parts:
 
-* **Domain Name:** the domain name for which the user wants to request an ip address, you should note that the domain name records in this experiment may carry a wildcard mask, e.g. `*.netlab.nju.edu.cn.` means that any sub-domain under `netlab.nju.edu.cn` can be matched to that record (the `.` at the last represents the root domain name, although we usually omit it).
+* **Domain Name:** the domain name for which the user wants to request an ip address, you should note that the domain name records in this experiment may carry a wildcard mask, e.g. `*.108.nasa.nju.edu.cn.` means that any sub-domain under `108.nasa.nju.edu.cn` can be matched to that record (the `.` at the last represents the root domain name, although we usually omit it).
 * **Record Type:** there are many record types in DNS protocol, for this experiment we will use only two DNS Record types, which are:
   * A ：Returns directly the IP address (or list of addresses) corresponding to the domain name.
   * CNAME：Mapping a domain name to another domain name tells the client that it needs to continue resolving that domain name.

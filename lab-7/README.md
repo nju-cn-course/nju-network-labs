@@ -6,7 +6,9 @@ In this lab, you are going to build a demo of **Content Delivery Network (CDN)**
 
 To minimize the distance between the visitors and your website’s server, a CDN stores a cached version of its content in multiple geographical locations (a.k.a., points of presence, or PoPs). Each PoP contains a number of caching servers responsible for content delivery to visitors within its proximity.
 
-As a feature of this lab, you will use [OpenNetLab](https://opennetlab.org/) for deployment. OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of[ Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assginment in real WAN now!
+~~As a feature of this lab, you will use~~ [~~OpenNetLab~~](https://opennetlab.org/) ~~for deployment.~~ OpenNetLab is a networking platform running in WAN built by Microsoft Research Lab – Asia in cooperation with research group of[ Professor Chen Tian](https://cs.nju.edu.cn/tianchen/). That is to say, you can deploy your assignment in real WAN now!
+
+For simpilicity, we only requires you to deploy cache servers in NJU campus WAN.
 
 Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/N43vxYWo](https://classroom.github.com/a/N43vxYWo)
 
