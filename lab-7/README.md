@@ -10,7 +10,7 @@ To minimize the distance between the visitors and your website’s server, a CDN
 
 For simpilicity, we only requires you to deploy cache servers in NJU campus WAN.
 
-Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/N43vxYWo](https://classroom.github.com/a/N43vxYWo)
+Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/xw0yMMwt](https://classroom.github.com/a/xw0yMMwt)
 
 ## Your Tasks
 

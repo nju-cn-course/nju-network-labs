@@ -34,7 +34,7 @@ This is the last stage in a series of exercises that have the ultimate goal of c
 
 The goal of this stage of the project is to accomplish **#4** and **#5** above. When you're done with this project, you will have a functioning Internet router.
 
-Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/5PGv3Pag](https://classroom.github.com/a/5PGv3Pag)
+Lab-5 assignment in Github Classroom: [https://classroom.github.com/a/ob7XBdKp](https://classroom.github.com/a/ob7XBdKp)
 
 ## Your Tasks
 

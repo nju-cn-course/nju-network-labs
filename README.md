@@ -10,7 +10,7 @@ Lecturer: [Chen Tian](https://cs.nju.edu.cn/tianchen/) & [Wenzhong Li](https://c
 
 Website: [https://cs.nju.edu.cn/lwz/networks/](https://cs.nju.edu.cn/lwz/networks/)
 
-Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)~~~~
+Resources: [https://box.nju.edu.cn/d/f334d2c3bd4446b68003/](https://box.nju.edu.cn/d/f334d2c3bd4446b68003/)
 
 ## Contact
 
@@ -24,17 +24,17 @@ You may come up with questions about lab assignments. While some can be answered
 
 ### Lab 1: Switchyard & Mininet
 
-Out: 2023-3-10
+Out: 2023-9-15
 
-Due: 2023-3-24 10:00 AM
+Due: 2023-9-29 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
 
 [Start the lab here](lab-1/)
 
 ### Lab 2: Learning Switch
 
-Out: 2023-3-24
+Out: 2023-9-29
 
-Due: 2023-4-07 10:00 AM
+Due: 2023-10-13 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
 
 [Start the lab here](lab-2/)
 
@@ -44,39 +44,39 @@ Due: 2023-4-07 10:00 AM
 
 #### Lab 3: Respond to ARP
 
-Out: 2023-4-07
+Out: 2023-10-13
 
-Due: 2023-4-21 10:00 AM
+Due: 2023-10-27 10:00 AM
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2023-4-21
+Out: 2023-10-27
 
-Due: 2023-5-05 10:00 AM
+Due: 2023-11-10 10:00 AM
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2023-5-05
+Out: 2023-11-10
 
-Due: 2023-5-19 10:00 AM
+Due: 2023-11-24 10:00 AM
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2023-5-19
+Out: 2023-11-24
 
-Due: 2023-6-02 10:00 AM
+Due: 2023-12-08 10:00 AM
 
 [Start the lab here](lab-6/)
 
 ### Lab 7: Content Delivery Network
 
-Out: 2023-5-19
+Out: 2023-12-8
 
 Due: TBD
 

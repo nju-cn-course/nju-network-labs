@@ -13,7 +13,11 @@ The overall workflow to submit an assignment is as follows:
 5. Modify the code to finish the assignment and commit the code.
 6. Push the code to the GitHub repository. Now we will receive your assignment.
 
-![](../.gitbook/assets/5MG@N4D21B96{Y1WW{3BU3J.png)
+<div align="left">
+
+<img src="../.gitbook/assets/5MG@N4D21B96{Y1WW{3BU3J.png" alt="">
+
+</div>
 
 You will walk through the procedure in [Task 4](modification.md).
 
