@@ -17,7 +17,7 @@ There are many situations where you'll need to generate ICMP error messages. Bef
 
     The only packets destined for the router itself that it knows how to handle are ICMP echo requests. Any other packets should cause the router to send an **ICMP destination port unreachable** error message back to the source address in the IP packet. Note: the ICMP type should be destination unreachable, and the ICMP code should be port unreachable.
 
-However, it is also worth noting that an router **SHOULD NOT** reply to any ICMP error messages even though they meet those criteria. ✅ In the report, explain the reason behind this. For details on generating ICMP errors, refer to the Switchyard documentation on [ICMP headers](https://pavinberg.gitee.io/switchyard/reference.html#icmp-internet-control-message-protocol-header-v4).
+However, it is also worth noting that an router **SHOULD NOT** generate ICMP error messages in response to any ICMP error messages, even though they meet those criteria. ✅ In the report, explain the reason behind this. For details on generating ICMP errors, refer to the Switchyard documentation on [ICMP headers](https://pavinberg.gitee.io/switchyard/reference.html#icmp-internet-control-message-protocol-header-v4).
 
 ### Coding
 
