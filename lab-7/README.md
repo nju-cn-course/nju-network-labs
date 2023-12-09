@@ -12,6 +12,10 @@ For simpilicity, we only requires you to deploy cache servers in NJU campus WAN.
 
 Lab-7 assignment in Github Classroom: [https://classroom.github.com/a/xw0yMMwt](https://classroom.github.com/a/xw0yMMwt)
 
+{% hint style="info" %}
+This lab is **optional**: you get neither extra points nor penalty for completing or not completing this lab.
+{% endhint %}
+
 ## Your Tasks
 
 There are two keys in CDN:
