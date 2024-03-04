@@ -4,7 +4,7 @@
 
 In this chapter we will introduce all preparations for our network experiments. Then your are going to modify the examples we provide according to our requirements.
 
-Lab-1 assignment in Github Classroom: [https://classroom.github.com/a/FQSHH0oU](https://classroom.github.com/a/FQSHH0oU)
+Lab-1 assignment in Github Classroom: [https://classroom.github.com/a/0hUQO977](https://classroom.github.com/a/0hUQO977)
 
 ## Details
 
