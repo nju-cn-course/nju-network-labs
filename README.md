@@ -1,6 +1,6 @@
 # Computer Network Lab Manual
 
-Computer Network, Nanjing University, Fall 2023
+Computer Network, Nanjing University, Spring 2024
 
 ## Course Info
 
@@ -24,17 +24,17 @@ You may come up with questions about lab assignments. While some can be answered
 
 ### Lab 1: Switchyard & Mininet
 
-Out: 2023-9-15
+Out: 2024-3-6
 
-Due: 2023-9-29 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
+Due: 2024-3-20 10:00 AM
 
 [Start the lab here](lab-1/)
 
 ### Lab 2: Learning Switch
 
-Out: 2023-9-29
+Out: 2024-3-20
 
-Due: 2023-10-13 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
+Due: 2024-4-3 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
 
 [Start the lab here](lab-2/)
 
@@ -44,39 +44,39 @@ Due: 2023-10-13 10:00 AM (The deadline may be postponed due to the Mid-Autumn Fe
 
 #### Lab 3: Respond to ARP
 
-Out: 2023-10-13
+Out: 2024-4-3
 
-Due: 2023-10-27 10:00 AM
+Due: 2024-4-17 10:00 AM
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2023-10-27
+Out: 2024-4-17
 
-Due: 2023-11-10 10:00 AM
+Due: 2024-4-24 10:00 AM
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2023-11-10
+Out: 2024-4-24
 
-Due: 2023-11-24 10:00 AM
+Due: 2024-5-15 10:00 AM
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2023-11-24
+Out: 2024-5-15
 
-Due: 2023-12-08 10:00 AM
+Due: 2024-5-29 10:00 AM
 
 [Start the lab here](lab-6/)
 
 ### Lab 7: Content Delivery Network
 
-Out: 2023-12-8
+Out: 2024-5-29
 
 Due: TBD
 
