@@ -34,7 +34,7 @@ Due: 2024-3-20 10:00 AM
 
 Out: 2024-3-20
 
-Due: 2024-4-3 10:00 AM (The deadline may be postponed due to the Mid-Autumn Festival and National Day holidays. Please refer to the notice in the course group for specific arrangements.)
+Due: 2024-4-3 10:00 AM
 
 [Start the lab here](lab-2/)
 
