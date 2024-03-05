@@ -26,7 +26,7 @@ You may come up with questions about lab assignments. While some can be answered
 
 Out: 2024-3-6
 
-Due: 2024-3-20 10:00 AM
+Due: 2024-3-19  23: 59
 
 [Start the lab here](lab-1/)
 
@@ -34,7 +34,7 @@ Due: 2024-3-20 10:00 AM
 
 Out: 2024-3-20
 
-Due: 2024-4-3 10:00 AM
+Due: 2024-4-2  23: 59
 
 [Start the lab here](lab-2/)
 
@@ -46,7 +46,7 @@ Due: 2024-4-3 10:00 AM
 
 Out: 2024-4-3
 
-Due: 2024-4-17 10:00 AM
+Due: 2024-4-16  23: 59
 
 [Start the lab here](ipv4-router/lab-3/)
 
@@ -54,7 +54,7 @@ Due: 2024-4-17 10:00 AM
 
 Out: 2024-4-17
 
-Due: 2024-4-24 10:00 AM
+Due: 2024-4-30  23: 59
 
 [Start the lab here](ipv4-router/lab-4/)
 
@@ -62,7 +62,7 @@ Due: 2024-4-24 10:00 AM
 
 Out: 2024-4-24
 
-Due: 2024-5-15 10:00 AM
+Due: 2024-5-14  23: 59
 
 [Start the lab here](ipv4-router/lab-5/)
 
@@ -70,7 +70,7 @@ Due: 2024-5-15 10:00 AM
 
 Out: 2024-5-15
 
-Due: 2024-5-29 10:00 AM
+Due: 2024-5-28  23: 59
 
 [Start the lab here](lab-6/)
 
