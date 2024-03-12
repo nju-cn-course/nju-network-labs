@@ -13,7 +13,7 @@ The cache table is similar to the table used in Ethernet learning switch. For ea
 
 When the router receives a packet with ARP header, add or update an entry of the cached ARP table. For example, if there is an ARP request with the Ethernet source address `01:02:03:04:05:06` and the IP source address `10.1.2.3`, the router will _update_ the entry whose key is `10.1.2.3` with the value `01:02:03:04:05:06`. You can also see here that the IP address is **unique** in the table.
 
-{% hint style="info" %}
+{% hint style="warning" %}
 According to [RFC 1812](https://www.rfc-editor.org/rfc/rfc1812), a router **MUST** not believe any ARP reply that claims that the Ethernet address of another host or router is a broadcast address.
 {% endhint %}
 

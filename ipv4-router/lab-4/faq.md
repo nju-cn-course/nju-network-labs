@@ -6,3 +6,6 @@
 2.  **Q:** When the router needs to make an ARP request for the next hop IP address (obtained after the longest prefix match lookup), should it flood the request on all ports?
 
     **A:** The router does not flood the ARP request on all ports. The ARP query is merely broadcast on the port from lookup. The response ARP query _should_ come back on the same port but it doesn't actually need to (and it doesn't matter for the purposes of forwarding the packet or sending out the ARP request).
+3.  **Q:** What to do with packets with IP option field(s)?
+
+    **A:** As for this course, you need not support those operations. It is OK to simply treat them as standard IPv4 packets. Just keep the option fields as they were.
