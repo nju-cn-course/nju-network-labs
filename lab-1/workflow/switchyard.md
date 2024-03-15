@@ -12,7 +12,7 @@ We expect that you have complete [How to use Mininet](mininet.md) and [How to us
 
 The [Switchyard documentation](https://pavinberg.gitee.io/switchyard/) also uses these files to show many useful APIs. Again, this document is very important. You need to read it whenever you get confused with the APIs or Switchyard itself. In this section we do not show you the APIs but the workflow and a little code explanation.
 
-We expect that it will take you up to 4 days on this. It may be a little bit tricky. But this is important.
+We expect that it will take you up to 4 days on this. It may be a little bit tricky but important.
 
 ## Install Switchyard
 
@@ -20,18 +20,23 @@ We expect that it will take you up to 4 days on this. It may be a little bit tri
 
 We have downloaded the source code of Switchyard in the provided VM. For custom environments, you need to download the source code first. Instructions can be found [here](../../appendix/environment-setup.md#install-switchyard).
 
-### Create Virtual Environment
+### Create Isolated Environment
 
-You can install Switchyard and related packages in an isolated Python virtual environment ("venv"), which is strongly recommended; or system-wide, which is often less desirable. The venv route is highly suggested since it makes all installation "local" and can easily be destroyed, cleaned up, and recreated.
+You can install Switchyard and related packages in an isolated Python virtual environment, which is strongly recommended; or system-wide, which is often less desirable. The [`conda`](https://docs.anaconda.com/free/miniconda/)/[`venv`](https://docs.python.org/3/library/venv.html) route is highly suggested since it makes all installation "local" and can easily be destroyed, cleaned up, and recreated.
 
-To **create** a new virtual environment, you could do something like the following under your workspace folder.
+{% hint style="info" %}
+If you choose `conda`, refer to the [appendix](../../appendix/environment-setup.md#conda) for installation.
+{% endhint %}
+
+To **create** a new environment, you could do something like the following under your workspace folder:
 
 ```bash
-$ python3 -m venv syenv
+$ conda create --name syenv python=3.7 # with conda, OR
+$ python3 -m venv syenv # with venv
 ```
 
 {% hint style="info" %}
-We advise you to clone the repositories to your workspace folder. Otherwise, you may need to exclude `syenv/` from git tracking. A recommended structure is as follows:
+We advise you to clone the repositories to your workspace folder. Otherwise, if you go with `venv` you may need to exclude `syenv/` from git tracking. A recommended structure with `venv` is as follows:
 
 ```
 ~
@@ -45,16 +50,22 @@ We advise you to clone the repositories to your workspace folder. Otherwise, you
 ```
 {% endhint %}
 
-After this command, you will find a folder `syenv` in `workspace`, which is the folder of the Python virtual environment. You can change the name `syenv` to whatever you'd like to name your virtual environment. Next, you need to **activate** the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
+You can change the name `syenv` to whatever you'd like. Next, you need to **activate** the environment. The instructions vary depending on the shell you're using. On `bash`, the command is
 
 ```bash
-$ source ./syenv/bin/activate
+$ conda activate syenv # with conda, OR
+$ source ./syenv/bin/activate # with venv
 ```
 
-Exactly, `activate` is a runnable file in the folder `syenv`. You'll need to replace `syenv` with whatever you named the virtual environment. If you're using a different shell than bash, refer to Python documentation on the venv module.
+If you're using a different shell than bash, refer to the documentation for details.
 
 {% hint style="info" %}
-If you want to deactivate the virtual environment, just use the command `deactivate`.
+To deactivate the virtual environment, just use the command
+
+```
+$ conda deactivate # with conda, OR
+$ deactivate # with venv
+```
 {% endhint %}
 
 ### Install Switchyard
@@ -62,13 +73,13 @@ If you want to deactivate the virtual environment, just use the command `deactiv
 Finally, go to the Switchyard directory and perform installation. All the additional libraries required should be automatically installed as well.
 
 ```bash
-$ python3 -m pip install .
+(syenv)$ python3 -m pip install .
 ```
 
 Alternatively, you can download the source code and install Switchyard simutaneously:
 
 ```sh
-$ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
+(syenv)$ python3 -m pip install git+https://gitee.com/pavinberg/switchyard.git
 ```
 
 ## Prepare Your Test Script
