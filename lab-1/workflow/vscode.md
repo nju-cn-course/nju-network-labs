@@ -26,9 +26,9 @@ You have got almost everything you need here. But you may want to format your do
 
 ![VSC-format](<../../.gitbook/assets/vscode-format (1).gif>)
 
-## Switch Python Virtual Environment
+## Switch Python Environment
 
-We recommand using a virtual environment of Python for Switchyard module. We introduce this in Switchyard section that you need to activate the environment for Switchyard to be used. However, this activation **ONLY** takes effect in that exactly one terminal session, which means that the VS Code has no idea where is your Switchyard so that it cannot support features like code completion.
+We recommand using a isolated environment of Python for Switchyard module. We introduce this in Switchyard section that you need to activate the environment for Switchyard to be used. However, this activation **ONLY** takes effect in that exactly one terminal session, which means that the VS Code has no idea where is your Switchyard so that it cannot support features like code completion.
 
 To solve this, tell VS Code to switch to the virtual environment you created.
 

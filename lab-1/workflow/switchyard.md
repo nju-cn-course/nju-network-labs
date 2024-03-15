@@ -268,17 +268,13 @@ In Switchyard, the device you want to be the hub will run this script and act li
 ## Running in the Test Environment
 
 {% hint style="info" %}
-You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important. Change directory to your workspace and run
-
-```
-$ source ./syenv/bin/activate
-```
+You need to activate your Python virtual environment first in any case you want to run Switchyard. This step is very important.
 {% endhint %}
 
 You can test your hub code with your test file in Switchyard test mode. To do so you need to invoke `swyard` as follows:
 
 ```bash
-$ swyard -t examples/myhub_testscenario.py examples/myhub.py
+(syenv)$ swyard -t examples/myhub_testscenario.py examples/myhub.py
 ```
 
 Note that the `-t` option puts switchyard in test mode. The argument to the `-t` option should be the name of the test scenario to be executed, and the final argument is the name of your code.
@@ -305,10 +301,9 @@ mininet> xterm hub
 
 To run your code, remember to activate your virtual environment first. Then go to the switchyard directory and execute
 
-```
-# swyard examples/myhub.py
-... here is your hub log ...
-```
+<pre><code><strong>(syenv)# swyard examples/myhub.py
+</strong>... here is your hub log ...
+</code></pre>
 
 Now that you have your topology ready and your hub running, let's see if it works. In Mininet CLI, type `pingall` and return.
 
