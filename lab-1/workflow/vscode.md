@@ -38,6 +38,15 @@ Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command
 
 ![Choose virtual environment](../../.gitbook/assets/vsc-python-venv.png)
 
+{% hint style="info" %}
+For `venv`, VS Code can only detect interpreter in current path. If the environment is not listed, try:
+
+1. Open the parent folder,
+2. Set the path to the interpreter manually in the dialog box,
+3. Use the method below, or
+4. Use other IDE/editor instead, like [PyCharm](https://www.jetbrains.com/pycharm/).
+{% endhint %}
+
 You can also set this in your workspace settings for running tasks below.
 
 Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command Pallette_ and type "Preferences: Open Workspace Settings". This will create a `.vscode/settings.json` file in your workspace.

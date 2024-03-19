@@ -1,6 +1,6 @@
 # VS Code Configuration
 
-This page is dedicated to those who want the most out of VS Code. Since the editor is constantly updating, some configurations here may not apply to a newer version. As a result, you may need to adjust your settings accordingly.
+This page is dedicated to those who want the most out of VS Code. Since the editor has been constantly changing, some configurations here are **outdated** in newer versions. As a result, you may need to adjust your settings accordingly.
 
 ## Configure Test Procedure
 
