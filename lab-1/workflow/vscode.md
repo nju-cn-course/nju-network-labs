@@ -2,6 +2,10 @@
 
 Visual Studio Code (VSC) is a convenient tool to develop your projects. As one of the most popular editor, it is open source with a large number of extensions. We will briefly introduce it as well as some helpful plugins. This tutorial is prepared for those who want to take full control of Switchyard in one editor. We assume Ubuntu 18.04 here.
 
+{% hint style="danger" %}
+The latest VS Code no longer supports Ubuntu 18.04. Our VM comes with an older version.
+{% endhint %}
+
 We expect that you will spend several hours on this.
 
 ## Install VSC
@@ -10,9 +14,9 @@ The VM we provided comes with VS Code. In case you have a custom environment, yo
 
 ## Develop with VSC
 
-Open the folder of Switchyard in VSC. You can open files in the explorer column and edit them.
+Open your workspace folder in VSC. We use switchyard folder here for demostration but [a seperate workspace folder](switchyard.md#create-isolated-environment) is strongly recommend. You can open files in the explorer column and edit them.
 
-![VSC](../../.gitbook/assets/vscode.png)
+![VS Code UI](../../.gitbook/assets/vscode.png)
 
 There are some plugins you may want to install. For Python, search for this extension and install it.
 
@@ -41,13 +45,12 @@ Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command
 {% hint style="info" %}
 For `venv`, VS Code can only detect interpreter in current path. If the environment is not listed, try:
 
-1. Open the parent folder,
-2. Set the path to the interpreter manually in the dialog box,
-3. Use the method below, or
-4. Use other IDEs/editors instead, like [PyCharm](https://www.jetbrains.com/pycharm/).
+1. Open the folder containing the environment,
+2. Set the path to the interpreter manually in the dialog box, or
+3. Use the method below.
 {% endhint %}
 
-You can also set this in your workspace settings for running tasks below.
+You can also modify your workspace configuration file for running tasks.
 
 Press `Shift+Ctrl+P` on Windows/Linux or `Shift+Cmd+P` on macOS to open _Command Pallette_ and type "Preferences: Open Workspace Settings". This will create a `.vscode/settings.json` file in your workspace.
 
@@ -59,7 +62,7 @@ Edit `.vscode/settings.json` like this:
 }
 ```
 
-Notice that you should change the path to the one on your machine.
+You should change the path to the one on your machine accordingly.
 
 ## Run Switchyard
 
