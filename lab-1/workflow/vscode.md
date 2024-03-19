@@ -69,11 +69,11 @@ You can simply open the terminal either in VS Code or in Linux to run switchyard
 
 [Switchyard document about debug](https://jsommers.github.io/switchyard/test\_execution.html#if-you-don-t-like-pdb) shows that you are free to choose other debuggers, which means you can use VS Code debugger to test your code. This step is optional, but if you are really curious, you can try the configurations [here](../../appendix/vs-code-configuration.md#configure-debug-procedure).
 
-## Other editor/IDE
+## Other editors/IDEs
 
 You are free to choose other editors or IDEs you prefer. Some powerful tools are:
 
-* IDE: PyCharm, Visual Studio
-* Editor: Vim, Emacs
+* IDEs: PyCharm, Visual Studio
+* Editors: Vim, Emacs
 
-However, if you have always been using an IDE, we recommend you to try out an editor.
+However, if you have always been using an IDE, we recommend you to try out an editor, and vice versa.
