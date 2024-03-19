@@ -44,7 +44,7 @@ For `venv`, VS Code can only detect interpreter in current path. If the environm
 1. Open the parent folder,
 2. Set the path to the interpreter manually in the dialog box,
 3. Use the method below, or
-4. Use other IDE/editor instead, like [PyCharm](https://www.jetbrains.com/pycharm/).
+4. Use other IDEs/editors instead, like [PyCharm](https://www.jetbrains.com/pycharm/).
 {% endhint %}
 
 You can also set this in your workspace settings for running tasks below.
