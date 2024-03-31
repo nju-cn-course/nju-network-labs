@@ -24,8 +24,10 @@ You can find more detailed information on these functionalities in the following
 * Lab 4: Complete Item #2 and Item #3.
 * Lab 5: Complete Item #4 and Item #5.
 
+Note that modern routers are capable of more functionalities like [BGP](https://datatracker.ietf.org/doc/html/rfc4271), [SNMP](https://datatracker.ietf.org/doc/html/rfc3411), [IGMP](https://datatracker.ietf.org/doc/html/rfc3376), etc. All such capablities are beyond the scope of these Labs, and thus **NOT** in need of realization.
+
 {% hint style="warning" %}
-Even though you might finish Lab 3-5 without questions, we still urge you to read the [FAQs](faq.md), which give important rules on how you should finish your experiments.
+Even though you might finish Lab 3-5 without questions, we still urge you to read the [FAQs](faq.md), which provide details on how you should finish your experiments.
 {% endhint %}
 
 ## Notes
@@ -36,7 +38,7 @@ ARP is a protocol used for resolving IP addresses to MAC addresses. The main iss
 
 ### Internet Control Message Protocol (ICMP) Review
 
-ICMP is one of the main protocols that allows routers to closely monitor the operation of the Internet. ICMP messages are used by network devices (e.g routers) for sending error messages to indicate various issues, such as unreachable destination host/network or expired TTL for a packet. ping is a very commonly used network administration utility that uses ICMP Echo Request/Reply packets to validate the reachability of a host and also collect information about the status of the network (e.g average RTT, % of packet loss, etc.).
+ICMP is one of the main protocols that allows routers to closely monitor the operation of the Internet. ICMP messages are used by network devices (e.g routers) for sending error messages to indicate various issues, such as unreachable destination host/network or expired TTL for a packet. ping is a very commonly used network administration utility that uses ICMP Echo Request/Reply packets to validate the reachability of a host and also collect information about the status of the network (e.g average RTT, percentage of packet loss, etc.).
 
 ### Testing Your Code
 
