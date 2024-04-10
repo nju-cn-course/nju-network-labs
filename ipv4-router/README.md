@@ -24,7 +24,7 @@ You can find more detailed information on these functionalities in the following
 * Lab 4: Complete Item #2 and Item #3.
 * Lab 5: Complete Item #4 and Item #5.
 
-Note that modern routers are capable of more functionalities like [BGP](https://datatracker.ietf.org/doc/html/rfc4271), [SNMP](https://datatracker.ietf.org/doc/html/rfc3411), [IGMP](https://datatracker.ietf.org/doc/html/rfc3376), etc. All such capablities are beyond the scope of these Labs, and thus **NOT** in need of realization.
+Note that modern routers are capable of more functionalities like [BGP](https://datatracker.ietf.org/doc/html/rfc4271), [SNMP](https://datatracker.ietf.org/doc/html/rfc3411), [IGMP](https://datatracker.ietf.org/doc/html/rfc3376), etc. All such capablities are beyond the scope of these Labs, and thus should **NOT** be supported.
 
 {% hint style="warning" %}
 Even though you might finish Lab 3-5 without questions, we still urge you to read the [FAQs](faq.md), which provide details on how you should finish your experiments.
