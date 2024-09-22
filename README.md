@@ -44,39 +44,39 @@ Due: 2024-10-11  08: 00
 
 #### Lab 3: Respond to ARP
 
-Out: 2024-4-3
+Out: 2024-10-11
 
-Due: 2024-4-16  23: 59
+Due: 2024-10-25  08: 00
 
 [Start the lab here](ipv4-router/lab-3/)
 
 #### Lab 4: Forwarding packets
 
-Out: 2024-4-17
+Out: 2024-10-25
 
-Due: 2024-5-7  23: 59
+Due: 2024-11-8  08: 00
 
 [Start the lab here](ipv4-router/lab-4/)
 
 #### Lab 5: Respond to ICMP
 
-Out: 2024-4-24
+Out: 2024-11-8
 
-Due: 2024-5-14  23: 59
+Due: 2024-11-22  08: 00
 
 [Start the lab here](ipv4-router/lab-5/)
 
 ### Lab 6: Reliable Communication
 
-Out: 2024-5-15
+Out: 2024-11-22
 
-Due: 2024-5-28  23: 59
+Due: 2024-12-6  08: 00
 
 [Start the lab here](lab-6/)
 
 ### Lab 7: Content Delivery Network
 
-Out: 2024-5-29
+Out: 2024-12-6
 
 Due: TBD
 
