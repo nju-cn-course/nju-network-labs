@@ -12,7 +12,7 @@ This is the first in a series of exercises that have the ultimate goal of creati
 
 The goal of this first stage of building the router is to accomplish item **#1** above: respond to ARP requests.
 
-Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/1pj5xcVy](https://classroom.github.com/a/pa4DFMEs)
+Lab-3 assignment in Github Classroom: [https://classroom.github.com/a/pa4DFMEs](https://classroom.github.com/a/pa4DFMEs)
 ## Your Tasks
 
 In the source directory for this exercise, there is a Python file to use as a starter template: `myrouter.py`. This file contains the outline of a Router class, and currently contains a constructor (`__init__`) method, a `start` method and a `handle_packet` method. This is just a starter template: you can refactor and redesign the code in any way you like.
