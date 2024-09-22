@@ -12,7 +12,7 @@ This is the second exercise for creating the "brains" of an IPv4 router. The bas
 
 The goal of this stage is to accomplish **#2** and **#3** above.
 
-Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/ZJndeOek](https://classroom.github.com/a/ZJndeOek)
+Lab-4 assignment in Github Classroom: [https://classroom.github.com/a/1rdvGo4B](https://classroom.github.com/a/1rdvGo4B)
 
 ## Your Tasks
 
