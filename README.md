@@ -1,6 +1,6 @@
 # Computer Network Lab Manual
 
-Computer Network, Nanjing University, Spring 2024
+Computer Network, Nanjing University, Fall 2024
 
 ## Course Info
 
@@ -24,17 +24,17 @@ You may come up with questions about lab assignments. While some can be answered
 
 ### Lab 1: Switchyard & Mininet
 
-Out: 2024-3-6
+Out: 2024-9-13
 
-Due: 2024-3-19  23: 59
+Due: 2024-9-27  08: 00
 
 [Start the lab here](lab-1/)
 
 ### Lab 2: Learning Switch
 
-Out: 2024-3-20
+Out: 2024-9-27
 
-Due: 2024-4-2  23: 59
+Due: 2024-10-11  08: 00
 
 [Start the lab here](lab-2/)
 
